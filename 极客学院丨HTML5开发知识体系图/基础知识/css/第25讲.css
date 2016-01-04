@@ -1,0 +1,12 @@
+*{margin:0px;}
+.div1{width: 20%;height: 100px;background-color: #A1112F;margin:auto;}
+.div2{width: 20%;height: 100px;background-color: #665577;
+position: relative;left: 20px;}
+.div3{width: 20%;height: 100px;background-color: #00AA33;float: left;}
+
+.p1{width: 100px;line-height: normal;}
+.p2{width: 100px;line-height: 200%;}
+.p3{width: 100px;line-height: 50%;}
+
+.p4{cursor: cell;}/*鼠标指针效果*/
+li{display: block;visibility: hidden;;}/* 列表点效果、隐藏*/

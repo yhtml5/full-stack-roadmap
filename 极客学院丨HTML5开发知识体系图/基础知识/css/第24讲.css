@@ -1,0 +1,13 @@
+/* *{color: #00FFFF;margin: 0px;padding: 0px;}
+p{color: #1199FF;margin: 10px;}
+h1,h2{color: #FF3399;font-size: 45px;}/*分组
+
+.p1{color: #776699;}
+.p2{font-size: 30px;}
+.p1.p2{font-style: italic;}/*同时具有 *、p1、p2和自身定义的效果*/
+
+#mydiv{color: #FF8899;}
+p strong{color: #77AA99}
+p strong i{font-size: 20px}/*直接到达*/
+p>strong>i{font-size: 20px}/*一层一层去找*/
+li+li{font-size: 30px;color: #ADAA2F;margin: 20px}

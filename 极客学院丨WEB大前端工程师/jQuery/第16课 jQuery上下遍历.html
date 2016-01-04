@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+                    #div1 {
+                text-align: center;
+                width: 300px;
+                margin: 10px;
+                height: 200px;
+                border: 3px solid chocolate;
+            }
+            #div2 {
+                width: 80%;
+                height: 150px;
+                margin: auto auto;
+                border: 3px solid chocolate;
+            }
+            #div3 {
+                width: 80%;
+                height: 200px;
+                border: 3px solid chocolate;
+            }
+            #div4 {
+                width: 200px;
+                height: 150px;
+                margin-top: 10px;
+                margin-left: 10px;
+                border: 3px solid chocolate;
+            }
+            p {
+                width: 60%;
+                height: 80px;
+                margin: auto auto;
+                border: 3px solid chocolate;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="div1">
+            div1
+            <div id="div2">
+                div2
+                <p>
+                    <a class="a1" href="" target="_blank">hello</a>
+                </p>
+            </div>
+        </div>
+        <hr />
+        <div id="div3">
+            div3
+            <div id="div4">
+                div4
+                <p>
+                    <a class="a2" href="" target="_blank">hello</a>
+                </p>
+            </div>
+        </div><hr
+
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // $("#div1").children().css({
+                // border : "3px solid #ff0000"
+                // })
+                $("#div1").find("p").css({
+                    border : "3px solid #ff7700"
+                })
+                $("p").parent().css({
+                    border : "3px solid #ff7700"
+                })
+                // $("p").parents().css({
+                // border : "3px solid #7f5700"
+                // })
+                $(".a2").parentsUntil("#div3").css({
+                    border : "3px solid #337700"
+                })
+            })
+
+        </script>
+
+    </body>
+</html>

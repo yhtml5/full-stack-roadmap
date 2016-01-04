@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Date对象  </title>
+    
+       
+    </head>
+    <body onload="startTime()"> 
+        
+        <div id="time"> </div>
+        
+        
+        
+           <script>
+               //var date=new Date();
+               //document.write(date);//时间
+               //document.write(date.getFullYear());//年份
+               //document.write(date.getTime());//毫秒
+               //date.setFullYear(2010,1,1);//设置时间
+               //document.write(date);
+               function startTime () {
+                   var today=new Date();
+                   var h=today.getHours();
+                   var m=today.getMinutes();
+                   var s=today.getSeconds();
+                                  
+               }
+                   m=checkTime(m);
+                   s=checkTime(s);
+                   document.getElementByID("time").innerHTML=h+":"+m+":"+s;
+                   t=setTimeout(function  () {//时间刷新
+                       startTime();
+                       },500);
+                  }
+                  function checkTime (i) {
+                      if (i<10) {i="0"+i;
+                      }return i;
+                    
+                  }
+               
+           </script> 
+          
+          
+          
+          
+    </body>
+</html>

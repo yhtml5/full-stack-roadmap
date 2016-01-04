@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> 新input元素2 </title>
+		
+	</head>
+	<body>
+	    <input type="range" name="range" id="range" value="25" min="0" max="100" step="5" /><br />
+	    <!--图像表示滑动范围-->
+	    <input type="search" name="search" id="search" value="123" /><br />
+	    <input type="tel" name="tel" id="tel" value="123" />
+	    <form>
+	    <input type="color" onchange="document.body.style.backgroundColor=document.getElementById('currentColor').textContent=this.value;"/>
+	    <span id="currentColor"></span>
+	    </form>
+	    
+	    <form id="testform"> 
+	       <input type="range" id="range" value="10" min="0" max="100" step="10" onchange="value_change()" />
+	       <output id="output">10</output>
+	    </form>
+	    
+	    <script>
+	        function value_change() {
+	            var number=document.getElementById("range").value;
+	            document.getElementById("output").value=number;
+			 }
+	    </script>
+        
+	</body>
+</html>

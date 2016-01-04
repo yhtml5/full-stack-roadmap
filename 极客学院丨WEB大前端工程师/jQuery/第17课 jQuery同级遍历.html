@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .div1 * {
+                display: block;
+                border: 3px solid gray;
+                color: gray;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+        </div>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+            // sibings()同级所有元素修改
+            // next()下一个元素修改
+            // nextAll()下面所有元素修改
+            // nextUntil()下面元素的区间修改
+            // prev()向上
+            // prevAll()向上所有
+            // prevUntil()向上区间
+            $(document).ready(function() {
+                $("h6").prevUntil("h1").css({
+                    border : "3px solid #ff0000"
+                })
+            })
+        </script>
+    </body>
+</html>

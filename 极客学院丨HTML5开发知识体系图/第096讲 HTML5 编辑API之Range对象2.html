@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Range对象  </title>
+	</head>
+	<body>
+	     <!--Range 对象表示文档的连续范围区域，如用户在浏览器窗口中用鼠标拖动选中的区域。-->
+	     <script>
+             function cloneContent () {
+                 var div=document.getElementById("div");
+                 var rangeObj=document.createRange();
+                 rangeObj.selectNodeContents(div);
+                 var docFrangMent=rangeObj.cloneContents();
+                 div.appendChild(docFrangMent);}//向节点后加一个子节点
+                 </script>
+         <div id="div">
+                              你好吗<br />
+           <button onclick="cloneContent()">克隆</button><br /></div><br />
+           
+	     <script>
+             function cloneRange () {
+                 var rangeObj=document.createRange();//创建range对象
+                 rangeObj.selectNodeContents(document.getElementById("p"));//选择节点范围
+                 var rangeClone=rangeObj.cloneRange();
+                 alert(rangeClone.toString());}
+         </script> 
+	     <p id="p">这是测试内容 </p>
+	     <button onclick="cloneRange()">克隆</button>
+	      <br /><br />
+	      
+		 <script>
+		     function moveContent () {
+		         var srcDiv=document.getElementById("srcDiv");
+		         var distDiv=document.getElementById("distDiv");
+		         var rangeObj=document.createRange();
+		         rangeObj.selectNodeContents(srcDiv);
+		         var docFragment=rangeObj.extractContents();
+		         distDiv.appendChild(docFragment);}
+		 </script>
+		 <div id="srcDiv" style="background-color: #55AA99;width: 300px;height: 60px">你好吗</div>
+	     <div id="distDiv" style="background-color: #556699;width: 300px;height: 60px"></div>
+	     <button onclick="moveContent()">移动元素</button>         
+         
+         <br /><br />
+            <script>//移动按钮的功能
+                function moveButton () {
+                    var btn=document.getElementById("button");//获取按钮
+                    var selection=document.getSelection();
+                    if (selection.rangeCount >0) { 
+                        var range=selection.getRangeAt(0); 
+                        range.insertNode(btn);};}//插入btn节点后面
+            </script>
+         <div onmouseup="moveButton()" style="width: 300px;background-color: #779944">
+                                        测试range测试range测试range测试range测试range测试range测试range测试range测试range测试range测试range
+         </div> 
+         <button id="button">按钮</button>  
+            
+         <br /><script>//不成功
+             function testPlace () {
+                 var boldTest=document.getElementById("b");
+                 var boldRange=document.createRange();
+                 boldRange.selectNodeContents(boldTest.firstChild);
+                 var selection=document.getSelection();
+                 if(selection.rangeCount>0){
+                     var selRange=selection.getRangeAt(0);
+                     if (selRange.compareBoundaryPoint(Range.START_TO_END,boldRange)<=0) {
+                         alert("选取前面文字")
+                     } else{
+                         if (selRange.compareBounderyPoint(Range.END_TO_START,boldRange)>=0) {
+                             alert("选取后面文字")
+                         }}}}
+         </script><br />
+                                     这是一段文字，我也不<b id="b">知道</b>写什么<br />
+             <button onclick="testPlace()">位置比较</button>
+             
+             
+             <br /><script>//选择取消
+                 var rangeObj=document.createRange();
+                 function selectRangeConents()  {
+                     var div=document.getElementById("div1");
+                     rangeObj.selectNode(div);}
+                     //raangeObj.detach();
+                  function unselect () {
+                      rangeObj.collapse(false);}
+                  function showRange () {
+                      alert(rangeObj.toString());}
+             </script><br />
+             <div id="div1" style="background-color: #228899;width: 300px;height: 50px">元素</div><br />
+                 <button onclick="selectRangeConents()">选择元素</button>
+                 <button onclick="unselect ()">取消元素</button>
+                 <button onclick="showRange ()">显示元素</button>
+           </body>
+</html>

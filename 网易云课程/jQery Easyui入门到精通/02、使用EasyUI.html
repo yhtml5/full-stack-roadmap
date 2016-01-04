@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/easyloader.js"></script>
+    </head>
+    <body>
+        <h2>加载UI组件方式</h2>
+        <div id="box">
+            <div style="width:400px;height:200px">
+                不推荐智能加载，http请求变多、编程难度增加
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                easyloader.load("dialog", function() {
+                    $("#box").dialog()
+                })
+            })
+        </script>
+    </body>
+</html>

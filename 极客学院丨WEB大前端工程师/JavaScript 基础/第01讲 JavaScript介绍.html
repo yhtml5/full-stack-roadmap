@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        </head>
+    <body>
+          <h2>javascript介绍</h2>     
+           <ol>
+               <li>JavaScript是互联网上最流行的脚本语言，可用于Web、HTML，广泛用于服务器、pc端、移动端</li>
+               <li>特点：
+                 <ul type="disc">
+                   <li>JavaScript是一种轻量级的编程</li>
+                   <li>JavaScript是可以插入HTML页面的编程代码</li>
+                   <li>JavaScript插入HTML页面后，可由所有浏览器执行</li>
+                   <li>不限制使用次数</li></ul>
+                 <li>语句：
+                     <ul type="disc">
+                     <li>JavaScript语句是向浏览器发出命令，告诉浏览器该做什么</li>
+                     <li>语句间用英文分号";"，可选的</li>
+                     <li>按照编写顺序执行的，如果同一选择器，后面执行覆盖前面</li>
+                     <li>标识符必须以字母、下划线、美元符号开始</li>
+                     <li>JavaScript关键词，不能当作标识符</li>
+                     <li>对大小写敏感</li>
+                     <li>空格不影响，不能在单词中间换行</li>
+                     <li>保留字，不建议使用做标识符</li>
+                     <li>单行注释// 多行注释/*...*/</li>
+                 </ul></li>
+                 <li>快捷键：
+                     <ol>
+                         <li>ctrl+/  能快速注释html、css、js代码</li>
+                     </ol></li>
+           </ol>     
+        <hr /><p id="pid">world</p>
+                 <script>
+            document.write("<h1>标题</h1>");
+            //打印h1标题
+            document.getElementById("pid").innerHTML="baidu";
+            //获取id为pid的元素，html内部内容改成baidu
+        </script>
+        <script>document.write("hello");</script> 
+         <script>document.write("hello");</script>
+         <script>document.write("hello");</script>
+         <br />
+         <script>document.write("hello"); 
+         document.write("hello");
+         document.write("hello");
+        </script>
+         <script>
+            document.getElementById("pid").innerHTML="baidu";
+        </script> 
+       </body>
+</html>

@@ -1,0 +1,20 @@
+/*a:link{color: #FF0000;
+text-decoration: none;
+background-color: #88AA99;}未点击
+
+a:visited{color: #00FF00;} 已点击
+a:hover{color: #0000FF;}   鼠标悬浮
+a:active{color: #00FFFF;}  点击效果
+
+*/
+
+
+ul li{
+list-style-image: url("images\shuidi.png") ;}
+
+ul.ul2{list-style-type: disc;
+list-style-position: inside;}
+
+
+
+

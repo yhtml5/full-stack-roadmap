@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 事件   </title>
+       <link rel="stylesheet" type="text/css" href="phone\css\第48讲.css"/>
+       
+    </head>
+    <body onload="mgs()">  <!--onLoad网页加载事件  onUnload网页关闭事件-->
+        <form>
+            <input type="text" onchange="changeDemo1(this)"/><br /><!--文本内容改变事件-->
+            <input type="text" onselect="changeDemo2(this)"/><br /><!--文本框选中事件-->
+            <input type="text" onblur="changeDemo3(this)" /><br /><!--移开光标事件-->
+            <input type="text" onfocus="changeDemo4(this)"/><br /><!--光标聚集事件-->
+            
+        </form>
+        <div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div> <!--指定函数-->
+                      <!--鼠标移出事件                                            鼠标经过事件-->
+        
+        <button onclick="demo()">按钮</button> <!--点击调用函数-->
+        <script>
+         
+            function demo () {  //定义函数 
+               alert("Hello"); //弹出Hello
+           }
+            function onOver (ooj) {  //首字母小写，第二个大写
+               // alert("Hello"); //弹出Hello
+              ooj.innerHTML="Hello";
+            }
+            function onOut(ooj) {
+                ooj.innerHTML="World";
+             }
+            </script>
+            
+            <script> //可以定义多个"scrip"标签
+            function changeDemo1(bg) {
+                alert("Hello,内容改变了"); //也可以直接写 onchange="alert('hello')"
+            function changeDemo2(bg) {
+               bg.style.background="#5559FF";
+               }
+            function changeDemo3(bg) {
+               bg.style.background="#8859FF";
+               }
+            function changeDemo4(bg) {
+               bg.style.background="#5669FF";
+               }
+            function mgs () {  //定义函数 
+               alert("网页加载完毕"); //弹出Hello
+           }
+             
+            
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+/*body{
+   
+    background-image: url("images/background/1.jpg");
+  }
+*/
+
+p{width:150px; padding:10px; background-color: #ADFF2F }
+
+
+/* p{width:100px; background-image: url(images/background/2.jpg);} */
+
+
+body{
+   
+    background-image: url("images/background/1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 600px 600px;
+    
+    /*background-position: right top;  /*也能用百分比、PX*/
+   
+   
+   
+  }
+
+
+
+
+

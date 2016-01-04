@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> 新input元素  </title>
+		
+	</head>
+	<body>
+	    <form>
+	        <input type="url" name="url" value="http://www.baidu.com" /><!--默认网址，可输入，提交时检查网址-->
+	        <input type="submit" value="提交" />
+	    </form>
+	    <form>
+            <input type="email" name="email" value="1417376255@qq.com" /><!--默认邮箱地址，可输入，提交时检查网址-->
+            <input type="submit" value="提交" />
+        </form>
+        <form>
+        <input type="date" value="" />
+        <input type="time" name="time" id="time" value="10:00" />
+        <input type="datetime" name="datetime" id="datetime" value="" />
+        <input type="datetime-local" name="datetime-local" id="datetime-local" value="" />
+        <input type="week" name="week" id="week" value="" />
+        <input type="month" name="month" id="month" value="" />
+        <input type="number" name="number" id="number" value="15" max="100" min="0" step="5" />
+        <!--    规定元素类型        规定元素名称             唯一的id  规定元素的值       规定最大、最小值      规定输入字的的合法数字间隔-->
+        </form><br />
+        
+        <form><!--计算器-->
+            <input type="number" id="num1"/>
+            +
+            <input type="number" id="num2" />
+            =
+            <input type="number" id="result" readonly=""/>
+            <input type="button" value="计算" onclick="sum()" />
+        </form>
+        <script>
+            function sum() {//定义函数，用getElementById获取HTML5的元素
+                var n1=document.getElementById("num1").valueAsNumber;//value表示字符相加
+                var n2=document.getElementById("num2").valueAsNumber;
+                document.getElementById("result").valueAsNumber=n1+n2;              
+            }
+        </script>
+        
+	</body>
+</html>

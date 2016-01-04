@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> 新form </title>
+		
+	</head>
+	<body>
+	    <form id="text">
+	        <textarea form="testform"></textarea><!--可以将textarea在form外部编写引用-->
+	    </form>
+	    <form id="textarea">
+	        <input type="submit" name="s1" value="v1" formaction="xxx.jsp"/>注册
+	        <!--submit对象，表示提交按钮，一个submit对象被创建 ；name规定input元素名称；
+	            value属性为input设定值；覆盖form元素的action属性，与type="submit"配合使用 -->
+	    </form>
+	    <form id="textform"><!--可使用formmethod来对每一个表单元素分别指定不同的提交方法-->
+	        <input type="submit" name="s2" value="v2" formmethod="post" />登录<br />
+	        <input type="submit" name="s3" value="v3" formmethod="get" />体验登录
+	        <!--这里设计jsp与后台数据交互-->
+	    </form>
+	    <form><!--formenctype为表单元素分别指定编码方式-->
+	        <input type="text" formenctype="text/plain" /><br />
+	        <input type="text" formenctype="multipart/form-data" /><br />
+	        <input type="text" formenctype="application/x-www-form-urlencoded" />
+	    </form>
+	           
+	</body>
+</html>

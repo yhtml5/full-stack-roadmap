@@ -1,0 +1,11 @@
+body{margin: 10px auto;width: 70%;height: auto;background-color: #DDDDDD;}
+     /*左右自适应居中                  宽度70%*/
+.image{border: 1px solid #999999;width: auto;height: auto;float: left;text-align: center;
+margin: 5px}
+     /*  边框粗细颜色                                                                                                                       向左浮动*/
+img{margin: 5px;opacity: 0.8}
+               /*透明度0.8*/
+.text{font-size: 24px;margin-bottom: 8px;}
+        /*字体大小                              距离底部8px*/
+a:hover{background-color: #1199EE;}
+/*鼠标悬浮效果*/

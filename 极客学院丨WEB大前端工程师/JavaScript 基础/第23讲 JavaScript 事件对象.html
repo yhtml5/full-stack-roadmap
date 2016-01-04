@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 事件对象 </title>
+    
+       
+    </head>
+    <body > 
+            
+             <div id="div">
+             <button id="btn1">北京</button><br />
+             <a id="aid" href="http://www.baidu.com">百度</a>
+             </div>
+          
+             <script>
+                 document.getElementById("btn1").addEventListener("click,showType");
+                 document.getElementById("div").addEventListener("click,showDiv");
+                 document.getElementById("aid").addEventListener("click,showA");
+                 function showType (event) {
+                //     alert(event.type);
+                     alert(event.target);//获取时间类型
+                     event.stopPropagation();//阻止事件冒泡
+                  }
+                  function showDiv () {
+                    alert("div"); 
+                  }
+                 function showA (event) {
+                    event.stopPropagation();//阻止事件冒泡
+                    event.preventDefault();//阻止事件默认行为
+                 
+                 
+                 
+                 
+             </script>       
+          
+          
+          
+          
+          
+          
+          
+    </body>
+</html>

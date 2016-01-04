@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 异常捕捉   </title>
+        
+      
+        
+    </head>
+    <body>
+         <!--当JS运行发生错误，导致程序无法运行时跳出的事件-->
+         
+         <form> 
+             <input id="txt" type="text" />
+             <input id="btn" type="button" onclick="demo()" value="按钮"/>  <!--点击调用demo-->
+             </form>
+         
+         <script>
+             
+             var str="Hello" //定义
+             function demo () { 
+                 try{alert(str);
+                     }catch(err){//发生错误触发catch
+                         alert(err);
+                     }
+             }
+              demo();//调用函数
+              
+              
+            function demo () {
+                try{var e=document.getElementById("txt").value;//监听文本框内容
+                if (e=="") { //内容为空
+                    throw"请输入密码";
+                };
+                }catch(err){alert(err);}
+              
+            }
+             
+              
+         </script>
+    
+        
+        
+    </body>
+</html>

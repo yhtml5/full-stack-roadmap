@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/icon.css"/>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
+    </head>
+    <body>
+        <h2>Draggable拖动组件</h2>
+        <div id="box0" class="easyui-draggable" style="width: 200px;height: 200px;background-color: #00ffff;">
+            class调用模式
+        </div>
+        <div class="box11" style="width: 200px;height: 200px;background-color: #F0F8FF;">
+            axis（拖动轴）参数为：v
+        </div>
+        <div class="box12" style="width: 200px;height: 200px;background-color: #F0F8FF;">
+            axis（拖动轴）参数为：h
+        </div>
+        <div class="box13" style="width: 200px;height: 200px;background-color: #F5F5DC;">
+            axis（拖动轴）参数为：null
+        </div>
+        <div class="box2" style="width: 200px;height: 200px;background-color: #FFEBCD;">
+            cursor（指针）
+        </div>
+        <div class="box3" style="width: 200px;height: 200px;background-color: #8A2BE2;">
+            disabled（停止拖动）
+        </div>
+        <div class="box4" style="width: 200px;height: 200px;background-color: #6495ED;">
+            deltaX（水平增量，X轴）
+            <br />
+            deltaY（垂直增量，y轴）
+        </div>
+        <div class="box6" style="width: 200px;height: 200px;background-color: #00CED1;">
+            edge（边缘）
+        </div>
+        <div class="box7" style="width: 200px;height: 200px;background-color: #9400D3;">
+            <p class="ppp">
+                handle（句柄）
+            </p>
+        </div>
+        <div class="box8" style="width: 200px;height: 200px;background-color: #00BFFF;">
+            proxy（替代）
+        </div>
+        <div class="box9" style="width: 200px;height: 200px;background-color: #1E90FF;">
+            proxy（替代）
+        </div>
+        <div class="box10" style="width: 200px;height: 200px;background-color: #008000;">
+            revert（复原）
+        </div>
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+                $('.box11').draggable({
+                    axis : 'h',//拖动轴丨可用值为'v'、'h'，当设置为空时，元素可以同时在水平垂直方向拖动
+                })
+                $('.box12').draggable({
+                    axis : 'v',//拖动轴丨可用值为'v'、'h'，当设置为空时，元素可以同时在水平垂直方向拖动
+                })
+                $('.box13').draggable({
+                    axis : null,//拖动轴丨可用值为'v'、'h'，当设置为空时，元素可以同时在水平垂直方向拖动
+                })
+                $('.box2').draggable({
+                    cursor : 'text',//指针丨拖动时CSS指针，默认：move
+                })
+                $('.box3').draggable({
+                    disabled : true,//停止拖动丨停止拖动，默认为false
+                })
+                $('.box4').draggable({
+                    proxy : 'clone',
+                    deltaX : 10, //水平增量，X轴丨被拖动元素对应于当前指针的水平位置
+                    deltaY : 10,//垂直增量，Y轴丨被拖动元素对应于当前指针的垂直位置
+                })
+                $('.box6').draggable({
+                    edge : 50,//边缘丨可以在其中拖动的容器宽度，50为边缘不可拖动的像素
+                })
+                $('.box7').draggable({
+                    handle : '.ppp',//句柄丨开始拖动的句柄
+                })
+                $('.box8').draggable({
+                    proxy : 'clone',//替代丨使用该元素的复制元素作为替代元素
+                })
+                $('.box9').draggable({
+                    proxy : function(source) {
+                        var p = $('<div style="width:400px;height:200px;border:1px" dashed </div>')
+                        p.html($(source).html()).appendTo('body');
+                        return p;
+                    }
+                })
+                $('.box10').draggable({
+                    revert : true,//复原丨如果设置为true, 当拖动停止时元素将返回它的初始位置,默认为false
+                })
+            })
+        </script>
+    </body>
+</html>

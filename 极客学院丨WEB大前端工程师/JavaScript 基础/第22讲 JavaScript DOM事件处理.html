@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 事件流 </title>
+    
+       
+    </head>
+    <body > 
+             <!--1.事  件  流 ：描述在页面中接收事件的顺序
+                 2.事件冒泡：从具体到节点
+                 3.事件捕获： HTML-div-button-->
+                 
+             <div id="div1">甜甜
+             <button id="btn1">北京</button>
+             </div>
+             
+             <!--<script>//要改两处函数
+                 function demo () {
+                     alert("我爱你");
+                }
+             </script> -->
+             
+             <!--<script>//DOM 0级事件处理，只需要改一处
+                 var btn1=document.getElementById("btn1");
+                 btn1.onclick=function(){alert("我爱你1")};//会被覆盖
+                 btn1.onclick=function(){alert("我爱你2")};
+                 btn1.onclick=null;//撤销点击事件
+                </script>  -->
+                
+             <!--<script>//DOM 2级事件处理，语法：add EventListener(事件，函数)
+                 var btn1=document.getElementById("btn1");
+                 btn1.addEventListener("click,demo1");
+                 btn1.addEventListener("click,demo2");
+                 btn1.addEventListener("click,demo3");
+                 function demo1 () {
+                     alert("2级事件处理1")
+                  }
+                 function demo2 () {
+                     alert("2级事件处理2")
+                  }
+                 function demo3 () {
+                     alert("2级事件处理3")
+                  }
+                 btn1.removeEventListener("click,demo2");
+                </script>-->
+              <script>
+                  var btn1=document.getElementById("btn1");
+                  if (btn1.addEventListener) {
+                      btn1.addEventListener("click",demo);
+                  } else if{
+                      btn1.attachEvent) {
+                      btn1.attachEvent("onclick",demo);
+                   }else{
+                       btn1.onclick=demo();
+                   }
+                   function demo () {
+                       alert("hello");
+                   }
+              </script>  
+                    
+          
+          
+          
+          
+          
+          
+          
+    </body>
+</html>

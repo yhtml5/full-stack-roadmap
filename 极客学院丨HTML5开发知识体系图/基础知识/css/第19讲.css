@@ -1,0 +1,12 @@
+/* #tb,tr,th,td{border: 2px solid #99FFAA;background-color: #FF0099;text-align: center}
+边框大小、颜色；背景颜色；文字居中/
+*/
+
+
+#tb{border-collapse: collapse;width: 500px;height: 200px;}/* 边框合并、宽度、高度*/
+
+
+#tb td,#tb th{border: 3px solid #665599;padding: 5px;}
+
+#tb th{text-align: center;background-color: #ADFF2F;color: #FF0099}
+#tb tr.alt td{color: black;background-color: #FF0099;}

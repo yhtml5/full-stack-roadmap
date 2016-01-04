@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> DOM对象  </title>
+      
+       
+    </head>
+    <body > 
+                  <!--Document Object Model文档对象模型-->
+        <p id="pid">world</p>
+        <a id="aid" href="http://www.baidu.com">hello</a><br />
+        <img src="phone\css\images\头像\1.jpg" id="img1"/><br />
+        <button onclick="demo4()">按钮</button> <!--点击事件引用的函数-->
+        <script>
+        function demo1 () {
+          document.write("hello");//改变HTML输出流
+        }  //绝对不要在文档加载完成之后使用document.write("");这会覆盖该文档
+        function demo2 () {
+            var nv=document.getElementById("pid").innerHTML="甜甜";//通过id寻找HTML元素,改变内容
+            //nv.innerHTMl="甜甜";
+            //document.getElementsByTagName("p").innerHTML="紫曦";//通过寻找HTML元素,相同元素中的第一个
+         }
+        function demo3 () {
+           document.getElementById("aid").href="http://www.taobao.com";//通过id寻找HTML元素,改变链接
+           
+        }  
+        function demo4 () {
+           document.getElementById("img1").src="phone\css\images\头像\11.jpg";//通过id寻找HTML元素,改变图片 需根目录
+        }  
+        </script>
+       
+    </body>
+</html>

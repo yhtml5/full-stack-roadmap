@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 句柄 </title>
+    
+       
+    </head>
+    <body > 
+        <!--  <p id="pid">甜甜</p>
+          <button id="btn" onclick="change()">北京</button>
+          
+          
+          <script>
+              function change()  {
+                  document.getElementById("pid").innerHTML="world"; //改变pid元素内容
+         } 
+               
+                 
+          </script>
+          -->
+          
+          <button id="btn" >北京</button>
+         <script>
+              //document.getElementById("btn").addEventListener("click",function  () {alert("hello")});
+             //访问HTML中的id                  添加句柄  （点击时间，函数）
+       
+             var x =document.getElementById("btn")//分开写法，定义x来寻找HTML元素
+             x.addEventListener("click",hello);//添加句柄，监听点击事件
+             x.addEventListener("click",world);
+             x.removeEventListener("click",world);//移除句柄
+             
+             function hello () {alert("hello");}//执行的函数
+             function world () {alert("world");}
+             
+             
+                 
+          </script>
+          
+    </body>
+</html>

@@ -1,0 +1,52 @@
+td{
+    /*padding: 100px; 总设置*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;/*上下左右 */
+}
+
+p{
+    border-style: double;/* 样式 */
+    border-width: 10px;/* 边距 */
+    border-color: #996633;/*颜色*/
+    }
+    /* border-top-tyle left\right\bottom*/
+   
+   
+.cssyy1{
+    
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #00AA99;
+    text-align: center;
+    border: 8px solid #A35F2F;
+}
+
+.cssyy2{
+    background-color: #ADFF66;/*背景颜色 */
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #885566;/*阴影距上、距左、清晰度、颜色*/
+}
+
+body{margin: 0;}
+
+.mg{
+    background-color: #00AA99;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;}
+
+
+.container{margin: 30px;}
+.bd{border-style: dotted;width: 200px;}
+.pd{padding: 30px;}
+.content{background-color: #A0AA99;width: 300px}
+
+.container2{margin: 30px;}
+.bd2{border-style: dotted;width: 200px;}
+.pd2{padding: 30px;}
+.content2{background-color: #A0AA99;width: 300px}

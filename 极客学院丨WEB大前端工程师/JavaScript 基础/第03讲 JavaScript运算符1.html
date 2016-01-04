@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>运算符1</title>
+        
+      
+        
+    </head>
+    <body>
+        <p>i=10,j=10,i+j=?</p>
+        <p id="sumid"></p>
+        <button onclick="mysum()">结果</button>   <!-- 点击获取数值mysum() -->
+        <script>
+        function mysum(){         //function小写
+          var i=10;
+          var j=10;
+          var m=i+j;  //算数运算符【i-j、i*j、i/j、i%j（求余数）、++i（累加，先加再运算）、i--（累减、先运算再减）】
+                      //赋值运算符【+=:i+j、      -=:i-j、      *=:i*j、      /=:i/j、      %=:i%j】
+          var x="www.baidu.com"
+          var y=10; 
+          var z=x+y;  //字符串【"5"、"baidu"    任何类型运算符与字符串相加自动变为字符串】
+                      
+                      
+          document.getElementById("sumid").innerHTML=z;//访问HTML元素 使用 document.getElementById(id) 
+          }
+       
+       </script>
+      
+        
+        
+       
+          
+    </body>
+</html>

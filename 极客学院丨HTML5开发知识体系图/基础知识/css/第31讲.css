@@ -1,0 +1,5 @@
+.container{
+    column-width:250px;column-gap 5px;-webkit-column-width: 250px;-webkit-column-gap: 5px;}
+    /*   容器宽带                          容器间距          */
+.container div{width: 250px;margin: 5px 0;}
+.container p{text-align: center;}

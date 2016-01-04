@@ -1,0 +1,21 @@
+div{width: 100px;height: 100px;background-color:#138899;}
+.div1{transform: translate(200px;200px);  /*移动*/
+-webkit-transition: translate(200px;200px);-ms-transition: translate(200px;200px);
+-o-transition: translate(200px;200px);-moz-transition: translate(200px;200px);}
+
+.div2{transform: rotate(18deg);margin-bottom:60px;margin-top:60px;/*旋转*/
+-webkit-transition: rotate(180deg);-ms-transition: rotate(180deg);
+-o-transition: rotate(180deg);-moz-transition:rotate(180deg);}
+
+.div3{transform: scale(1,2);/*缩放*/
+-webkit-transition:scale(1,2);-ms-transition: scale(1,2);
+-o-transition: scale(1,2);-moz-transition:scale(1,2);}
+
+.div4{transform: skew(50deg,50deg);margin-top: 200px;/*倾斜*/
+-webkit-transition: skew(50deg,50deg);-ms-transition: skew(50deg,50deg);
+-o-transition: skew(50deg,50deg);-moz-transition:skew(50deg,50deg);}
+
+.div5{transform: rotateX(200deg);/*X轴旋转*/
+-webkit-transition: rotateX(100deg);-ms-transition: rotateX(100deg);
+-o-transition: rotateX(100deg);-moz-transition:rotateX(100deg);}
+

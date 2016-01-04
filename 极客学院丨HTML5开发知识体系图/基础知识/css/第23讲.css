@@ -1,0 +1,17 @@
+#position1{width: 100px;height: 100px;background-color: #99FF22;
+position: fixed;left:30px;top: 10px;z-index: 1;}
+#position2{width: 100px;height: 100px;background-color: #FF3399;
+position: fixed;left:40px;top: 20px;z-index: 2;}
+#position3{width: 100px;height: 100px;background-color: #AA1122;
+position: fixed;left:50px;top: 30px;z-index: 3;}
+
+
+#container1{width: 400px;height:300px;background-color: #AAAAAA;float: left;}
+#fd1{width: 150px;height: 300px;background-color: #99FF22;float: left;}/*向左浮动，依次排列*/
+#fd2{width: 200px;height: 100px;background-color: #00AA99;float: left;}
+#fd3{width: 200px;height: 100px;background-color: #1199FF;float: left;}
+#text{clear: both;}/*清除浮动left|right|both|inherit*/
+
+li{list-style: none;}
+#div1{width: 700px;height: auto;margin: 30px auto;text-align: center;}
+ul{width: 200px;float: left;}

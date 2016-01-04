@@ -1,0 +1,38 @@
+/*body{color: #99FFAA}
+
+p{color: #665599;
+text-align: left}
+
+h1{text-indent: -2em;
+padding-left: 2em;
+
+}
+
+p{padding-left: 2em;}
+
+
+#p1{text-transform: capitalize;}
+#p2{text-transform: lowercase;}
+#p3{text-transform: uppercase;}
+
+*/
+
+
+P{text-shadow: 6px 5px 2px #334499；/*左方、上方、清晰度、颜色 */
+width:50px; text-wrap:normal;}
+
+#p2{font-size: 40px;/*字体大小、*/
+font-family: monospace;/*类型:serif、sans-serif、monospace、cursive、fantasy*/
+font-style: italic;}
+
+@font-face{font-family: myfont;src:url();}
+
+div{font-family: myfont;}
+
+
+
+
+
+
+
+

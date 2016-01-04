@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		    div{background-color: #667733;width: 30px;height: 30px;float: left;}
+		</style>
+	</head>
+	<body>
+	    <h2>jQuery特效</h2>
+	    <button id="btn1">点击隐藏</button>
+	    <button id="btn2">点击显示</button>
+	    <button id="btn3">隐藏显示</button>
+	    <p>我会隐藏</p>
+	    <script src="js/jquery-1.11.3.js"></script>
+	    <script src="js/第06课 animation.js"></script> <!-- 后面加载的js会覆盖前面，所以弄清楚依赖关系 -->
+	    <script>
+	        for (var i=0; i < 5; i++) {
+	            $("<div>").appendTo(document.body);//将每一个元素插入到目标的末端
+			 }
+			$("div").click(function () {
+			    $(this).hide(2000,function () {
+			        $(this).remove();//点击隐藏并移除当前元素
+				  
+				});
+			  
+			})
+	    </script>
+	</body>
+</html>

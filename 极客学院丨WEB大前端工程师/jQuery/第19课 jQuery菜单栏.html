@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .main,.hmain {
+                background-color: #997722;
+                background-repeat: repeat-x;
+                width: 100px;
+            }
+            ul, li {
+                list-style: none;
+            }
+            ul {
+                padding: 0px;
+                margin: 0;
+            }
+            li {
+                background-color: #eeeeee;
+            }
+            a {
+                text-decoration: none;
+                padding-left: 20px;
+                display: block;
+                width: 80px;
+                padding-left: 3px;
+                padding-bottom: 3px;
+            }
+            .main a,.hmain a {
+                color: #ffffff;
+                background-color: #778872;
+                background-repeat: no-repeat;
+                background-position: 3px center;
+            }
+            .main li a ,.hmain li a{
+                color: #000000;
+            }
+            .main ul,.hmain ul {
+                display: none;
+            }
+            .hmain{float: left;}
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="main">
+                <a href="#">menu1</a>
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="main">
+                <a href="#">menu1</a>
+
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="main">
+                <a href="#">menu1</a>
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+        <ul>
+            <li class="hmain">
+                <a href="#">menu1</a>
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="hmain">
+                <a href="#">menu1</a>
+
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="hmain">
+                <a href="#">menu1</a>
+                <ul>
+                    <li>
+                        <a href="#">children1</a>
+                    </li>
+                    <li>
+                        <a href="#">children2</a>
+                    </li>
+                    <li>
+                        <a href="#">children3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".main a").click(function() {
+                    var ulnode = $(this).next("ul")
+                    if (ulnode.css("display") == "none") {
+                        ulnode.css("display", "block");
+                    } else {
+                        ulnode.css("display", "none")
+                    }
+                })
+                $(".hmain").hover(function() {
+                    $(this).children("ul").slideToggle(1000);
+                })
+            })
+        </script>
+    </body>
+</html>
+

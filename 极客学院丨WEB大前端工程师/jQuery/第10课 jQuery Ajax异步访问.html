@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <h2>jQuery Ajax</h2>
+        <input type="text" name="namevalue" id="namevalue" value="" />
+        <br />
+        <button id="btn">Send</button>
+               结果：<span id="result"></span>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script>
+           $(document).ready(function () {
+               $("#btn").on("click",function () {
+                   $("#result").text("请求数据中...")//增加等待效果
+                   $.get("Server.php",{name:$("#namevalue").val()},function (data) {
+                       alert("Hello");
+                       $("#result").text(data)
+                    }).error(function () {
+                       $("#result").text("通讯故障")//.text()用来读取或修改元素的纯文本内容
+               })                
+             }) 
+           })
+        </script>
+    </body>
+</html>

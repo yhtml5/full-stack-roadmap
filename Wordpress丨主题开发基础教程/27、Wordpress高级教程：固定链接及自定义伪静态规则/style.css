@@ -1,0 +1,135 @@
+/* 
+Theme Name: 黄聪的笔记本 
+Theme URI: http://hcsem.com/huangcong
+Description: 黄聪指导的第一个主题模版
+Version: 1.0
+Author: 黄聪
+Author URI: http://hcsem.com 
+Tags: 简洁，双栏
+*/ 
+body{font-family:'Microsoft YaHei','微软雅黑',Tahoma,Verdana,Arial,Helvetica,sans-serif;font-size:12px;}
+#header {
+  background: #90a090;
+  border-bottom: double 3px #aba;
+  border-left: solid 1px #9a9;
+  border-right: solid 1px #565;
+  border-top: solid 1px #9a9;
+  margin: 0;
+  padding:60px;
+}
+
+#header {
+  background: url("images/headerbg.png") ;
+}
+
+#content{
+  background: #FEFEFE;
+  border-bottom: double 3px #aba;
+  border-left: solid 1px #9a9;
+  border-right: solid 1px #565;
+  border-top: solid 1px #9a9;
+  margin-top:10px;
+  padding:60px;
+}
+
+#home-loop{margin-top:10px;}
+
+.post-item{width: 610px;
+padding: 20px;
+border: 1px solid #CFCFCF;
+box-shadow: 0 0 5px #C6C6C6;
+background-image: url("images/r.png");
+background-repeat: no-repeat;
+background-position: 99% 5px;
+margin-bottom: 20px;}
+
+.post-item h2 {
+font-size: 26px;
+margin: 10px 0;
+}
+.post-item h2 a{
+color: #2280DA;
+text-decoration: none;
+}
+
+.post-meta
+{
+	margin: 0 0 10px;
+	font-size: 12px;
+	color: #8C8C8C;
+}
+.post-meta a, .post-meta span {
+	color: #8C8C8C;
+}
+
+#left-box{float:left;width:650px;}
+#right-box{float:left;width:300px;margin:10px 0 0 10px;}
+.posts_nav_link{font-size:12px;text-align:center;}
+.posts_nav_link a{text-decoration:none;}
+
+.sbox{padding: 10px;border: 1px solid #CFCFCF;box-shadow: 0 0 5px #C6C6C6;margin-bottom: 10px;font-size:12px;}
+.sbox h2 {
+	border-left: 4px solid #3780D3;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 15px;
+	font-size: 18px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.c{clear:both;width:960px;margin:0 auto;display:block;}
+.clr{clear:both;font-size:0px;line-height:0px;height:0px;}
+.footer{text-align:center;font-size:12px;margin:30px 0;}
+
+.cat-title{padding: 10px;border: 1px solid #CFCFCF;box-shadow: 0 0 5px #C6C6C6;margin: 10px 0 0 0;font-size:12px;}
+
+#post-box{margin-top:10px;}
+.post-nav{font-size:12px;margin-top:30px;color:#999;}
+
+#page-box{margin-top:10px;}
+#page-box .post-item{width:918px;}
+
+
+#comment-box{padding:20px;border: 1px solid #CFCFCF;box-shadow: 0 0 5px #C6C6C6;margin-top:10px;font-size:12px;}
+#comment-box h3{border-left: 4px solid #3780D3;height: 26px;line-height: 26px;padding-left: 15px;font-size: 18px;margin-bottom: 5px;margin-left: 5px;}
+h3#comments, #respond h3{font-size:14px;color:#000;margin:10px 0;clear:both;}
+#commentform{margin:5px 0 0 0;}
+#commentform input{padding:2px;margin:5px 5px 1px 0;}
+#commentform label{font-size:11px;}
+#commentform textarea{width:98%;padding:2px;margin:0;border:1px solid #aaa;font:11px Georgia, "Times New Roman", Times, serif;}
+#commentform p{margin:5px 0;font-size:11px;line-height:15px;}
+#commentform fieldset{border:none;padding:0;margin:0;}
+#commentform #submit{margin:0 5px 5px auto;font-size:12px;float:right;}
+#respond{color:#666;overflow:hidden;}
+#respond:after{content:"."; display:block;height:0;clear:both;visibility:hidden;}
+#cancel-comment-reply-link{font-size:10px;font-weight:bold;}
+ol.commentlist,ul.children{padding:0;border-left:none;}
+.commentlist{color:#000;padding:0;list-style:none;}
+.commentlist li{margin:10px 0;padding:5px 0 5px 10px;clear:both;}
+.commentlist li ul li{font-size:1em;}
+.commentlist p{margin:10px 0;font-weight:normal;line-height:1.5em;text-transform:none;}
+.commentlist li .avatar{float:right;border:1px solid #9c9c9c;padding:2px;margin-right:5px;background:#fff;}
+.commentlist li a{color:#000;}
+.commentlist .says{color:#999;}
+ul.children{padding:0;margin:0 10px 0 0;list-style:none;}
+.commentlist cite, .commentlist cite a{font-weight:bold;font-style:normal;font-size:14px;margin-right:5px;}
+.nocomments{text-align:center;}
+.commentmetadata{display:block;font-weight:normal;}
+.commentmetadata,.commentlist li .commentmetadata a{color:#999;font-size:12px;}
+.thread-alt{background-color:#eee;}
+.thread-even{background-color:#fff;}
+.even{background-color:#FFFFFF;border:1px solid #2AACE0;border-left:4px solid #2AACE0;}
+.commentlist .even  cite a,.commentlist .even  .comment-reply-link{color:#2AACE0;}
+.odd{background-color:#FFFEEE;border:1px solid #C32127;border-left:4px solid #C32127;}
+.commentlist .odd  cite a,.commentlist .odd  .comment-reply-link{color:#C32127;}
+
+._404{text-align:center;}
+
+.nav{border:1px solid #369FF6;background-color:#FFF;line-height:20px;position:relative;margin-top:10px;float:left;width:958px;}
+.nav ul{padding-left:0;}
+.nav li{list-style:none;float:left;position:relative;margin:0 0 10px 40px;}
+.nav li a:hover, .nav li.current-menu-item a{border-color:#369FF6;color:#369FF6;text-decoration:none;}
+.nav li a{border-bottom:3px solid white;color:#333;float:left;line-height:31px;font-size:18px;white-space:nowrap;-moz-transition:all 0.1s ease-in;-webkit-transition:all 0.1s ease-in;text-decoration:none;}
+
+.wz{margin-top:5px;float:left;}

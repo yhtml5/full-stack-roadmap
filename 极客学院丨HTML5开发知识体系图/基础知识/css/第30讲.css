@@ -1,0 +1,8 @@
+div{
+    column-count: 3;-webkit-column-count: 3;
+    /*分列的数量                       火狐、苹果浏览器*/
+    column-gap: 30px;-webkit-column-gap: 30px;
+    /*分列的距离                      火狐、苹果浏览器*/
+    column-rule:5px outset #886632;-webkit-column-rule: 5px outset #993344;
+    /*分列的边框宽度、颜色                         火狐、苹果浏览器*/
+}

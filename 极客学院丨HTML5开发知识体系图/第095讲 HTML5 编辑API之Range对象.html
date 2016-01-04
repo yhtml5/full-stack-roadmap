@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title> Range对象  </title>
+	</head>
+	<body>
+	    Selection对象与Range对象的使用
+	    <!--Range 对象表示文档的连续范围区域，如用户在浏览器窗口中用鼠标拖动选中的区域。-->
+	    <input type="button" name="" id="" value="获取"  onclick="rangeTest1()"/>
+	    <div id="showRange"></div>
+	    <script>
+            function rangeTest1 () {
+              var html;
+              showRangeDiv=document.getElementById("showRange");
+              selection=document.getSelection();
+              if (selection.rangeCount>0) {
+                  html="您选取了>"+selection.rangeCount+"<内容<br/>";
+                  for (var i=0; i <selection.getRangeCount; i++) {
+                    var range=selection.getRangeAt(i);
+                    html+="第"+(i+1)+"段内容为："+Range+"<br/>";
+                  }showRangeDiv.innerHTML=html;
+              };
+            }
+        </script>
+	    <br />
+	    
+	    <div id="div" style="background-color: #FF3311;width: 300px;height: 50px">
+			元素中的内容
+		</div>
+		<button onclick="deleteRangeContent(true)">删除内容</button>
+		<button onclick="deleteRangeContent(false)">删除元素</button><br />
+	    <script>
+	        function deleteRangeContent (onlyContent) {
+	            var div=document.getElementById("div");
+	            var rangeObj=document.createRange();//创建Range对象
+	            if (onlyContent) {
+	                rangeObj.selectNodeContents(div);//选取当前节点内容的开始到结束
+	                rangeObj.deleteContents();//删除内容
+	            } else{
+	                rangeObj.selectNode(div);//选区整个div
+	                rangeObj.deleteContents();
+	            };}
+	    </script><br />
+	    
+	    <div id="myDiv" style="color: #00AA11">
+	                               这段文字是用来删除的,浏览器可能不支持 	
+		</div>
+		<button onclick="deleteChar()">删除文字</button><br />
+		<script>
+		    function deleteChar(){
+		        var div = document.getElementById("myDiv");
+		        var textNode = div.firstChild;//firstChild 属性返回指定节点的首个子节点，以 Node 对象
+		        var rangeObj = document.createRange();//createRange() 方法创建 Range 对象。
+		        rangeObj.setStart(textNode,1);
+		        rangeObj.setEnd(textNode,3);
+		        rangeObj.deleteContents();
+		        }
+		</script><br />
+		
+		
+		<table border="1" id="mytable" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+                </tr>
+            <tr>
+                <td>Data1</td>
+                <td>Data2</td>
+                </tr>
+            <tr>
+                <td>Data3</td>
+                <td>Data4</td>
+                </tr>
+            </table>
+            <button onclick="deleteRow()">删除第一行 </button>
+            <script>
+                function deleteRow () {
+                    var table=document.getElementById("mytable");
+                    if (table.rows.length>0) {
+                        var row=table.rows[0];
+                        var rangeObj=document.createRange();
+                        rangeObj.setStartBefore(row);
+                        rangeObj.setEndAfter(row);
+                        rangeObj.deleteContents();
+                    };
+                }
+            </script> 
+            
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+		</body>
+</html>   

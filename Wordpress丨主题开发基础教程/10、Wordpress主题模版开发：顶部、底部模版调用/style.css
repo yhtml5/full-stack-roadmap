@@ -1,0 +1,81 @@
+/* 
+Theme Name: 黄聪的笔记本 
+Theme URI: http://hcsem.com/huangcong
+Description: 黄聪指导的第一个主题模版
+Version: 1.0
+Author: 黄聪
+Author URI: http://hcsem.com 
+Tags: 简洁，双栏
+*/ 
+#header {
+  background: #90a090;
+  border-bottom: double 3px #aba;
+  border-left: solid 1px #9a9;
+  border-right: solid 1px #565;
+  border-top: solid 1px #9a9;
+  margin: 0;
+  padding:60px;
+}
+
+#header {
+  background: url("images/headerbg.png") ;
+}
+
+#content{
+  background: #FEFEFE;
+  border-bottom: double 3px #aba;
+  border-left: solid 1px #9a9;
+  border-right: solid 1px #565;
+  border-top: solid 1px #9a9;
+  margin-top:10px;
+  padding:60px;
+}
+
+#home-loop{margin-top:10px;}
+
+.post-item{width: 610px;
+padding: 20px;
+border: 1px solid #CFCFCF;
+box-shadow: 0 0 5px #C6C6C6;
+background-image: url("images/r.png");
+background-repeat: no-repeat;
+background-position: 99% 5px;
+margin-bottom: 20px;}
+
+.post-item h2 {
+font-size: 26px;
+margin: 10px 0;
+}
+.post-item h2 a{
+color: #2280DA;
+text-decoration: none;
+}
+
+.post-meta
+{
+	margin: 0 0 10px;
+	font-size: 12px;
+	color: #8C8C8C;
+}
+.post-meta a, .post-meta span {
+	color: #8C8C8C;
+}
+
+#left-box{float:left;width:650px;}
+#right-box{float:left;width:300px;margin:10px 0 0 10px;}
+.posts_nav_link{font-size:12px;text-align:center;}
+.posts_nav_link a{text-decoration:none;}
+
+.sbox{padding: 10px;border: 1px solid #CFCFCF;box-shadow: 0 0 5px #C6C6C6;margin-bottom: 10px;font-size:12px;}
+.sbox h2 {
+	border-left: 4px solid #3780D3;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 15px;
+	font-size: 18px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.c{clear:both;width:960px;margin:0 auto;display:block;}
+.footer{text-align:center;font-size:12px;margin:30px 0;}

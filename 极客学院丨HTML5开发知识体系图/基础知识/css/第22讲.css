@@ -1,0 +1,16 @@
+*{margin: 0px;padding: 0px;}
+.top{width: 100%;height: 50px;background-color: #00AA99;}
+.top_content{width:75%;height: 50px;background-color: #00FFFF;margin: 0px auto;text-align: center}
+.body{width:75%;height:400px;background-color:#665599;margin: 20px auto;}/*外边距20px*/
+.body_img{width: 100%;height:100px;background-color: #996633;}/*body中的100%就是整体的75%*/
+.body_content{width: 100%;height:300px;background-color:#AAFFAA;text-align: center}
+.body_no{width: 100%;height: 40px;background-color:#FF9333;}
+.footing{width:75%;height:100px;background-color:#665599;margin: 0px auto;}/*上下0px，左右自动调节*/
+.footing_content{width: 100%;height:60px;background-color:#FFAA99;text-align: center}
+.footing_subnav{width: 100%;height:40px;background-color:#A35F66;}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> 新form3 </title>
+		
+	</head>
+	<body>
+	    <form><!--datalist在输入的时候提供默认的候选词-->
+	        <input type="text" name="greeting" list="greetings"/>
+	        <datalist id="greetings" style="display:"><!--默认不显示，list目前只有opera支持-->
+	        <option value="HTML5">HTML5</option>
+	        <option value="CSS3">CSS3</option>
+	        <option value="Android">Android</option></datalist>
+	    </form>
+	    <form><!--当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项-->
+	        <input type="text" name="greeting" autocomplete="on" list="greetings" />
+	    </form>
+	    <form><!--表单，不然输入无法提交-->
+	        <input pattern="[A-Z,1-9]{3}" name="part"/><!--对input进行检查，必须符合给定的样式-->
+	        <input type="submit" />
+	       </form>
+	    
+	    <form><!--复选框处于尚未明确选区状态-->
+	    <input type="checkbox" indeterminate id="cb" />test
+	    </form><br />
+	    <script>
+              var cb=document.getElementById("cb");
+              cb.indeterminate=true;
+        </script>
+        
+        <form action="http://www.baidu.com" method="post">姓名：<!--规定如何发送表单数据-->
+            <input type="text" name="name" /><!--alt表示无法显示图片时，用文字代替-->
+            <input type="image" src="phone\css\images\头像\1.jpg" alt="编辑" width="40" height="40"/>
+         </form><br /><!--指定图片的宽、高-->
+        
+	    <form>
+	        <input type="test" name="text" />
+	        <input type="button" value="点击我" onclick="AD()"/>
+	    </form>
+	    <script><!--用来获取用户操作-->
+	        function AD() {
+	            var control=document.forms[0]['text'];
+	            var Direction=control.selectionDirection;
+	            alert(Direction);
+			  }
+			  var cb=document.getElementById("cb");
+			  cb.indeterminate=true;
+	    </script>
+	</body>
+</html>

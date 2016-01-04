@@ -1,0 +1,12 @@
+ul{width:350px;height:auto;margin: 0px;padding: 0px;background-color: #AAAA99;
+list-style-type: none;text-align: center;}/*列表去点、文字居中*/
+a:link,a:visited{text-decoration: none;display: bolock;background-color:#1199AA;
+width: 60px;text-align: center;font-weight:900; }/*未点击、已点击效果：
+去文字下划线、bolock把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），允许规定宽度列表排列类型、
+文字居中、字体粗细*/
+
+a:active,a:hover{background-color: #ADAA2F;}
+li{padding:5px;padding-left: 5px;padding-right: 5px;}
+
+#li2{display: inline;padding: 0px;margin: 0px}
+

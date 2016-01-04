@@ -1,0 +1,29 @@
+/*div{width: 100px;height: 100px;background-color: #999999;
+-webkit-transition: width 2s,height 2s,-webkit-tranform 2s;
+transition: width 2s,height: 2s,transform: 2s;
+-webkit-transition-delay: 2s;transition-delay: 2s;}
+
+div:hover{width: 200px;height: 200px;
+transform: rotate(360deg);
+-webkit-transition: rotate(360deg);}
+*/
+
+div{width: 100px;height: 100px;background-color: #FF8899;
+animation: anim 5s infinite alternate;/*连续执行效果*/
+-webkit-animation: anim 5s infinite alternate;}
+
+@keyframes anim{
+    0%{background: #AA7652; left: 0px;top: 0px;}
+    25%{background: #882299; left: 200px;top: 0px;}
+    50%{background: #773315; left: 200px;top: 200px;}
+    75%{background: #FF5178; left: 0px;top: 200px;}
+    100%{background: #FFAA55; left: 0px;top: 0px;}
+}
+@-webkit-keyframes anim{
+    0%{background: #AA7652; left: 0px;top: 0px;}
+    25%{background: #882299; left: 200px;top: 0px;}
+    50%{background: #773315; left: 200px;top: 200px;}
+    75%{background: #FF5178; left: 0px;top: 200px;}
+    100%{background: #FFAA55; left: 0px;top: 0px;}
+}
+

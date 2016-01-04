@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.4/themes/icon.css"/>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
+    </head>
+    <body>
+        <h2>加载UI组件方式</h2>
+        <div style="width:400px;height:200px" id="box">
+            使用Js调用加载"（推荐）
+        </div>
+        <div class="easyui-dialog" style="width:400px;height:200px" data-options="title:'My Dialog',collapsible:true,iconCls:'icon-ok',onOpen:function(){}">
+            使用class方式加载
+        </div>
+        <script>
+            $("#box").dialog()
+        </script>
+    </body>
+</html>

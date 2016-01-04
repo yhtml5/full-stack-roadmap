@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> 新form2 </title>
+		
+	</head>
+	<body>
+	    <form>
+	    <input type="submit" name="i1" id="i1" value="v1" formtarget="_blank" formaction="https://www.baidu.com/" />
+	    <input type="submit" name="i2" id="i2" value="v2" formtarget="_self" formaction="https://www.baidu.com/" />
+	    <input type="submit" name="i3" id="i3" value="v3" formtarget="_top" formaction="https://www.baidu.com/" />
+	    <input type="submit" name="i4" id="i4" value="v4" formtarget="_framename" formaction="https://www.baidu.com/" />
+	    
+	    <!--可以对多个提交按钮分别使用foemtarget打开所需的加载界面。
+	        _blank:在新窗口打开；_self:默认。在本窗口打开；_parent:在父框架中打开；_top:在整个窗口中打开；_framename:在指定框架中打开。-->
+	    </form><br />
+	    <div ><a href="http://www.w3school.com.cn/tags/tag_input.asp">input说明帮助</a></div>
+	    <form>
+	        <input type="text" />
+	        <input type="text" autofocus="on"/><!--autofocus:获取当前鼠标聚焦-->
+	    </form>
+	    
+	    <form action="http://www.baidu.com">
+	        <input type="text" required="required"/><!--若内容为空，则显示相应提示内容-->
+	        <button type="submit">提交</button>
+	    </form>
+	    <br /><br />
+	    
+	    <form id="testform">
+	        <label id="label" for="txt_name">姓名：</label><!--代表该元素所绑定的元素集合-->
+	        <input id="txt_name" />
+	        <input type="button" id="btnValidate" value="验证" onclick="Validate()"/>
+	    </form>
+	    
+	    <script>
+	        function Validate () {
+	            var txtName=document.getElementById("txt_name");
+	            var button=document.getElementById("btnValidate");
+	            var form=document.getElementById("testform");
+	            if(txtName.value.trim()==""){
+	                var label=document.createElement("label");
+	                label.setAttribute("for","txt_name");
+	                form.insertBefore(label,button);//(依赖的父级空间,插入在XX元素前面)
+	                txtName.labels[1].innerHTML="请输入姓名";
+	                txtName.labels[1].setAttribute("style","font-size:9px;color:red");
+	                }
+			  
+			}
+	    </script>
+	           
+	</body>
+</html>

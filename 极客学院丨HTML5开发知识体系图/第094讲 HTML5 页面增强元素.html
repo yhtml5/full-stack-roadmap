@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title> 页面增强元素  </title>
+		
+	</head>
+	<body>
+	    <section>
+	        <h2>pregress</h2><!--代表任务完成百分比-->
+	        <p>完成的百分比<progress style="background-color: #"  id="p" max="00"><span>0</span>%</progress></p>.
+	        <!--span标签被用来组合文档中的行内元素-->
+	        <input type="button" onclick="btn()" value="点击" />
+	    </section>
+	    <script>
+	        function btn () {
+//	            for (var i=0; i <=100; i++) {
+//			  setTimeout (function(){
+//			      updateprogress(i);
+//			  },2000)
+//			};
+			 var i=0;
+			 function thread_one(){
+			     if (i<=100) {i++;
+			         updateprogress(i);}}
+			 setInterval(thread_one,100);//可按照指定的周期来调用函数
+			}
+			function updateprogress (newValue) {
+              var progressBar=document.getElementById("p");
+              progressBar.value=newValue;
+              progressBar.getElementsByTagName("span")[0].textContent=newValue;
+            }
+			</script>
+	    
+	    
+	    <figure><!--使用在代码实例、表格-->
+	    <img src="基础知识/res/images/头像/1.jpg" alt="美女"/>
+	    <img src="/res/images/头像/10.jpg" alt="美女"/>
+	    <img src="phone/css/images/头像/11.jpg" alt="美女"/>
+	    <figure>美女</figure><!--多张图片的描述-->
+	    </figure><br />
+	    
+	    <details id="detail" onclick="detail_onclick(this)">
+	        <summary>速8</summary>
+	        <p id="p" style="visibility: hidden">这是<mark>特地</mark>为你打造的旅馆</p>
+	    </details>
+	    
+	    <meter value="80" min="0" max="100" low="10" high="90" optimum="80"></meter><!--最适合-->
+	    <meter value="">40</meter>
+	    
+	    <ol start="9" reversed="">
+	        <!--从5开始       倒序-->
+	        <li>项目2</li>
+	        <li>项目3</li>
+	        <li>项目4</li>
+	        <li>项目5</li>
+	        <li>项目6</li>
+	    </ol>
+	    <dl>
+	        <dt>hello</dt>
+	        <dd><small>world</small></dd>
+	        <!--标签呈现小号字体效果-->
+	        <dt>小米</dt>
+	        <dd><cite>miui</cite></dd>
+	        <!--引用的文本将以斜体显示-->
+	    </dl>
+	    
+	    
+	    <script>
+	        function detail_onclick (detail) {
+			  var p=document.getElementById("p");
+			  if (detail.open) {
+			      p.style.visibility="hidden";
+			  } else{
+			      p.style.visibility="visible";
+			  };
+			}
+	    </script>
+	    </body>
+</html>   

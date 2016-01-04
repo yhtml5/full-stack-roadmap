@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                div1
+            </p>
+        </div>
+        <div>
+            <p>
+                div2
+            </p>
+        </div>
+        <div>
+            <p>
+                div3
+            </p>
+        </div>
+        <div>
+            <a>
+                div4
+            </a>
+        </div>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+        // first()寻找同一个元素中的第一个
+        // last()寻找同一个元素中的最后一个
+        // eq()将匹配元素集合缩减为位于指定索引的新元素
+        // filter()匹配元素集合缩减为匹配选择器或匹配函数返回值的新元素
+        // not()从匹配的元素集合中删除元素。
+            $("div p").fist().css("background-color","red")
+            $("div p").last().css("background-color","blue")
+            $("div p").eq(2).css("background-color","green")
+            $("div p").filter(p).css("background-color","#662288")
+            $("div p").not.css("background-color","#776183")
+        </script>
+    </body>
+</html>

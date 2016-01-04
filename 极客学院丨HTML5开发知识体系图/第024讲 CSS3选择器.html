@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择器</title>
+		<link rel="stylesheet" type="text/css" href="phone\css\第24讲.css"/>
+		<style>
+		    [title]{color: #6655AA;}
+		    [title~="title"]{font-size: 60px}
+		    [href="http://baidu.com"]{font-size: 20px;}
+		</style>
+	</head>
+	<body>
+	    <!-- <p>hello world!</p>
+	     <h1>标题1</h1>
+	     <h2>标题2</h2>
+	     <br /><br />
+	     <div class="div">百度</div>
+	 <p class="p1">this is my webapp</p>
+	 <p class="p2">this is my webapp</p>
+	 <p class="p1 p2">this is my webapp</p>
+	 -->
+	 <!--1、ID选择器具有唯一性
+               2、ID选择器不能结合使用
+               3、js需要使用到ID-->
+	 <div id="mydiv">hello</div>
+	 <div class="div4"></div>
+	  <div class="div4"></div>
+	   <div class="div4"></div><!--后代选择器-->
+	   <p title="t">百度1</p>
+	   <p title="tit">百度2</p>
+	   <p title="title">百度3</p>
+	   <p title="title 123">百度4</p>
+	   <a href="http://baidu.com">baidu</a>
+	   <!--子元素选择器-->
+	   <p>this is <strong>web <i>app</i></strong> </p>
+	   <p>this is <strong>web <i>app</i></strong> </p>
+	   
+	   <div><!--相邻元素选择器-->
+	       <ul>
+	           <li>item1</li>
+	           <li>item2</li>
+	           <li>item3</li>
+	       </ul>
+	       <ol>
+               <li>item4</li>
+               <li>item5</li>
+               <li>item6</li>
+           </ol>
+       
+	       
+	   </div>
+	 
+	</body>
+</html>
+
+

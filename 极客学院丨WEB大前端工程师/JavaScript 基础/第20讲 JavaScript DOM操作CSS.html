@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> DOM操作CSS </title>
+      <link rel="stylesheet" type="text/css" href="phone\css\第48讲.css"/>
+       
+    </head>
+    <body > 
+           <div class="div" id="div">hello</div>
+           <button onclick="demo()">甜甜</button>
+           
+           <script>
+               function demo () {
+                   document.getElementById("div").style.background="#639915";//改变CSS背景  不是background-color
+                   document.getElementById("div").style.color="#177FF5";//改变CSS字体颜色
+              }
+           </script>
+    </body>
+</html>
