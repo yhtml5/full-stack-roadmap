@@ -13,23 +13,9 @@
 				<h3>node</h3>
 				<ol>
 					<li>node -v</li>
+					<li>node //进入命令交互模式</li>
 					<li>sudo npm install -g n //安装版本管理</li>
 					<li>sudo n stable //安装最新稳定版的node</li>
-					<li>npm ls -g</li>
-					<li>npm install express //安装express模块</li>
-					<li>npm install -g express //全局安装express模块</li>
-					<li>npm uninstall express //删除指定的模块</li>
-					<li>npm update //升级当前目录下的项目的所有模块</li>
-					<li>npm update express</li>
-					<li>npm update -g express //升级全局安装的express模块</li>
-					<li>npm show express //显示模块详情</li>
-					<li>npm search express</li>
-					<li>npm publish</li>
-					<li>npm cache clean</li>
-					<li>sudo npm cache clean -f</li>
-					<li>npm config set proxy="http://127.0.0.1:8087" //设置代理地址 http://www.xxxx.com:port格式</li>
-					<li>npm config set registry="http://registry.npmjs.org" //设置npm源地址</li>
-					<li>npm install express --registry=http://registry.npmjs.org //e.g 安装时临时修改npm源地址,成功</li>
 
 				</ol>
 			</li>
@@ -61,6 +47,12 @@
 				<h3>fis3</h3>
 				<ol>
 					<li>fis3 -v</li>
+					<li>fis3 release -d ./output //构建发布到项目目录的 output 目录下</li>
+					<li>fis3 release -d ../dist //构建发布到项目父级目录的 dist 子目录下</li>
+					<li>进入项目根目录(配置文件fis-conf.js所在的目录)，执行命令，进行构建。</li>
+					<li></li>
+					<li></li>
+					<li></li>
 				</ol>
 			</li>
 			</li>
@@ -70,9 +62,16 @@
 		<h2>2.Issue</h2>
 		<ol>
 			<li>permission denied 权限问题//sudo chmod -R 777 /usr/local/</li>
-			<li></li>
+			<li>安装不成功，可能被墙，使用淘宝的cnpm</li>
 		</ol>
-		<ol></ol>
+		<h2>3.DOS 常用命令</h2>
+		<ol>
+			<li>cd 目录名：进入特定的目录。如果看到有个目录显示为：abcdef ghi 就 输入：cd abcdef.ghi进入该目录。</li>
+			<li>cd\ 退回到根目录。</li>
+			<li> cd..退回到上一级目录</li>
+			<li>cls 清除屏幕</li>
+
+		</ol>
 	</body>
 
 </html>
