@@ -1,0 +1,37 @@
+{
+    "res": {
+        "modules/html/header/header.scss": {
+            "uri": "/static/html/header/header.scss",
+            "type": "scss"
+        },
+        "modules/html/footer/footer.scss": {
+            "uri": "/static/html/footer/footer.scss",
+            "type": "scss"
+        },
+        "modules/css/common.scss": {
+            "uri": "/static/css/common.scss",
+            "type": "scss"
+        },
+        "modules/css/index.scss": {
+            "uri": "/static/css/index.scss",
+            "type": "scss"
+        },
+        "lib/es5-shim.js": {
+            "uri": "/static/lib/es5-shim.js",
+            "type": "js"
+        },
+        "lib/es5-sham.js": {
+            "uri": "/static/lib/es5-sham.js",
+            "type": "js"
+        },
+        "lib/html5-shim.js": {
+            "uri": "/static/lib/html5-shim.js",
+            "type": "js"
+        },
+        "lib/mod.js": {
+            "uri": "/static/lib/mod.js",
+            "type": "js"
+        }
+    },
+    "pkg": {}
+}
