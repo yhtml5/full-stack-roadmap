@@ -3,8 +3,6 @@ fis.set('project.name', 'fis3-base');
 fis.set('project.static', '/static');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '.');
-
-
 fis.set('project.files', ['*.html', 'map.json', '/test/*']);
 
 // 引入模块化开发插件，设置规范为 commonJs 规范。
