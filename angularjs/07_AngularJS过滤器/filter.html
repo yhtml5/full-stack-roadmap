@@ -33,7 +33,8 @@
 						</div>
 						<div class="card-block" ng-controller="namesCtrl">
 							<label for="">name:</label>
-							<h4 ng-bind="lastName|uppercase"></h4>
+							<h4 ng-bind="names[0] | uppercase"></h4>
+							<h4 ng-bind="names.name[0] | uppercase"></h4>
 							</div>
 					</div>
 					<div class="card">
