@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		input.ng-invalid {
+			background-color: lightblue;
+		}
+	</style>
+
+	<body>
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">ng-model 指令</h3>
+						</div>
+						<div class="card-block">
+							<p>使用 ng-model 指令来绑定输入域的值到控制器的属性。</p>
+							<div>
+								名字: <input ng-model="name">
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">双向绑定</h3>
+						</div>
+						<div class="card-block">
+							<label for="">名字:</label>
+							<input ng-model="doubelBind">
+							<h3>你输入了: {{doubelBind}}</h3>
+							<h3>你输入了: <span ng-bind="doubelBind"></span></h3>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">CSS类</h3>
+						</div>
+						<div class="card-block">
+							<p>ng-model 指令根据表单域的状态添加/移除以下类</p>
+							<ul>
+								<li>ng-empty</li>
+								<li>ng-not-empty</li>
+								<li>ng-touched</li>
+								<li>ng-untouched</li>
+								<li>ng-valid</li>
+								<li>ng-invalid</li>
+								<li>ng-dirty</li>
+								<li>ng-pending</li>
+								<li>ng-pristine</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--card-deck-->
+			</div>
+			<div class="card-deck-wrapper m-t-3">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">验证输入</h3>
+						</div>
+						<div class="card-block">
+							<form name="myForm">
+								<label for="">Email:</label>
+								<input type="email" name="myAddress" ng-model="text" placeholder="请输入您的邮箱地址">
+								<p class="text-warning" ng-show="myForm.myAddress.$error.email">不合法的邮箱地址</p>
+							</form>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">应用状态</h3>
+						</div>
+						<div class="card-block">
+							<form ng-app="" name="myForm2" ng-init="myText = 'test@runoob.com'">
+								<label for="">Email:</label>
+								<input type="email" name="myAddress" ng-model="myText" required>
+								<p>编辑邮箱地址，查看状态的改变。</p>
+								<h4>状态:</h4>
+								<p>Valid: {{myForm2.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+								<p>Dirty: {{myForm2.myAddress.$dirty}} (如果值改变则为 true)。</p>
+								<p>Touched: {{myForm2.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+							</form>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">CSS类</h3>
+						</div>
+						<div class="card-block">
+							<form ng-app="" name="myForm3">
+								<label for="">输入你的名字:</label>
+								<input name="myName3" ng-model="myText3" required>
+								<p>编辑文本域，不同状态背景颜色会发送变化。</p>
+								<p>文本域添加了 required 属性，该值是必须的，如果为空则是不合法的。</p>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+				$scope.name = "John Doe";
+				$scope.doubelBind = "双向绑定";
+			});
+		</script>
+
+	</body>
+
+</html>

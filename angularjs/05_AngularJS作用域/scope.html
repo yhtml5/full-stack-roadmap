@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Scope(作用域)</h3>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>Scope(作用域) 是应用在 HTML (视图) 和 JavaScript (控制器)之间的纽带</li>
+								<li>Scope 是一个对象，有可用的方法和属性</li>
+								<li>Scope 可应用在视图和控制器上</li>
+								<li>在 AngularJS 创建控制器时，你可以将 $scope 对象当作一个参数传递</li>
+								<li>当在控制器中添加 $scope 对象时，视图 (HTML) 可以获取了这些属性</li>
+								<li>视图中，你不需要添加 $scope 前缀, 只需要添加属性名即可，如:{{carname}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Scope 作用范围</h3>
+						</div>
+						<div class="card-block">
+							<div ng-app="myApp" ng-controller="myCtrl">
+								<ul>
+									<li ng-repeat="x in names">{{x}}</li>
+									<li ng-repeat="x in names"><span ng-bind="x"></span></li>
+								</ul>
+								<p>当你修改输入框中的值时，会影响到模型(model),当然也会影响到控制器对应的属性值。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--card-deck-->
+			</div>
+			<div class="card-deck-wrapper m-t-3">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">RootScope</h3>
+						</div>
+						<div class="card-block">
+							<h4>姓氏为 {{lastname}} 家族成员:</h4>
+							<ul>
+								<li ng-repeat="x in names">{{x}} {{lastname}}</li>
+								<li ng-repeat="x in names">
+									<span ng-bind="x"></span>
+									<span ng-bind="lastname"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope, $rootScope) {
+				$scope.names = ["Emil", "Tobias", "Linus"];
+				$rootScope.lastname = "Refsnes";
+			});
+		</script>
+	</body>
+
+</html>

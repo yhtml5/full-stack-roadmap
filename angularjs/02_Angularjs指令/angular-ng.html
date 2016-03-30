@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../bootstrap.min.css">
+		<script rel="" src="../angular.min.js" async></script>
+	</head>
+
+	<body ng-app="">
+		<div class="container m-t-3">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">AngularJS指令</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>AngularJS有一套完整的、可扩展的、用来帮助web应用开发的指令集，它使得HTML可以转变成“特定领域语言(DSL)”，是用来扩展浏览器能力的技术之一，在DOM编译期间，和HTML关联着的指令会被检测到，并且被执行，这使得指令可以为DOM指定行为，或者改变它。</li>
+								<li>AngularJS通过称为指令的新属性来扩展的HTML，带有前缀ng-，我们也可以称之为“指令属性”，它就是绑定在DOM元素上的函数，可以调用方法、定义行为、绑定controller及$scolie对象、操作DOM，等等。</li>
+								<li>AngularJS指令指示的是“当关联的HTML结构进入编译阶段时应该执行的操作”，它本质上只是一个当编译器编译到相关DOM时需要执行的函数，可以写在元素的名称里，属性里，css类名里，注释里。</li>
+								<li>当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，它们就会被收集起来、排序，然后按照优先级顺序被执行。</li>
+								<li>Angular.js应用的动态性和响应能力，都要归功于指令属性，常见的有：ng-alili、ng-init、ng-model、ng-bind、ng-relieat等等。</li>
+								<li>关于“指令属性”就先暂时介绍这些，相信你已经对它有初步的了解，接下来我们就开始逐一的深入的学习它们。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">指令：ng-app</h2>
+						</div>
+						<div class="card-block">
+							<p>ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。</p>
+							<p>引用方法很简单，如右所示： 如上引用，一个AngularJS应用程序初始化就完成了并标记了作用域，也就是div元素就是AngularJS应用程序的"所有者"，在它里面的指令也就会被Angular编译器所编译、解析了。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block" ng-init="name='World'">
+							<code>
+								&lt;div ng-app=""&gt;
+								&lt;/div&gt; 
+							</code>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">指令：ng-init</h2>
+						</div>
+						<div class="card-block">
+							<p>ng-init指令初始化应用程序数据，也就是为AngularJS应用程序定义初始值，通常情况下，我们会使用一个控制器或模块来代替它，后面我们会介绍有关控制器和模块的知识</p>
+							<p>如右所示，我们为应用程序变量name赋定初始值。</p>
+							<p>我们不仅可以赋值字符串，也可以赋值为数字、数组、对象，而且可以为多个变量赋初始值</p>
+							<p>后面我们还会学习使用控制器来初始化数据的方式，接着我们来学习如何来调用这些已经初始化了的值。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>
+									<code>
+								        &lt;div ng-app="" ng-init="name='Hello World'"&gt;
+								        &lt;/div&gt; 
+						          	</code>
+								</li>
+								<li>
+									<code>
+						                &lt;div ng-app="" ng-init="quantity=1;price=5"&gt; 
+                                        &lt;/div&gt; 
+                                    </code>
+								</li>
+								<li>
+									<code> 
+                                        &lt;div ng-app="" ng-init="names=['Tom','Jerry','Gaffey']"&gt; 
+                                        &lt;/div&gt; 
+						         	</code>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">AngularJS表达式</h2>
+						</div>
+						<div class="card-block">
+							<p>AngularJS框架的核心功能之一 —— 数据绑定，由两个花括号{{}}组成，可以把数据绑定到HTML，类似Javascript代码片段，可以包含文字、运算符和变量，通常在绑定数据中用到，表达式可以绑定数字、字符串、对象、数组，写在双大括号内：{{ expression }}。
+								<p>如示例，我们就可以使用表达式这样调用初始化的变量值，如下。</p>
+								<p>当然我们也可以使用表达式输出数字、数组、对象</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>
+									<div ng-app="" ng-init="name='Hello World'">
+										{{ name }}
+									</div>
+								</li>
+								<li>
+									<div ng-app="" ng-init="quantity=12;price=5">
+										总价： {{ quantity * price }}
+									</div>
+								</li>
+								<li>
+									<div ng-app="" ng-init="names=['Tom','Jerry','Gaffey']">
+										名字为： {{ names[0] }}
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">指令：ng-model</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>在AngularJS中，只需要使用ng-model指令就可以把应用程序数据绑定到HTML元素，实现model和view的双向绑定。</li>
+								<li>如示例，使用ng-model指令对数据进行绑定。</li>
+								<li>ng-model把相关处理事件绑定到指定标签上，这样我们就可以不用在手工处理相关事件(比如change等)的条件下完成对数据的展现需求。</li>
+								<li>以上介绍了ng-model的单向绑定(view->model)后面控制器我们会用到它的双向绑定功能，好，参照以上代码，赶快试试数据绑定的效果吧</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block" ng-init="name='World'">
+							<label for="">请输入任意值：</label>
+							<input type="text" ng-model="inputName" />
+							<p>你输入的为： {{ inputName }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--row-->
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">指令：ng-bind</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>指令ng-bind和AngularJS表达式有异曲同工之妙，但不同之处就在于ng-bind是在angular解析渲染完毕后才将数据显示出来的。</li>
+								<li>如下使用ng-bind指令绑定把应用程序数据</li>
+								<li>PS：使用花括号语法时，因为浏览器需要首先加载页面，渲染它，然后AngularJS才能把它解析成你期望看到的内容，所以对于首个页面中的数据绑定操作，建议采用ng-bind，以避免其未被渲染的模板被用户看到。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block" ng-init="name='World'">
+							<label for="">请输入任意值：</label>
+							<input type="text" ng-model="inputBind" />
+							<p>你输入的为： <span ng-bind="inputBind"></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--row-->
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">指令：ng-click</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>AngularJS也有自己的HTML事件指令,比如说通过ng-click定义一个AngularJS单击事件。</li>
+								<li>对按钮、链接等，我们都可以用ng-click指令属性来实现绑定，如下简单示例：</li>
+								<li>PS：ng-hide="true"，设置HTML元素不可见。</li>
+								<li>ng-click指令将DOM元素的鼠标点击事件(即mousedown)绑定到一个方法上，当浏览器在该DOM元素上鼠标触发点击事件时，Angular就会调用相应的方法，是不是很简单方便呢！</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block" ng-init="click=false">
+							<div ng-hide="click">
+								<label for="">请输入一个名字：</label><input type="text" ng-model="name" />
+								<p>Hello <span ng-bind="name"></span></p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<button class="btn btn-info text-xs-center" ng-click="click= !click">隐藏/显示</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--row-->
+		</div>
+
+		</div>
+		</div>
+	</body>
+
+</html>

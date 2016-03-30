@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS 过滤器</h3>
+						</div>
+						<div class="card-block">
+							<p>用于转换数据</p>
+							<ul>
+								<li>currency丨格式化数字为货币格式</li>
+								<li>filter丨从数组项选择一个子集</li>
+								<li>orderBy丨根据某个表达式排列数组</li>
+								<li>lowercase丨格式化字符串为小写</li>
+								<li>uppercase丨格式化字符串为大写</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">过滤器</h3>
+						</div>
+						<div class="card-block" ng-controller="namesCtrl">
+							<label for="">name:</label>
+							<h4 ng-bind="lastName|uppercase"></h4>
+							</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">outLink</h3>
+						</div>
+						<div class="card-block" ng-controller="namesCtrl">
+							<label for="">first name:</label>
+							<ul>
+								<li ng-repeat="x in names">
+									<span ng-bind="x.name"></span>
+									<span ng-bind="x.country"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--card-deck-->
+			</div>
+		</div>
+		<script>
+			//在大型应用程序中，通常是把控制器存储在外部文件
+			angular.module('myApp', [])
+				.controller('namesCtrl', function($scope) {
+					$scope.names = [{
+						name: 'jani',
+						country: 'Norway'
+					}, {
+						name: 'kyle',
+						country: "Janpen"
+					}, {
+						name: 'sweet',
+						country: "China"
+					}]
+				})
+		</script>
+	</body>
+
+</html>

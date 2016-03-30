@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS 控制器</h3>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li> AngularJS 控制器 控制 AngularJS 应用程序的数据。</li>
+								<li>AngularJS 控制器是常规的 JavaScript 对象</li>
+								<li>ng-controller 指令定义了应用程序控制器</li>
+								<li>控制器是 JavaScript 对象，由标准的 JavaScript 对象的构造函数 创建</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Test</h3>
+						</div>
+						<div class="card-block" ng-controller="personCtrl">
+							<p>ng-model 指令绑定输入域到控制器的属性</p>
+							<label for="">first name:</label>
+							<input type="text" name="" id="" value="" ng-model="firstName"><br>
+							<label for="">last name:</label>
+							<input type="text" name="" id="" value="" ng-model="lastName">
+							<h4 ng-bind="fullName()"></h4>
+							<!--<h4 ng-bind="fullName"></h4>-->
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">outLink</h3>
+						</div>
+						<div class="card-block" ng-controller="namesCtrl">
+							<label for="">first name:</label>
+							<ul>
+								<li ng-repeat="x in names">
+									<span ng-bind="x.name"></span>
+									<span ng-bind="x.country"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--card-deck-->
+			</div>
+		</div>
+		<script>
+			//在大型应用程序中，通常是把控制器存储在外部文件
+			angular.module('myApp', [])
+				.controller('personCtrl', function($scope) {
+					// Angular 中使用 $scope 对象来调用控制器
+					// Controller 在 $scope 中创建俩个属性
+					$scope.firstName = "yhtml";
+					$scope.lastName = "5";
+					$scope.fullName = function() {
+						//控制器也可以有变量与function
+						return $scope.firstName + "" + $scope.lastName;
+					}
+				})
+				.controller('namesCtrl', function($scope) {
+					$scope.names = [{
+						name: 'jani',
+						country: 'Norway'
+					}, {
+						name: 'kyle',
+						country: "Janpen"
+					}, {
+						name: 'sweet',
+						country: "China"
+					}]
+				})
+		</script>
+	</body>
+
+</html>

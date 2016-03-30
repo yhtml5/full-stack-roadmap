@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>sample</title>
+		<link rel="stylesheet" href="../bootstrap.min.css">
+		<script src="../angular.js"></script>
+	</head>
+
+	<body>
+		<div class="container m-t-3">
+			<div id="A1" ng-app="app1"> <input ng-model="name" type="text" placeholder="请输入姓名">
+				<p>我的姓名： {{name}}</p>
+			</div>
+			<div id="A2" ng-app="app2"> <input ng-model="age" type="number" placeholder="请输入年龄">
+				<p>我的年龄: {{age}}</p>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var app1 = angular.module("app1", []);
+			var app2 = angular.module("app2", []);
+			angular.bootstrap(document.getElementById("A2"), ['app2']);
+		</script>
+	</body>
+
+</html>

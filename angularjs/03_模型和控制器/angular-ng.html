@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../bootstrap.min.css">
+		<script src="../angular.js"></script>
+	</head>
+
+	<body>
+		<div class="container m-t-3">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">MVVM简介</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>针对客户端应用开发AngularJS吸收了传统的MVC基本原则。
+									<br>MVC(Model-View-Controll)设计模式针对不同的人可能意味不同的东西 ,AngularJS并不执行传统意义上的MVC，更接近于MVVM。</li>
+								<li>MVVM模式是Model-View-ViewMode模式的简称。
+									<br>由视图(View)、视图模型(ViewModel)、模型(Model)三部分组成，通过这三部分实现UI逻辑、呈现逻辑和状态控制、数据与业务逻辑的分离。</li>
+								<li>Model将和ViewModel互动(通过$scope对象)，将监听Model的变化。这些可以通过View来发送和渲染，由HTML来展示你的代码。
+									<br>View可以通过$routeProvider对象来支配，所以你可以深度的链接和组织你的View和Controller，将他们变成导航 URL。AngualrJS同时提供了无状态的Controller，可以用来初始化和控制$scope对象。</li>
+								<li>Model与MVC模式一样，Model用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。
+									<br>它具有对数据直接访问的权利，例如对数据库的访问，Model不依赖于View和ViewModel，也就是说，模型不关心会被如何显示或是如何被操作，模型也不能包含任何用户使用的与界面相关的逻辑。</li>
+								<li>ViewModel是一个用来提供特别数据和方法从而维护指定view的对象。ViewModel是$scope的对象，只存在于AnguarJS的应用中。$scope只是一个简单的js对象，这个对象使用简单的API来侦测和广播状态变化。</li>
+								<li>Controller负责设置初始状态和参数化$scope方法用以控制行为。需要指出的controller并不保存状态也不和远程服务互动。</li>
+								<li>View是AngularJS解析后渲染和绑定后生成的HTML。这个部分帮助你创建web应用的架构。$scope拥有一个针对数据的参考，controller定义行为，view处理布局和互动。</li>
+								<li>使用MVVM模式有几大好处：
+									<ol>
+										<li>低耦合：View可以独立于Model变化和修改，一个ViewModel可以绑定到不同的View上，当View变化的时候Model可以不变，当Model变化的时候View也可以不变。</li>
+										<li>可重用性：可以把一些视图的逻辑放在ViewModel里面，让很多View重用这段视图逻辑。</li>
+										<li>独立开发：开发人员可以专注与业务逻辑和数据的开发(ViewModel)。设计人员可以专注于界面(View)的设计。</li>
+										<li>可测试性：可以针对ViewModel来对界面(View)进行测试。</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">控制器</h2>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>AngularJS控制器控制AngularJS应用程序的数据，是常规的JavaScript对象。</li>
+								<li>ng-controller指令就是用来定义应用程序控制器的，并且同时创建了一个新的作用域关联到相应的DOM元素上。</li>
+								<li>所谓作用域就是一个指向应用模型的对象，它是表达式的执行环境，作用域有层次结构，这个层次和相应的DOM几乎是一样的，作用域能监控表达式和传递事件并且可以从父作用域继承属性。</li>
+								<li>每一个AngularJS应用都有一个绝对的根作用域。但也可能有多个子作用域。 一个应用可以有多个作用域，因为有一些指令会生成新的子作用域，当新作用域被创建的时候，他们会被当成子作用域添加到父作用域下，这使得作用域会变成一个和相应DOM结构一个的树状结构。</li>
+								<li>ViewModel是一个用来提供特别数据和方法从而维护指定view的对象。ViewModel是$scope的对象，只存在于AnguarJS的应用中。$scope只是一个简单的js对象，这个对象使用简单的API来侦测和广播状态变化。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">AngularJS 应用</h2>
+						</div>
+						<div class="card-block">
+							<ol>
+								<li>AngularJS 模块（Module） 定义了 AngularJS 应用。</li>
+								<li>AngularJS 控制器（Controller） 用于控制 AngularJS 应用。</li>
+								<li>ng-app指令定义了应用, ng-controller 定义了控制器</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="card">
+						<div class="card-header">
+							<h2 class="card-title">Test</h2>
+						</div>
+						<div class="card-block">
+							<p>尝试修改以下表单。</p>
+							<div ng-app="myApp" ng-controller="myCtrl">
+								名: <input type="text" ng-model="firstName">
+								<br> 姓: <input type="text" ng-model="lastName">
+								<p>姓名: {{firstName + " " + lastName}}</p>
+							</div>
+							<script>
+								var app = angular.module('myApp', []); //AngularJS 模块定义应用
+								app.controller('myCtrl', function($scope) { //AngularJS 控制器控制应用
+									$scope.firstName = "John";
+									$scope.lastName = "Doe";
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
