@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Angular module</h3>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>模块定义了一个应用程序</li>
+								<li>模块是应用程序中不同部分的容器</li>
+								<li>模块是应用程序控制器的容器</li>
+								<li>控制器通常属于一个模块</li>
+								<li>函数会影响到全局命名空间</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">ng-hide</h3>
+						</div>
+						<div class="card-block">
+							<p><button class="btn btn-info" ng-click="toggle()">hide</button>
+								<button class="btn btn-danger" ng-click="toggle()">show</button>
+							</p>
+							<p ng-hide="myVar">
+								<label for="">first name:</label>
+								<input type="text" ng-model="firstName"><br>
+								<label for="">last name:</label>
+								<input type="text" ng-model="lastName"><br>
+							</p>
+							<p class="text-warning" ng-show="myVar">
+								<span>Full name:</span>
+								<span ng-bind="firstName"></span>-<span ng-bind="lastName"></span>
+							</p>
+						</div>
+					</div>
+					<!--card-deck-->
+				</div>
+
+			</div>
+			<script>
+				angular.module('myApp', [])//在磨矿中"[]"参数用于定义模块的依赖关系，中括号中写依赖的模块名字
+					//create a module,then add controller $scope filter directive
+					.controller('myCtrl', function($scope) {
+						// create controller ofmodule with ng-controller directive
+						$scope.count = 10
+						$scope.firstName = "hello"
+						$scope.lastName = "world"
+						$scope.myVar = false //默认属性
+						$scope.toggle = function() {
+							$scope.myVar = !$scope.myVar //切换变量
+						}
+					})
+					.directive("yDirective",function(){
+						return{
+							template:"I'm be created in directive"
+						}
+					})
+			</script>
+			<script src="app.js"></script>
+			<script src="ctrl.js"></script>
+	</body>
+
+</html>

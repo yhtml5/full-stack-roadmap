@@ -17,21 +17,36 @@
 							<h3 class="card-title">AngularJS Dom</h3>
 						</div>
 						<div class="card-block">
-							<button class="btn btn-info-outline" ng-disabled="mySwitch">Click me</button>
+							<div class="">
+								<button class="btn btn-danger" ng-disabled="mySwitch">Click me</button>
+								<input type="checkbox" ng-model="mySwitch">
+								<span ng-bind="mySwitch"></span>
+							</div>
+							<p>ng-disabled 指令绑定应用程序数据 "mySwitch" 到 HTML 的 disabled 属性</p>
+							<p>ng-model 指令绑定 "mySwitch" 到 HTML input checkbox 元素的内容（value）</p>
+							<p>如果 mySwitch 为true, 按钮将不可用,如果 mySwitch 为false, 按钮则可用</p>
+							<hr />
+							<div class="">
+								<button class="btn btn-warning" ng-model="mySwitch2">Click me</button>
+								<input type="checkbox" ng-disabled="mySwitch2">
+								<span ng-bind="mySwitch2"></span>
+							</div>
 						</div>
-						<input type="checkbox" ng-model="mySwitch" name="" id="" value="" />
-						<p ng-bind="mySwitch"></p>
 					</div>
 					<div class="card">
 						<div class="card-header">
-							<h3 class="card-title">AngularJS server</h3>
+							<h3 class="card-title">AngularJS show</h3>
 						</div>
 						<div class="card-block">
-							<h5>跨域请求解决方案：</h5>
+							<p ng-show="true" class="text-success">我是可见的</p>
+							<p ng-show="false">我是不可见的</p>
+							<p ng-hide="true">我是不可见的</p>
+							<p ng-hide="false" class="text-primary">我是可见的</p>
+							<hr>
 							<ul>
-								<li>PHP丨header("Access-Control-Allow-Origin:*")</li>
+								<li>ng-show 指令隐藏或显示一个 HTML 元素</li>
+								<li>ng-show 指令根据 value 的值来显示（隐藏）HTML 元素</li>
 							</ul>
-
 						</div>
 					</div>
 					<!--card-deck-->
@@ -42,11 +57,8 @@
 				//在大型应用程序中，通常是把控制器存储在外部文件
 				angular.module('myApp', [])
 					.controller('myCtrl', function($scope, $http) {
-						$http.get("data.json")
-							.success(function(response) {
-								$scope.names = response.records
-							})
-						$scope.mySwitch=true
+						$scope.mySwitch = true
+						$scope.mySwitch2 = false
 					})
 			</script>
 	</body>
