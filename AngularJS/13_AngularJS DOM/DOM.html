@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS Dom</h3>
+						</div>
+						<div class="card-block">
+							<button class="btn btn-info-outline" ng-disabled="mySwitch">Click me</button>
+						</div>
+						<input type="checkbox" ng-model="mySwitch" name="" id="" value="" />
+						<p ng-bind="mySwitch"></p>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS server</h3>
+						</div>
+						<div class="card-block">
+							<h5>跨域请求解决方案：</h5>
+							<ul>
+								<li>PHP丨header("Access-Control-Allow-Origin:*")</li>
+							</ul>
+
+						</div>
+					</div>
+					<!--card-deck-->
+				</div>
+
+			</div>
+			<script>
+				//在大型应用程序中，通常是把控制器存储在外部文件
+				angular.module('myApp', [])
+					.controller('myCtrl', function($scope, $http) {
+						$http.get("data.json")
+							.success(function(response) {
+								$scope.names = response.records
+							})
+						$scope.mySwitch=true
+					})
+			</script>
+	</body>
+
+</html>

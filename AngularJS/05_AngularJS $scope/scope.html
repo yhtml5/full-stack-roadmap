@@ -35,6 +35,7 @@
 							<div ng-app="myApp" ng-controller="myCtrl">
 								<ul>
 									<li ng-repeat="x in names">{{x}}</li>
+									<li ng-repeat="x in names" ng-bind="x"></li>
 									<li ng-repeat="x in names"><span ng-bind="x"></span></li>
 								</ul>
 								<p>当你修改输入框中的值时，会影响到模型(model),当然也会影响到控制器对应的属性值。</p>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS select</h3>
+						</div>
+						<div class="card-block">
+							<select name="" ng-model="selectedName" ng-options="x for x in names"></select>
+						</div>
+						<div class="card-block">
+							<select name="">
+                                <option ng-repeat="x in names" ng-bind="x"></option>								
+                            </select>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS select</h3>
+						</div>
+						<div class="card-block">
+							<h5>what's your choose: <span ng-bind="selectedSite"></span></h5>
+							<select name="" ng-model="selectedSite1">
+                                <option ng-repeat="x in site1" ng-bind="x.site" value="{{x.url}}"></option>								
+                            </select>
+							<hr>
+							<h5>
+							    <span ng-bind="selectedSite2.site"></span><br>
+							    <span ng-bind="selectedSite2.url"></span>
+						    </h5>
+							<select name="" ng-model="selectedSite2" ng-options="x.site for x in site2"></select>
+							<ul class="text-warning">
+								<li>使用ng-repeat指令创建的下拉框，选中的是一个字符串</li>
+								<li>使用ng-options指令创建的下拉框，选中的是一个对象</li>
+								<li>当选择值是一个对象时，我们就可以获取更多信息，应用灵活</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS select</h3>
+						</div>
+						<div class="card-block">
+							<h5>what's your choose: <span ng-bind="selectedSite3"></span></h5>
+							<select name="" ng-model="selectedSite3" ng-options="x  for (x,y) in site3"></select>
+							<hr>
+							<h5>Choose a car:</h5>
+							<select name="" ng-model="selectedCar" ng-options="x for (x,y) in cars"></select>
+							<ul>
+								<li>name:<span ng-bind="selectedCar.brand"></span></li>
+								<li>model:<span ng-bind="selectedCar.model"></span></li>
+								<li>color:<span ng-bind="selectedCar.color"></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--card-deck-->
+			</div>
+
+		</div>
+		<script>
+			//在大型应用程序中，通常是把控制器存储在外部文件
+			angular.module('myApp', [])
+				.controller('myCtrl', function($scope) {
+					$scope.names = ["goolge", "yhtml5", "ali"]
+					$scope.site1 = [{
+						site: "Google",
+						url: "google.com",
+					}, {
+						site: "Ali",
+						url: "ali.com",
+					}, {
+						site: "Tecent",
+						url: "qq.com",
+					}]
+					$scope.site2 = [{
+						site: "谷歌",
+						url: "google.com",
+					}, {
+						site: "阿里",
+						url: "ali.com",
+					}, {
+						site: "腾讯",
+						url: "qq.com",
+					}]
+					$scope.site3 = {
+						site1: "谷歌",
+						site2: "阿里",
+						site3: "腾讯",
+					}
+					$scope.cars = {
+						car1: {
+							brand: "Ford",
+							model: "Mustang",
+							color: "red"
+						},
+						car2: {
+							brand: "Fiat",
+							model: "EF600",
+							color: "green"
+						},
+						car3: {
+							brand: "Volvo",
+							model: "XC900",
+							color: "black"
+						}
+					}
+				})
+		</script>
+	</body>
+
+</html>

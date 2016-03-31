@@ -8,90 +8,66 @@
 		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
-	<body ng-app="myApp">
+	<body ng-app="myApp" ng-controller="myCtrl">
 		<div class="container m-t-3">
 			<div class="card-deck-wrapper">
 				<div class="card-deck">
 					<div class="card">
 						<div class="card-header">
-							<h3 class="card-title">AngularJS 过滤器</h3>
+							<h3 class="card-title">$location</h3>
 						</div>
 						<div class="card-block">
-							<p>用于转换数据</p>
-							<ul>
-								<li>currency丨格式化数字为货币格式</li>
-								<li>filter丨从数组项选择一个子集</li>
-								<li>orderBy丨根据某个表达式排列数组</li>
-								<li>lowercase丨格式化字符串为小写</li>
-								<li>uppercase丨格式化字符串为大写</li>
-							</ul>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header">
-							<h3 class="card-title">过滤器</h3>
-						</div>
-						<div class="card-block" ng-controller="namesCtrl">
-							<label for="">name:</label>
-							<ul>
-								<li ng-repeat="x in names">
-									<span ng-bind="x.name|uppercase"></span>
-								</li>
-								<li ng-repeat="x in names">
-									<span ng-bind="x.country |lowercase"></span>
-								</li>
-								<li ng-repeat="x in names">
-									<span ng-bind="x.data | currency"> </span>
-								</li>
-							</ul>
+							<p>The URL analyze: </p>
+							<ol>
+								<li ng-bind="absUrl"></li>
+								<li ng-bind="host"></li>
+								<li ng-bind="port"></li>
+								<li ng-bind="protocol"></li>
+								<li ng-bind="url"></li>
+								<li ng-bind="urlName"></li>
+								<li ng-bind="urlName2"></li>
+							</ol>
 
-							<h4 ng-bind="names[0].name | uppercase"></h4>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-header">
-							<h3 class="card-title">指令过滤器</h3>
+							<h3 class="card-title">$timeout</h3>
 						</div>
-						<div class="card-block" ng-controller="namesCtrl">
-							<p>循环对象:</p>
-							<ul>
-								<li ng-repeat="x in names | orderBy:'data'">
-									<span ng-bind="x.data"></span>-
-									<span ng-bind="x.name"></span>-
-									<span ng-bind="x.country"></span>
-								</li><br>
-								<li ng-repeat="x in names | orderBy:'name'">
-									<span ng-bind="x.data"></span>-
-									<span ng-bind="x.name"></span>-
-									<span ng-bind="x.country"></span>
-								</li><br>
-								<li ng-repeat="x in names | orderBy:'country'">
-									<span ng-bind="x.data"></span>-
-									<span ng-bind="x.name"></span>-
-									<span ng-bind="x.country"></span>
-								</li>
-							</ul>
+						<div class="card-block">
+							<p>Showing information after 2 seconds</p>
+							<h5>Welcom info:<span ng-bind="helloWorldTimeout"></span></h5>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">$interval</h3>
+						</div>
+						<div class="card-block">
+							<p>what's the time now:</p>
+							<span ng-bind="nowTime"></span>
 						</div>
 					</div>
 				</div>
 				<!--card-deck-->
 			</div>
-			<div class="card-deck-wrapper">
+			<div class="card-deck-wrapper m-t-3 m-b-3">
 				<div class="card-deck">
 					<div class="card">
 						<div class="card-header">
-							<h3 class="card-title">输入过滤</h3>
+							<h3 class="card-title">自定义服务</h3>
 						</div>
-						<div class="card-block" ng-controller="namesCtrl">
-							<p>输入过滤器可以通过一个管道字符（|）和一个过滤器添加到指令中，该过滤器后跟一个冒号和一个模型名称</p>
-							<input type="text" ng-model="test">
+						<div class="card-block">
+							<p>255 16进制运算</p>
+							<h5 ng-bind="hex"></h5>
+							<hr>
+							<p>使用过滤器</p>
 							<ul>
-								<li ng-repeat="x in names | filter:test | orderBy:'data'">
-									<span ng-bind="x.data"></span>-
-									<span ng-bind="x.name"></span>-
-									<span ng-bind="x.country"></span>
+								<li ng-repeat="x in counts">
+									<span ng-bind="x | myFormat"></span>
 								</li>
 							</ul>
+							<p>过滤器使用服务将10进制转换为16进制</p>
 						</div>
 					</div>
 				</div>
@@ -101,20 +77,37 @@
 		<script>
 			//在大型应用程序中，通常是把控制器存储在外部文件
 			angular.module('myApp', [])
-				.controller('namesCtrl', function($scope) {
-					$scope.names = [{
-						name: 'jani',
-						country: 'Norway',
-						data: 1
-					}, {
-						name: 'kyle',
-						country: "Janpen",
-						data: 2
-					}, {
-						name: 'sweet',
-						country: "China",
-						data: 3
-					}]
+				.service('yHex', function() {
+					this.myFunc = function(x) {
+						return x.toString(16)
+					}
+				})
+				.filter('myFormat', ['yHex', function(yHex) {
+					return function(x) {
+						return yHex.myFunc(x)
+					}
+				}])
+				.controller('myCtrl', function($scope, $location, $http, $timeout, $interval, yHex) {
+					//url=http:yhtml5.com?#name=123
+					$scope.absUrl = $location.absUrl()
+					$scope.host = $location.host()
+					$scope.port = $location.port()
+					$scope.protocol = $location.protocol()
+					$scope.url = $location.url() //?#name=cccccc
+					$scope.urlName = $location.search().name
+					$scope.urlName2 = $location.search()['name']
+					$http.get("server-index.html").then(function(response) {
+						$scope.helloWorld = response.data
+					})
+					$timeout(function() {
+						$scope.helloWorldTimeout = "hello world"
+					}, 2000)
+					$scope.nowTime = new Date().toLocaleTimeString()
+					$interval(function() {
+						$scope.nowTime = new Date().toLocaleTimeString()
+					}, 1000)
+					$scope.hex = yHex.myFunc(255)
+					$scope.counts = [255, 31, 42]
 				})
 		</script>
 	</body>

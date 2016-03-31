@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS table</h3>
+						</div>
+						<div class="card-block">
+							<table class="table table-bordered table-sm">
+								<tr ng-repeat="x in names | orderBy:'Country'">
+									<td ng-bind="$index+1" class="text-xs-center"></td>
+									<td ng-bind="x.Name"></td>
+									<td ng-bind="x.Country"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">AngularJS server</h3>
+						</div>
+						<div class="card-block">
+							<h5>跨域请求解决方案：</h5>
+							<ul>
+								<li>PHP丨header("Access-Control-Allow-Origin:*")</li>
+							</ul>
+
+						</div>
+					</div>
+					<!--card-deck-->
+				</div>
+
+			</div>
+			<script>
+				//在大型应用程序中，通常是把控制器存储在外部文件
+				angular.module('myApp', [])
+					.controller('myCtrl', function($scope, $http) {
+						$http.get("table.json")
+							.success(function(response) {
+								$scope.names = response.records
+							})
+					})
+			</script>
+	</body>
+
+</html>
