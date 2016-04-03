@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div class="container m-t-3">
+			<div class="card-deck-wrapper">
+				<div class="card-deck">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Angular form</h3>
+						</div>
+						<div class="card-block">
+							<ul>
+								<li>AngularJS 表单是输入控件的集合</li>
+								<li>模块是应用程序中不同部分的容器</li>
+								<li>模块是应用程序控制器的容器</li>
+								<li>控制器通常属于一个模块</li>
+								<li>避免使用全局函数，会影响到全局命名空间</li>
+								<li>AngularJS 模块让所有函数的作用域在该模块下，避免了全局污染</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">form</h3>
+						</div>
+						<div class="card-block">
+							<form action="" novalidate>
+								<label for="">First name:</label>
+								<input type="text" ng-model="user.firstName">
+								<label for="">last name:</label>
+								<input type="text" ng-model="user.lastName">
+								<button type="button" ng-click="reset()">RESET</button>
+							</form>
+							<p>form=<span ng-bind="user" class="text-info"></span>
+								<br>master=<span ng-bind="master" class="text-warning"></span></p>
+							<p>{{user}}</p>
+							<p>{{master}}</p>
+							<ul class="text-warning m-t-2">
+								<li>ng-model 指令绑定了两个 input 元素到模型的 user 对象</li>
+								<li>Ctrl 函数设置了 master 对象的初始值，并定义了 reset() 方法</li>
+								<li>reset() 方法设置了 user 对象等于 master 对象</li>
+								<li>ng-click 指令调用了 reset() 方法，且在点击按钮时调用</li>
+								<li>novalidate 属性在应用中不是必须的，但是你需要在 AngularJS 表单中使用，用于重写标准的 HTML5 验证</li>
+							</ul>
+						</div>
+					</div>
+					<!--card-deck-->
+				</div>
+
+			</div>
+			<script>
+				angular.module('myApp', []) //在模块中"[]"参数用于定义模块的依赖关系，中括号中写依赖的模块名字
+					//create a module,then add controller $scope filter directive
+					.controller('myCtrl', function($scope) {
+						// create controller of module with ng-controller directive
+						$scope.master = {
+							firstName: "john",
+							lastName: "kyle"
+						}
+						$scope.reset = function() {
+							$scope.user = angular.copy($scope.master)
+						}
+						$scope.reset()
+					})
+			</script>
+	</body>
+
+</html>

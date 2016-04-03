@@ -52,10 +52,10 @@
 
 			</div>
 			<script>
-				angular.module('myApp', [])//在磨矿中"[]"参数用于定义模块的依赖关系，中括号中写依赖的模块名字
+				angular.module('myApp', [])//在模块中"[]"参数用于定义模块的依赖关系，中括号中写依赖的模块名字
 					//create a module,then add controller $scope filter directive
 					.controller('myCtrl', function($scope) {
-						// create controller ofmodule with ng-controller directive
+						// create controller of module with ng-controller directive
 						$scope.count = 10
 						$scope.firstName = "hello"
 						$scope.lastName = "world"
