@@ -27,7 +27,7 @@
 						</div>
 						<div class="card-block">
 							<p><button class="btn btn-info" ng-click="toggle()">hide</button>
-							<button class="btn btn-danger" ng-click="toggle()">show</button>
+								<button class="btn btn-danger" ng-click="toggle()">show</button>
 							</p>
 							<p ng-hide="myVar">
 								<label for="">first name:</label>
@@ -52,9 +52,9 @@
 						$scope.count = 10
 						$scope.firstName = "hello"
 						$scope.lastName = "world"
-						$scope.myVar = false//默认属性
+						$scope.myVar = false //默认属性
 						$scope.toggle = function() {
-							$scope.myVar = !$scope.myVar//切换变量
+							$scope.myVar = !$scope.myVar //切换变量
 						}
 					})
 			</script>

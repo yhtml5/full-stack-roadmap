@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../bootstrap.min.css" />
+		<script src="../../angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="controller.js"></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="userCtrl">
+		<div class="container m-t-3">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="title">Users</h3>
+				</div>
+				<div class="block">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Edit</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="user in users">
+								<td>
+									<button class="btn btn-info" ng-click="editUser(user.id)">Edit</button>
+								</td>
+								<td ng-bind="user.firstName"></td>
+								<td ng-bind="user.lastName"></td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<button class="btn btn-success" ng-click="editUser('new')">Create New User</button>
+					<hr>
+					<h4 ng-show="edit">Create New User:</h4>
+					<h4 ng-hide="hide">Edit User:</h4>
+					<hr>
+					<form action="" class="form-horizontal">
+						<div class="row">
+							<label for="" class="col-sm-2 control-label">First Name:</label>
+							<div class="col-sm-10">
+								<input type="text" ng-model="firstName" ng-disabled="!edit" placeholder="First Name">
+							</div>
+						</div>
+						<div class="row">
+							<label for="" class="col-sm-2 control-label">Last Name:</label>
+							<div class="col-sm-10">
+								<input type="text" ng-model="lastName" ng-disabled="!edit" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="row">
+							<label for="" class="col-sm-2 control-label">Password:</label>
+							<div class="col-sm-10">
+								<input type="password" ng-model="password1" placeholder="password">
+							</div>
+						</div>
+						<div class="row">
+							<label for="" class="col-sm-2 control-label">Repeat:</label>
+							<div class="col-sm-10">
+								<input type="password" ng-model="password2" placeholder="Repeat password">
+							</div>
+						</div>
+					</form>
+					<div class="card-footer">
+						<button class="btn btn-success" ng-disabled="error || incomplete">Save</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
