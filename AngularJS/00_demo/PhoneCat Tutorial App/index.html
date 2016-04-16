@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../bootstrap.min.css" />
+		<script src="../../angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+	</head>
+
+	<body ng-app="myNoteApp" ng-controller="myNoteCtrl">
+		<div class="container m-t-3">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="title">我的笔记</h3>
+				</div>
+				<div class="block">
+					<textarea class="m-a-3" ng-model="message" cols="40" rows="10"></textarea>
+					<ul class="text-info">
+						<li>ng-model 指令绑定了textarea标签到控制器变量 message</li>
+						<li>两个 ng-click 事件调用了控制器函数 clear() 和 save()</li>
+						<li>ng-bind 指令绑定控制器函数remainNum() 到span标签，用于显示剩余字符</li>
+					</ul>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-success" ng-click="save()">保存</button>
+					<button class="btn btn-warning" ng-click="clear()">清除</button>
+					<span>剩余字数<span ng-bind="remainNum()"></span></span>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
