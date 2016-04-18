@@ -1,0 +1,82 @@
+﻿
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+<meta name="keywords" content="BeeCloud,支付SDK,支付开发,支付接入,聚合支付,一键支付,支付,支付app,在线支付平台,在线支付,游戏支付平台,网上支付,网络支付,统一支付平台,手机支付平台,手机支付,手机网上支付,快捷支付,一键支付,电子支付,安全支付,第三方支付接口,支付宝支付,支付宝接口,移动支付,在线支付,第三方支付,支付平台,银联支付,银联在线支付,银联快捷支付,银行支付,网银支付平台,网银支付,pos支付,app支付,支付接口,支付API,支付宝接口,微信支付接口,银联支付接口,BeeCloud,支付云服务,微信红包,红包SDK,秒支付,秒支付SDK,秒支付Button,秒收款,微信支付,支付宝支付">
+<meta name="description" content="BeeCloud | 让支付更简单 | 一站式支付解决方案提供商 | 为开发者提供一站式支付解决方案。通过提供易用友好的支付SDK，几行代码高效实现网页、APP支付功能，并提供可靠稳定可靠的分布式云后端服务，保障支付流程安全流畅。">
+
+    <title>BeeCloud Dashboard | BeeCloud 控制台</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/image/titlelogo.ico" media="screen">
+    <link type="text/css" rel="stylesheet" href="css/dashboard.css">
+    <link type="text/css" rel="stylesheet" href="css/iconfont.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?3f741565675278407dac03217790254c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>    <style>
+        #alert-message {
+            position: fixed;
+            z-index: 10001;
+            margin: 0;
+            top: -55px;
+            width: 20%;
+            left: 40%;
+            border: 2px solid transparent;
+            border-radius: 2px;
+            text-align: center;
+            backgroud: #ffffff;
+            padding: 5px 0 0 15px;
+        }
+
+        .alert-message.success {
+            border-color: #21d376;
+            background-color: #21d376;
+            color: #ffffff;
+        }
+
+        .alert-message.warning {
+            border-color: #ffff00;
+            background-color: #ffff00;
+            color: black;
+        }
+
+        .alert-message.error {
+            border-color: red;
+            background-color: red;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body ng-app="dashboard" ng-controller="dashboardCtrl" style=" background-color: #f1f1f1;">
+<div class="alert-message {{util.message.class?util.message.class:'success'}}" id="alert-message">
+    <strong>{{util.message.text?util.message.text:''}}</strong>
+     <span class="close" ng-click="closeWarning()">
+        &times;
+    </span>
+</div>
+<div ui-view></div>
+
+
+
+<script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
+<script type="text/javascript" src="js/angular-1.4.0.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/angular-1.4.0-cookies.min.js"></script>
+<script type="text/javascript" src="js/oclazyload.min.js"></script>
+
+<script>
+    window.scriptVersion = "v1";
+    window.oauth = "";
+    window.username = "demo@beecloud.cn";
+    window.showingName = "demo@beecloud.cn";
+    window.isChild = "" || false;
+        window.cheight = window.document.body.clientHeight;
+</script>
+<script type="text/javascript" src="js/control.js"></script>
+</body>

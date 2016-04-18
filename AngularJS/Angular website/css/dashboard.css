@@ -1,0 +1,599 @@
+﻿
+body,html{ width:100%;}
+body{ font-family:'Hiragino Sans GB',"Microsoft YaHei"; font-size: 14px;}
+body,ul,li,dl,dt,dd,p,input,h3,h4,h5{ padding:0; margin:0;}
+i,span,em{ display:inline-block;}
+a{ text-decoration:none;color:#007aff;}
+button{ outline:none; cursor:pointer; font-family: 微软雅黑;}
+li{ list-style:none;}
+input,select{ font-family: 微软雅黑;}
+
+/*header*/
+header{ width:100%; height:59px; border-bottom:1px solid #cccccc; font-size:16px;}
+header .left{ float:left; line-height:59px;}
+header .left span{ position:relative;}
+header .left span ul{ position:absolute; left:0; top:59px; min-width:80px; z-index:9999; background:rgba(255,255,255,.97); border:1px solid #cccccc; padding:10px 0; display:none;}
+header .left span ul li{ line-height:32px; font-size:14px; padding:0 10px; cursor:pointer;}
+header .left span ul li:hover{ background-color:#f2f2f2;}
+header .left span:hover ul{ display:block; -webkit-animation: mouseshow 0.5s ease-in-out 0s alternate;}
+
+header .left a.dashboard_a{ position: relative;display:inline-block;width:80px;}
+/*header .left a b{ display: inline-block; width: 36px; height: 18px; text-align: center; font-weight: normal; position: absolute; left: 55px; top: -5px; line-height: 17px; font-size: 10px; color: #fff;*/
+/*background-color: #d5d5d5; border-radius: 2px;}*/
+header .left a b{ display: inline-block; width: 36px; height: 18px; text-align: center; font-weight: normal; position: absolute; left: 48px; top: 10px; line-height: 17px; font-size: 10px; color: #ff0000;}
+
+header a{ color:#333;}
+header i{ width: 50px; height:50px; background:url(../img/icon.png) no-repeat; vertical-align:top; margin-top:3px; background-position:-250px 0;}
+header i.point{ width:30px; background-position:-210px 0;}
+header i.point_down{ width:20px; background-position:-312px 0; cursor:pointer;}
+header i.personal_center_icon{ width:40px; background-position:-350px 0; cursor:pointer;}
+header .right{ float:right; height:100%; padding-right:25px; position:relative;}
+/*myCenter*/
+header .right .mycenter{ position:absolute; right:0; top:59px; z-index:99999; width:200px; /*height:200px;*/ padding-bottom: 20px; background:rgba(255,255,255,.97); border:1px solid #cccccc; text-align:center; display:none;}
+header .right .mycenter div{ width:52px; height:52px; border:4px solid #efefef; margin:15px auto; border-radius:50%; background-color:#fff;}
+header .right .mycenter div img{ max-width:100%; max-height:100%;}
+header .right .mycenter span{ font-size:14px; line-height:24px; padding-bottom: 6px;}
+header .right .mycenter span.tags{ height:24px; padding:0 20px; margin:5px 0; background-color:#a9d86e; line-height:24px; color:#fff; font-size:12px; border-radius:4px;}
+header .right .mycenter span.tags a{ color: #fff;}
+header .right .mycenter span.tags.not-verify {background-color: rgb(244, 63, 63);}
+header .right .mycenter span b{color: #1FB5AD; font-size: 12px;}
+header .right .mycenter em{ width:100px; height:20px; background-color:#a9d86e; line-height:20px; color:#fff; font-size:12px; border-radius:4px;}
+header .right .mycenter button{ border:0; background-color:transparent; height:30px; margin-top:5px; color:#999999;}
+header .right .mycenter button i{ width:20px; height:30px; background-position:-416px -12px; vertical-align:middle; margin-top:0px;}
+header .right:hover .mycenter{ display:block; -webkit-animation: mouseshow 0.5s ease-in-out 0s alternate;}
+header .right a.recharge{ display: inline-block; height: 59px; line-height: 59px; color: #4A4A4A; font-size: 14px;}
+header .right a.recharge span{ color: #1FB5AD;}
+header .right a.recharge a{ color: #1FB5AD; display: inline-block; margin-left: 20px;}
+
+header .balance{ height: 59px; padding: 0 10px;}
+header .balance a.recharge{ display: inline-block; height: 59px; line-height: 59px; color: #4A4A4A; font-size: 14px;}
+header .balance a.recharge span{ color: #1FB5AD;}
+header .balance a.recharge a{ color: #1FB5AD; display: inline-block; margin-left: 20px;}
+
+@-webkit-keyframes mouseshow
+{
+0%   { display:block; opacity:0;}
+100% {  opacity:1;}
+}
+
+section{ width:100%; /*height:1066px; background-color:#32323a;*/ position:relative;}
+
+section .left{ width:250px; position:absolute; left:0; top:0; overflow: hidden;}
+section .left .top{ width:100%; height:170px; background-color:#28282e; text-align:center; padding-top:20px;}
+section .left .top i{ width:100px; height:100px; padding:5px; background-color:#fff; border:5px solid #3b3b43; border-radius:50%; overflow: hidden;}
+section .left .top i img{ max-width:100%; max-height:100%;}
+section .left .top span{ font-size:16px; line-height:30px; color:#fff;}
+section .left ul{ width:100%;}
+section .left ul li a{ display:inline-block;  width:100%; color:#95a0aa;}
+section .left ul li{ padding:0 5px; border-top:1px solid #3b3b43; height:52px; line-height:52px; color:#95a0aa; cursor:pointer;}
+section .left ul li:last-child{border-bottom:1px solid #3b3b43;}
+section .left ul li.on{ background-color:#1fb5ad; color:#fff;}
+section .left ul li.on a{color:#fff;}
+section .left ul li i{ width: 50px; height:50px; background:url(../img/icon.png) no-repeat; vertical-align:top; margin-top:1px;}
+section .left ul li em{ display: inline-block;width: 50px; height:50px; vertical-align:top; margin-top:1px; text-align: center; font-size: 20px;}
+
+section .left ul li em:after{ content: '\e604';}
+section .left ul li:nth-child(1) em:after{ content: '\e604';}
+section .left ul li:nth-child(2) em:after{ content: '\e601';}
+section .left ul li:nth-child(3) em:after{ content: '\e618';}
+section .left ul li:nth-child(4) em:after{ content: '\e619';}
+section .left ul li:nth-child(5) em:after{ content: '\e617'; font-size: 18px;}
+section .left ul li:nth-child(6) em:after{ content: '\e608';}
+section .left ul li.info em:after{ content: '\e604';}
+section .left ul li.paybtn em:after{ content: '\e61a';font-size: 26px;}
+section .left ul li.applepay em:after{ content: '\e600';font-size: 26px;}
+section .left ul li.ali em:after{ content: '\e618';}
+section .left ul li.wx em:after{ content: '\e619';}
+section .left ul li.un em:after{ content: '\e617'; font-size: 18px;}
+section .left ul li.jd em:after{ content: '\e608';}
+section .left ul li.bd em:after{ content: '\e603';}
+section .left ul li.yb em:after{ content: '\e616';}
+section .left ul li.kq em:after{ content: '\e609'; font-size: 15px;}
+section .left ul li.paypal em:after{ content: '\e60e';}
+section .left ul li.ms em:after{ content: '\e60a'; font-size: 16px;}
+section .left ul li.webhook em:after{ content: '\e615';}
+section .left ul li.order em:after{ content: '\e60b';}
+section .left ul li.progress em:after{ content: '\e61b';}
+section .left ul li.payoverview em:after{ content: '\e60d';}
+section .left ul li.revenue em:after{ content: '\e614';}
+section .left ul li.income-comparison em:after{ content: '\e605';}
+section .left ul li.order-total em:after{ content: '\e61b';}
+section .left ul li.order-comparison em:after{ content: '\e61b';}
+section .left ul li.pay-distribute em:after{ content: '\e607'; font-size: 16px;}
+section .left ul li.refund em:after{ content: '\e610';}
+section .left ul li.pre-refund em:after{ content: '\e60f';}
+section .left ul li.pay-category em:after{ content: '\e605';}
+
+section .left ul li:nth-child(1) i{ background-position:0 0;}
+section .left ul li:nth-child(2) i{ background-position:-50px 0;}
+section .left ul li:nth-child(3) i{ background-position:-50px 0;}
+section .left ul li:nth-child(4) i{ background-position:-50px 0;}
+section .left ul li:nth-child(5) i{ background-position:-100px 0;}
+section .left ul li:nth-child(6) i{ background-position:-150px 0;}
+section .left ul li.info i{ background-position:0 0;}
+section .left ul li.paybtn i{ background-position:0px -200px;}
+section .left ul li.ali i{ background-position:-50px -200px;}
+section .left ul li.wx i{ background-position:-100px -200px;}
+section .left ul li.un i{ background-position:-150px -200px;}
+section .left ul li.jd i{ background-position:-200px -200px;}
+section .left ul li.bd i{ background-position:-250px -200px;}
+section .left ul li.yb i{ background-position:-300px -200px;}
+section .left ul li.kq i{ background-position:-350px -200px;}
+section .left ul li.paypal i{ background-position:-400px -200px;}
+section .left ul li.ms i{ background-position:-450px -200px;}
+section .left ul li.webhook i{ background-position:-500px -200px;}
+section .left ul li.order i{ background-position:-550px -200px;}
+
+section .left ul li:nth-child(1).on i{ background-position:0 -50px;}
+section .left ul li:nth-child(2).on i{ background-position:-50px -50px;}
+section .left ul li:nth-child(3).on i{ background-position:-50px -50px;}
+section .left ul li:nth-child(4).on i{ background-position:-50px -50px;}
+section .left ul li:nth-child(5).on i{ background-position:-100px -50px;}
+section .left ul li:nth-child(6).on i{ background-position:-150px -50px;}
+section .left ul li.info.on i{ background-position:0 -50px;}
+section .left ul li.paybtn.on i{ background-position:0px -250px;}
+section .left ul li.ali.on i{ background-position:-50px -250px;}
+section .left ul li.wx.on i{ background-position:-100px -250px;}
+section .left ul li.un.on i{ background-position:-150px -250px;}
+section .left ul li.jd.on i{ background-position:-200px -250px;}
+section .left ul li.bd.on i{ background-position:-250px -250px;}
+section .left ul li.yb.on i{ background-position:-300px -250px;}
+section .left ul li.kq.on i{ background-position:-350px -250px;}
+section .left ul li.paypal.on i{ background-position:-400px -250px;}
+section .left ul li.ms.on i{ background-position:-450px -250px;}
+section .left ul li.webhook.on i{ background-position:-500px -250px;}
+section .left ul li.order.on i{ background-position:-550px -250px;}
+
+section .left ul li i:last-child{ background-position:-200px 0; margin-right:0; float:right;}
+section .left ul li.on i:last-child{ background-position:-200px -50px;}
+
+section .right{ margin-left:250px; min-height:900px; background-color:#f1f1f1; padding:20px; /background:url(../img/bg.png) repeat*/}
+section .right .content{ width:100%; overflow:hidden; padding-bottom: 50px;}
+section .right .content .module{ width:23%; min-width:180px; height:190px; margin:1%; display:inline; background-color:#fff; float:left; box-shadow:0px 0px 10px #d3d3d3;}
+section .right .content .module .pie_chart{min-width:180px;height:180px}
+section .right .content .allwidth{ width:98%; height:450px; background-color:#fff;}
+section .right .content .module .line_chart{ padding:20px; min-width:280px;height:370px;}
+section .right .content .module .title{ padding:0 20px; height:52px; border-bottom:1px solid #e8e8e8; background-color:#fbfbfb; line-height:52px; color:#777; /*color:#aeaeae;*/ font-size:16px;}
+section .right .content .module .title i{ width:30px; height:50px; float:right; margin-top:1px; background:url(../img/icon.png) no-repeat; background-position:-460px 0; opacity:0.3; cursor:pointer;}
+section .right .content .module .title i.set{ background-position:-510px 0;}
+section .right .content .module .title i.close{ background-position:-560px 0;}
+section .right .content .module .title i:hover{ opacity:0.8;}
+section .right .content .module .title span{background-color: #a9d86e;padding:1px 5px;line-height: 16px;color: #ffffff;font-size: 12px;border-radius: 4px;margin-left: 10px;margin-top: -4px; vertical-align: middle;}
+section .right .content .allheight{ height:400px;}
+section .right .content .allheight .line_chart{ height:320px;}
+
+/*info*/
+section .right .content .ipt_module{ width:98%; height:auto;}
+section .right .content .ipt_module .con{ padding:25px;}
+section .right .content .ipt_module .con h4{ border-left:3px solid #21d376; height:15px; font-size:15px; line-height:15px; padding-left:10px; color:#646464; font-weight: bold; margin:20px 0;}
+section .right .content .ipt_module .con dl{ padding:15px; font-size:14px;}
+section .right .content .ipt_module .con dl dt{ width:12%; float:left; line-height:20px; margin: 8px 0 6px; font-size:14px; color:#646464; font-weight: normal;}
+section .right .content .ipt_module .con dl dd{ width:85%; float:right; position:relative;}
+section .right .content .ipt_module .con dl dd input[type=text],section .right .content .ipt_module .con dl dd input[type=password],section .right .content .ipt_module .con dl dd select{
+    width:100%; height:34px; padding:0 5px; border:1px solid #e8e8e8; border-radius:4px; font-size: 14px; color: #646464;
+}
+section .right .content .ipt_module .con dl dd p{text-align: left; padding: 0; margin: 0; padding-top: 5px; color: #ccc;}
+section .right .content .ipt_module .con dl dd p a{ color:#007aff;}
+section .right .content .ipt_module .con dl dd p span{ font-size: 15px; color: #999;}
+section .right .content .ipt_module .con dl dd input:disabled{ background-color: #fcfcfc;}
+section .right .content .ipt_module .con dl:after{ content: "";clear:both; display:block;}
+/*section .right .content .ipt_module .con dl dd button{ width:70px; height:36px; border-radius:4px; background-color:#28d5cc; border:0; color:#fff; font-size:14px; position:absolute; top:1px; right:-2px;}
+section .right .content .ipt_module .con dl dd button:hover{ background-color:#1fb5ad;}*/
+
+section .right .content .ipt_module .con dl dd span{}
+section .right .content .ipt_module .con dl dd span em{width:16px; height:16px; border:1px solid #e8e8e8; border-radius:3px; color:#fff; line-height:16px;
+    font-size:12px; font-family:"黑体"; margin-right:5px; cursor:pointer;}
+section .right .content .ipt_module .con dl dd span.on em{width:16px; height:16px; border:1px solid #28d5cc;background-color:#28d5cc;}
+/*section .right .content .ipt_module .con dl:last-child dd{ text-align:right;}
+section .right .content .ipt_module .con dl:last-child dd button{ position:static;}*/
+section .right .content .ipt_module .con p{ padding:15px; font-size:14px; text-align:right;}
+section .right .content .ipt_module .con p button{ width:90px; height:36px; border-radius:4px; background-color:#28d5cc; border:0; color:#fff; font-size:14px;}
+section .right .content .ipt_module .con p button:hover{ background-color:#1fb5ad;}
+section .right .content .ipt_module .con dl dd .upload{ width:220px; height:100px; border:1px dashed #e8e8e8; border-radius:5px; text-align:center;
+    line-height:100px; font-size:20px; color:#cccccc;
+    float: left; margin:0 10px 10px 0; cursor: pointer;
+    background-size: 100% 100%;
+}
+section .right .content .ipt_module .con dl dd .for_btn{ height:auto; padding-right:70px; position:relative;}
+section .right .content .ipt_module .con dl dd .for_btn input{ border-radius:4px 0 0 4px;}
+section .right .content .ipt_module .con dl dd .for_btn button{ position:absolute; top:0; right:0;
+    width:72px; height:34px; border-radius:4px; background-color:#28d5cc; border:0; color:#fff; font-size:14px;}
+section .right .content .ipt_module .con dl dd .for_btn button:hover{ background-color:#1fb5ad;}
+/*section .right .content .ipt_module .con dl dd .for_btn p{text-align: left; padding: 0; margin: 0; padding-top: 5px; color: #ccc;}*/
+section .right .content .ipt_module .con dl dd .for_btn span{ position: absolute; left: -80px; top: 0; width: 70px; height: 34px; border-radius: 4px; background-color: #000; color: #fff; text-align: center; line-height: 34px;}
+
+section .right .content .ipt_module .con dl dd .for_btn button.del_btn{box-shadow: 0 0 4px #ff2c55!important; background-color: #ff2c55; color: #fff;}
+/*section .right .content .ipt_module .con dl dd .for_btn button.del_btn:hover{ background-color: #ff2c55; color: #fff;}*/
+
+
+/*add app page*/
+.app_section{ background-color:#f1f1f1; position:relative; padding:15px;}
+.app_section .add{ width:226px; height:300px;border:2px dotted #e5e5e5; background-color:#fcfcfc; text-align:center;
+/*position:absolute; left:100px; top:100px; */
+color:#dadada; font-size:18px; cursor:pointer; margin:10px; float:left;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.app_section .add i{ width:100px; height:90px; margin-top:80px;background:url(../img/icon.png) no-repeat; background-position:0px -100px;
+    /*-webkit-filter:grayscale(50%);*/
+    opacity:0.1;
+}
+.app_section .add:hover{ 
+/*  box-shadow:0px 0px 10px #7ff1ff; border-color:#00e4ff;*/
+  box-shadow:0px 0px 10px #dedede; border-color:#dddddd;
+    color: #bbbbbb;
+}
+.app_section .add:hover i{opacity:0.2;}
+
+.app_section .app{ width:230px; height:300px; padding:20px; background-color:#fcfcfc; text-align:center; box-shadow:0px 0px 3px #e8e8e8;
+ font-size:18px; margin:10px; float:left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+.app_section .app:hover{border-color:#fcfcfc;box-shadow:0px 0px 10px #dedede;}
+.app_section .app span{ line-height:52px;}
+.app_section .app em{ width:98px; height:98px; border-radius:50%; overflow:hidden; background-color:#4db8ea; margin-top:10px;}
+.app_section .app em img{ max-height:100%; max-width:100%;}
+.app_section .app ul{ width:100%; margin-top:36px;}
+.app_section .app ul li{ width:25%; height:10px; float:left; font-size:14px; line-height:12px; color:#878787; cursor:pointer;}
+.app_section .app ul li a{ display: inline-block; color: #878787;}
+.app_section .app ul li i{ width:40px; height:40px; background:url(../img/icon.png) no-repeat; opacity:0.8;}
+.app_section .app ul li:nth-child(1) i{ background-position:-255px -55px;}
+.app_section .app ul li:nth-child(2) i{ background-position:-305px -55px;}
+.app_section .app ul li:nth-child(3) i{ background-position:-355px -55px;}
+.app_section .app ul li:nth-child(4) i{ background-position:-406px -55px;}
+.app_section .app ul li i:hover{ opacity:1;}
+.app_section .app div{ width:100%;}
+
+/*子账户新增*/
+.app_section .app ul li.childGrey a{color: #ccc}
+.app_section .app ul li.childGrey a i{opacity:0.5;}
+.app_section .app ul li.childGrey a:hover{cursor: default}
+.app_section .app ul li.childGrey a i:hover{opacity:0.5;cursor: default}
+
+
+/*jsbutton*/
+.pay_list{ padding:15px;}
+/*.pay_list h4{ border-left:3px solid #21d376; height:14px; font-size:14px; line-height:14px; padding-left:10px; color:#646464; margin:15px 0;}*/
+.pay_list ul{
+    /*width:100%;*/
+    font-size:14px; color:#888;}
+.pay_list ul li{ padding:0 15px; height:50px; line-height:50px;}
+.pay_list ul li:hover{ background-color:#fbfbfb;}
+.pay_list ul li div{ float:right; height:50px;}
+.pay_list ul li div i{ width:40px; height:50px; background:url(../img/icon.png) no-repeat; background-position:-455px -50px; cursor:pointer;}
+.pay_list ul li div i.down{ -webkit-transform:rotate(180deg);}
+.pay_list ul li div em{ width:36px; height:14px; margin:18px 0 18px 15px; border:1px solid #e7e7e7; border-radius:7px; position:relative; background-color:#fff;}
+.pay_list ul li div em:after{content: ""; display:inline-block;height: 18px;width: 18px;border-radius: 100%;background: #fff;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);position: absolute;left: -1px;top: -2px;}
+/*.pay_list ul li div em:hover{-webkit-transition: all ease 0.4s; border:1px solid #21d376; background-color:#21d376;}*/
+.pay_list ul li div em.on{ border:1px solid #21d376; background-color:#21d376;}
+.pay_list ul li div em.on:after{ left:20px;}
+.pay_list ul li:first-child div i.up{ opacity:0.4;}
+.pay_list ul li.pay_close{ color:#ccc;}
+.pay_list ul li.pay_close div i{ opacity:0.4;}
+
+.pay_list .progress{margin:50px 75px 75px; height:5px; background-color:#d8d8d8; position:relative;}
+.pay_list .progress .bar{ width:0%; height:100%; padding:0; background-color:#21d376;}
+.pay_list .progress .bar.request{ width:33%;}
+.pay_list .progress .bar.handling{ width:66%;}
+.pay_list .progress .bar.finish{ width:100%;}
+.pay_list .progress .bar.fail{ width:100%;}
+.pay_list .progress .pro{ width:150px; text-align:center; position:absolute; left:0; top:-12px; font-size:12px; color:#ccc; margin-left:-75px;}
+.pay_list .progress .pro i{ width:30px; height:30px; background-color:#d8d8d8; border-radius:50%;}
+.pay_list .progress .pro.request{ left:33%;}
+.pay_list .progress .pro.handling{ left:66%;}
+.pay_list .progress .pro.finish{ left:100%;}
+.pay_list .progress .pro.on{ color:#333;}
+.pay_list .progress .pro.fail{ color:#999;}
+.pay_list .progress .pro.on i{ background-color:#21d376;}
+.pay_list .progress .pro.fail i{ background-color:#ff8956;}
+
+.pay_list h4 span{ font-weight:normal; color:#bbb;}
+.pay_list .jsbtn{ width:100%; padding:15px 0;}
+.pay_list .jsbtn .pay_selected{ width:25%; min-width:200px; margin:0 15px;  float:left;}
+.pay_list .jsbtn .pay_selected h5{margin:0;text-align:center; background-color:#e8e8e8; line-height:50px; color:#999; font-size:16px;}
+.pay_list .jsbtn .pay_selected ul{border:1px solid #e8e8e8; min-height:150px;}
+.pay_list .jsbtn .pay_selected li{ width:100%; height:50px; line-height:50px; color:#888; cursor:all-scroll;box-sizing: border-box;}
+.pay_list .jsbtn .pay_selected li span{ padding:0 15px; font-size:14px; display:block; text-align:center;}
+.pay_list .jsbtn .pay_selected li span i{ width:50px; height:50px; background:url(../img/ali.png) center no-repeat; background-size:18px 14px; vertical-align:middle;}
+
+.pay_list .jsbtn .pay_selected li:hover{ background-color:#fbfbfb;}
+.pay_list .jsbtn .l_r_move{ width:100px; height:200px; background:url(../img/left_right_move3.png) center no-repeat; float:left; background-size:40px 26px; opacity:0.3;}
+.pay_list .jsbtn .pay_selected li.no_this{ color:#ccc;}
+
+.pay_list .jsbtn_ui{ width:100%; padding:10px 0 25px;}
+.pay_list .jsbtn_ui span{ height:32px; padding:0 20px; margin:0 0 15px 12px; line-height:32px; text-align:center; border:1px solid #e8e8e8; font-size:14px; color:#bbb; cursor: pointer; position:relative;}
+.pay_list .jsbtn_ui span i{ width:14px; height:14px; background-color:#e8e8e8; position:absolute; left:-3px; top:-3px; color:#fff; font-size:10px; text-align:center; line-height:14px;}
+.pay_list .jsbtn_ui span:hover{ border-color:#21d376;}
+.pay_list .jsbtn_ui span.on{border:1px solid #21d376;}
+.pay_list .jsbtn_ui span.on i{ background-color:#21d376;}
+.pay_list .jsbtn_ui span div{ position:absolute; left:-1px; top:35px; z-index:10; display:none;}
+.pay_list .jsbtn_ui span div img{ width:200px;}
+.pay_list .jsbtn_ui span:hover div{ display:block;}
+
+/*appdata top*/
+#appdata_top{ margin-bottom: 15px;}
+.appdata_menu button, #appdata_bottom button, #appdata_top button{ padding: 0px 10px; height: 32px; border: 0; background-color: #e0e0e0; font-size: 14px; color: #333;}
+.appdata_menu > .menu, #appdata_top .top_left{float: left;}
+#appdata_top .select{float:left; min-width:56px; padding: 5px 30px 5px 10px; border: 0;background-color: #e0e0e0; border-radius: 0px;}
+#appdata_top .select span{ font-weight: normal; font-size: 14px; color: #333;}
+#appdata_top .select:after{border-color:#666 transparent;margin-top:-4px;right:10px;}
+
+#appdata_top .select ul{ min-width: 200px;}
+#appdata_top .select ul li a{ padding: 5px 10px; font-size: 14px;border-bottom: 0;}
+#appdata_top .top_left input{ width: 200px; height: 32px; padding:0px 5px; border: 1px solid #e0e0e0; margin-left: 20px; float: left; border-radius: 2px 0 0 2px;}
+.appdata_menu input, #appdata_bottom input{ width: 200px; height: 32px; padding:0px 5px; border: 1px solid #e0e0e0; margin-left: 20px; border-radius: 2px 0 0 2px; text-align:center;}
+#appdata_top .top_left input::-webkit-input-placeholder, #appdata_bottom input::-webkit-input-placeholder{ color: #ccc;}
+#appdata_top .top_left input::-moz-input-placeholder,  #appdata_bottom input::-moz-input-placeholder{ color: #ccc;}
+#appdata_top .top_left input::-o-input-placeholder,  #appdata_bottom input::-o-input-placeholder{ color: #ccc;}
+#appdata_top .top_left input::-ms-input-placeholder, #appdata_bottom input::-ms-input-placeholder{ color: #ccc;}
+#appdata_top .top_left button{border-radius: 0px 2px 2px 0px;}
+#appdata_top .top_right{ float: right;}
+#appdata_top .top_right span{ font-size: 14px; margin-right: 15px;}
+#appdata_top .top_right button{}
+
+#appdata_top .analysis-select ul{min-width: 80px;}
+
+
+.appdata_menu {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#appdata_bottom{ margin-top: 15px; float:left;}
+.bc-slick-grid div{ font-size: 14px;}
+
+/*add app 弹出框*/
+
+
+
+.btn-primary {
+    border-color: #007aff;
+    color: #007aff;
+    box-shadow: 0 0 4px #007aff;
+    outline: 0;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 0;
+    transition: all 200ms ease;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    /*float: right;*/
+}
+/*section .right .content .ipt_module .con dl dd input[type=text], section .right .content .ipt_module .con dl dd input[type=password].form-control{ width: 50%;}*/
+
+/*下发*/
+section .right .issued .ipt_module .con{ padding:25px 0;}
+section .right .issued .ipt_module .con input::-webkit-input-placeholder{ color: #ddd;}
+section .right .issued .ipt_module .con .top{ color: #979797; font-size: 16px; line-height: 28px; padding: 0 25px;}
+section .right .issued .ipt_module .con .top h3{ font-size: 18px; font-weight: normal; color: #4A4A4A; margin-bottom: 20px;}
+section .right .issued .ipt_module .con .top span{ display: inline-block; height: 28px; line-height: 28px; font-size: 18px; vertical-align: middle;}
+section .right .issued .ipt_module .con .top span.amount{font-size: 24px; color: #1FB5AD;}
+section .right .issued .ipt_module .con .top input{ border: 1px solid #ccc; border-radius: 4px; height: 24px; margin-left: 10px; width: 150px; padding: 0 5px; vertical-align: middle;}
+section .right .issued .ipt_module .con .top button{ border: 0; background-color: #1FB5AD; width: 60px; height: 26px; color: #fff; font-size: 14px; border-radius: 4px; vertical-align: middle; margin-left: 10px;}
+section .right .issued .ipt_module .con .list{ width: 100%;}
+section .right .issued .ipt_module .con .list .t{ padding: 13px 0px; border-bottom: 1px solid #e8e8e8;}
+section .right .issued .ipt_module .con .list .t span{ display: inline-block; height: 26px; line-height: 24px; padding: 0 25px; font-size: 16px; color: #979797; border-right: 1px solid #ccc; cursor: pointer;}
+
+section .right .issued .ipt_module .con .list .t span button{ font-size: 16px; border: 0; height:24px;}
+
+section .right .issued .ipt_module .con .list .t span.on{ color: #1FB5AD;}
+section .right .issued .ipt_module .con .list .t span.on button{ color: #1FB5AD;}
+section .right .issued .ipt_module .con .list .t input{ border: 1px solid #ccc; border-radius: 4px; height: 24px; margin-left: 50px; width: 150px; padding: 0 5px;}
+/*section .right .issued .ipt_module .con .list .t input::-webkit-input-placeholder{ color: #ddd;}*/
+section .right .issued .ipt_module .con .list .t button{ border: 1px solid #ccc; border-radius: 4px; height: 24px; margin-left: 15px; background-color: #fff; color: #979797;}
+section .right .issued .ipt_module .con .list .t .t_right{ float: right;}
+section .right .issued .ipt_module .con .list table{ border: 0; width: 100%; border-collapse: collapse; color: #979797; font-size: 14px;}
+section .right .issued .ipt_module .con .list table tr:nth-child(odd){background-color: #FAFAFA;}
+section .right .issued .ipt_module .con .list table tr.ing{ color: #FF6C2C;}
+section .right .issued .ipt_module .con .list table tr.success{ color: #66cc52;}
+section .right .issued .ipt_module .con .list table tr td{ padding: 0 25px; height: 40px; text-align: center;}
+
+section .right .issued .ipt_module .con .list .list_b{ width: 100%; height: 30px; padding: 50px 0 40px; border-top: 1px solid #e8e8e8; text-align: center; font-size: 16px; color: #979797;}
+section .right .issued .ipt_module .con .list .list_b span{ display: inline-block; line-height: 30px; padding: 0 10px; margin: 0 5px; cursor: pointer;}
+section .right .issued .ipt_module .con .list .list_b span.on{ background-color: #1FB5AD; color: #fff;}
+
+
+header {
+    background-color: #fff;
+}
+
+.pay_list .choose_pay{padding:10px 0;}
+.pay_list h4 input{ margin: 0 5px 0 10px; vertical-align: middle; background-color: #21d376;}
+.pay_list h4 label{ font-weight: normal; font-size: 14px; margin: 0; padding: 0; color: #999;}
+.unselectable {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/* Ewenlong select*/
+section .right .content .category .con dl dd select {
+    width: 20%;
+    margin-left: 10px;
+    float: left;
+}
+
+/*子账户管理*/
+
+section .right .account .ipt_module .m-con .list_b{ width: 100%; height: 30px; padding: 50px 0 40px; border-top: 1px solid #e8e8e8; text-align: center; font-size: 16px; color: #979797;}
+section .right .account .ipt_module .m-con .list_b span{ display: inline-block; line-height: 30px; padding: 0 10px; margin: 0 5px; cursor: pointer;}
+section .right .account .ipt_module .m-con .list_b span.on{ background-color: #1FB5AD; color: #fff;}
+.a-input-group{width: 900px;margin-left: auto;margin-right: auto;padding-top: 50px;padding-bottom: 10px;}
+.a-input-group span{color: #4a4a4a;font-size: 14px;margin-top: 20px;text-align: left;display: inline-block;width: 180px;}
+.a-input-group input{margin-left: 25px;border: 1px solid #979797;border-radius: 4px;padding: 10px;font-size: 14px;width: 400px;box-shadow: 1px 1px 1px 1px #efefef inset;margin-top: 20px;}
+.a-input-group input:focus{outline: none}
+.a-input-group input.submit{margin-left: 25px;border-radius: 4px;font-size: 14px;width: 100px;background-color: #1FB5AD;border: none;color: white;box-shadow: none}
+.a-input-group input.submit:hover{background-color: #1ea79f;cursor: pointer}
+
+
+
+
+section .right .content .account .a-page2 .con .a-input-group .input-info{display: inline-block}
+section .right .content .account .a-page2 .con .a-input-group .input-info p{padding:0 0 0 20px;}
+section .right .content .account .a-page2 .con .a-input-group .error{color: #D0021B}
+section .right .content .account .a-page2 .con .a-input-group input.ng-error{border:1px solid #D0021B;box-shadow: 1px 1px 1px 1px rgba(208,2,27,0.3) inset;}
+section .right .content .account .a-page2 .con .a-input-group input.readonly{background-color: #fafafa;color: #979797}
+section .right .content .account{position: relative;width: 200%;left: 0}
+section .right .content .account .module{width: 48%;}
+section .right .content .account .module .title{background-color: #1FB5AD;color: white; font-size: 16px;}
+section .right .content .account .a-page1 .title .a-left{float: left}
+section .right .content .account .a-page1 .title .a-right{  float: right; padding-right:10%;text-align: right;}
+section .right .content .account .a-page1 .title .a-right:hover{cursor: pointer;}
+section .right .content .account .a-page1 .title .a-right .iconfont{margin-right: 20px;font-size: 18px;}
+section .right .content .account .a-page1 .con{padding: 0;background-color: #FAFAFA}
+section .right .content .account .a-page1 .con .a-info{margin-top: 50px;color: #4a4a4a;padding-left: 46px;padding-bottom: 24px;text-align: left}
+section .right .content .account .a-page1 .con .a-info span{color: #1FB5AD; position: relative;}
+section .right .content .account .a-page1 .con .a-info span div{ display: none; width: 440px; padding: 30px; background-color: #fff; position: absolute; left: 0; top: 22px; box-shadow:0px 0px 20px #ccc; font-size: 12px; color: #4a4a4a; line-height: 20px;}
+section .right .content .account .a-page1 .con .a-info span div table{ width: 100%; margin:5px 0; border-collapse: collapse;}
+section .right .content .account .a-page1 .con .a-info span div table td{ font-size: 12px;padding:5px 0; line-height: 16px; border: 1px solid #D2D2D2;}
+section .right .content .account .a-page1 .con .a-info span:hover div{ display: block;}
+
+section .right .content .account .a-page1 .con table{table-layout: fixed;width: 100%;text-align: center;font-size: 14px;border-top: 1px solid #d2d2d2;background-color: white}
+section .right .content .account .a-page1 .con table tr th{color: #4a4a4a;font-weight: normal;border-bottom: 1px solid #E6E6E6;padding: 20px 0;background-color: #fafafa}
+section .right .content .account .a-page1 .con table tr td{color:#979797;border-bottom: 1px solid #E6E6E6;padding: 10px 0;line-height: 20px;word-wrap: break-word;}
+section .right .content .account .a-page1 .con table .operate p{display: inline-block;margin: 0 2%;color: #1FB5AD;}
+section .right .content .account .a-page1 .con table .operate p:hover{cursor: pointer;text-decoration: underline}
+section .right .content .account .a-page1 .con .list_b{ width: 100%; height: 30px; padding: 50px 0 40px; border-top: 1px solid #e8e8e8; text-align: center; font-size: 16px; color: #979797;}
+section .right .content .account .a-page1 .con .list_b span{ display: inline-block; line-height: 30px; padding: 0 10px; margin: 0 5px; cursor: pointer;}
+section .right .content .account .a-page1 .con .list_b span.on{ background-color: #1FB5AD; color: #fff;}
+/*添加子账户*/
+section .right .content .account .a-page2 .title {padding-left: 0}
+section .right .content .account .a-page2 .title .a-left{height: 52px;border-right: 1px solid #fff;text-align: center;color: #ffffff;padding: 0 20px;width: 76px;float: left;display: block; text-align: center;}
+section .right .content .account .a-page2 .title .a-left:hover{background-color: #1ea79f;cursor: pointer}
+section .right .content .account .a-page2 .title .a-right{height: 40px;line-height: 40px;color: #ffffff;float: left;padding-left: 40px;margin-top: 6px}
+section .right .content .account .a-page2 .con{padding: 0;background-color: #fafafa}
+section .right .content .account .a-page2 .con .con-in{background-color: white;margin-top: 50px;}
+section .right .content .account .a-page2 .con .con-in .title{color: #4a4a4a}
+section .right .content .account .a-page2 .con .con-in .a-table{table-layout: fixed;width: 100%;text-align: center;}
+section .right .content .account .a-page2 .con .con-in .a-table th{border-top: 1px solid #E6E6E6;background-color: #fafafa;color: #4a4a4a;padding: 20px 0;border-bottom: 1px solid #E6E6E6;font-weight: normal}
+section .right .content .account .a-page2 .con .con-in .a-table td{font-size: 14px;border-bottom: 1px solid #E6E6E6;word-wrap: break-word;padding: 20px 0}
+section .right .content .account .a-page2 .con .con-in .a-table .iconfont{color:#979797;}
+section .right .content .account .a-page2 .con .con-in .a-table .td1{width: 20%;color: #4a4a4a;vertical-align: top;text-align: left; padding-left: 3%}
+section .right .content .account .a-page2 .con .con-in .a-table .td1 p{padding: 0;text-align: left;font-size: 16px;line-height: 36px;}
+section .right .content .account .a-page2 .con .con-in .a-table .td1 p.authority-on .iconfont:after{color: #1FB5AD;content:"\e61d"}
+section .right .content .account .a-page2 .con .con-in .a-table .td1 p .iconfont{margin-right: 20px;}
+section .right .content .account .a-page2 .con .con-in .a-table .td1 p .iconfont:after{content:"\e61e"}
+section .right .content .account .a-page2 .con .con-in .a-table .td1 p:hover{cursor: pointer;}
+section .right .content .account .a-page2 .con .con-in .a-table .td2{width: 80%;border-right: none;padding-left: 5%}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2{text-align: left;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-left{display:table-cell;width: 250px;padding: 0;vertical-align: top;line-height: 36px;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-left p{color: #979797;padding: 0;text-align: center}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right{display:table-cell;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div{float: left;width: 250px;text-align: center;margin-bottom: 15px;position: relative}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div select{width: 200px;text-align: center;border: none;background-color: #FAFAFA;font-size: 14px;color: #4a4a4a;padding:0 8px;line-height: 36px;height: 36px;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div select option{line-height: 36px;height: 36px;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div select:focus{outline: none}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div.disabled select{color: #979797}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div.disabled .iconfont{color: #979797}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div .iconfont{position: absolute;right: 25px;width: 36px;height: 36px;background-color: #fafafa;line-height: 36px;color: #1FB5AD;}
+section .right .content .account .a-page2 .con .con-in .a-table td.td2 .a-right>div .iconfont:hover{cursor:default;}
+/*section .right .content .account .a-page2 .con .con-in .a-table .td2{width: 65%;padding-top: 20px;}
+section .right .content .account .a-page2 .con .con-in .a-table .td2 .a-table-in{table-layout: fixed;width: 100%}
+section .right .content .account .a-page2 .con .con-in .a-table .td2 .a-table-in td{border-bottom: none;text-align: center;width: 170px;}*/
+
+
+
+section .right .content .account .a-page2 .con .con-in .di-submit{display: block;width: 250px;height: 40px;border-radius: 4px;color: #979797;background-color: #1FB5AD;margin: 54px auto 81px;font-size: 14px;border: none;}
+section .right .content .account .a-page2 .con .con-in .di-submit.a-submit{display: block;width: 250px;height: 40px;border-radius: 4px;color: #fff;background-color: #1FB5AD;margin: 54px auto 81px;font-size: 14px;border: none;}
+section .right .content .account .a-page2 .con .con-in .a-submit:hover{cursor: pointer;background-color: #1ea79f}
+/*弹出框*/
+.a-conceal{position: fixed;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0,0,0,0.5)}
+.a-alert{width: 400px;border-radius: 5px;box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);position: absolute;left: 50%;margin-left: -200px;top:50%;background-color: white;overflow: hidden;margin-top: -110px;}
+.a-alert.a-change{width: 600px;margin-left: -300px;margin-top: -180px;}
+.a-alert .title{height: 40px;background-color: #1FB5AD;color: white;font-weight: normal;font-size: 16px;line-height: 40px;text-align: center;}
+.a-alert .con{padding: 40px 30px 20px;font-size: 14px;color: #4a4a4a;line-height: 20px;}
+.a-alert .con .btn{margin-top: 50px;text-align: center}
+.a-alert .con .btn button{width: 100px;border: none;height: 30px;border-radius: 4px;color: white;background-color:#1FB5AD;margin: 0 20px}
+.a-alert .con .btn button:hover{background-color: #1ea79f}
+.change-input-group{width: 550px;margin-left: auto;margin-right: auto;padding-top: 10px;padding-bottom: 10px;}
+.change-input-group span{color: #4a4a4a;font-size: 14px;margin-top: 20px;text-align: left;display: inline-block;width: 70px;}
+.change-input-group input{border: 1px solid #979797;border-radius: 4px;padding: 10px;font-size: 14px;width: 240px;box-shadow: 1px 1px 1px 1px #efefef inset;margin-top: 20px;margin-right:20px;}
+.change-input-group input:focus{outline: none}
+.change-input-group input.submit{margin-left: 25px;border-radius: 4px;font-size: 14px;width: 100px;background-color: #1FB5AD;border: none;color: white;box-shadow: none}
+.change-input-group input.submit:hover{background-color: #1ea79f;cursor: pointer}
+.change-input-group .error{color: #D0021B;display: inline-block}
+.change-input-group input.ng-error{border:1px solid #D0021B;box-shadow: 1px 1px 1px 1px rgba(208,2,27,0.3) inset;}
+
+
+
+@media (max-width: 1200px){
+	section .left{ width:60px;}
+	section .left .top{ height:95px;}
+	section .left .top i{width:40px; height:40px; padding:0;}
+	section .left .top span{ font-size:12px; line-height:20px;}
+	section .left ul li{ padding:0; overflow:hidden;}
+    section .left ul li i{ margin-left: 3px;}
+	section .right{ margin-left:60px; padding:5px 5px 50px;}
+	section .right .content .module{ width:48%;}
+	section .right .content .allwidth{ width:98%;}
+	section .right .content .ipt_module{ width:98%;}
+    section .right .content .ipt_module .con dl dt{ width:100%;}
+    section .right .content .ipt_module .con dl dd{ width:100%;}
+}
+@media (max-width: 767px){
+/*	header{ width:100%; height:44px; border-bottom:1px solid #cccccc; font-size:16px;}
+    header .left{ float:left; line-height:44px;}
+	header i{ width: 50px; height:40px; margin-top:0px;}*/
+	section .left{ display:none;}
+	section .left .top{ height:95px;}
+	section .left .top i{width:40px; height:40px;}
+	section .left .top span{ font-size:12px; line-height:20px;}
+	section .left ul li{ padding:0; overflow:hidden;}
+	section .right{ margin-left:0px; padding:5px;}
+	section .right .content .module{ width:98%;}
+	section .right .content .module .line_chart{ padding:0px;}
+	section .right .content .ipt_module .con dl dt{ width:100%;}
+	section .right .content .ipt_module .con dl dd{ width:100%;}
+
+    section .right .content .ipt_module .con{ padding:0}
+    .pay_list .progress{margin:50px 40px 75px;}
+    .pay_list .progress .pro{ width:80px; margin-left:-40px; font-size:10px;}
+}
+
+#bcgateway{ width: 200%; -webkit-transition: left 1.5s; left: 0; position: relative;}
+#bcgateway .gateway_k{  width: 50%; float: left;}
+#bcgateway .gateway_warp .module .title{ padding-left: 0px;}
+#bcgateway .gateway_warp .module .title em{ display: inline-block; padding: 0 40px; height: 100%; font-style: normal; border-right: 1px solid #979797; margin-right: 40px; cursor: pointer;}
+
+#bcgateway .gateway_warp .module .con{ padding:20px 50px;}
+#bcgateway .gateway_warp .module .con h3{ font-size: 16px; font-weight: normal; padding: 20px 0;}
+#bcgateway .gateway_warp .module .con ul{ width: 100%;}
+#bcgateway .gateway_warp .module .con ul li{ width: 100%; margin-bottom: 30px; line-height: 40px;}
+#bcgateway .gateway_warp .module .con ul li .con_l{ width: 10%; min-width: 130px; min-height: 40px; text-align: right; padding-right:2%; line-height: 40px; float: left; }
+#bcgateway .gateway_warp .module .con ul li .con_r{float: left; }
+#bcgateway .gateway_warp .module .con ul li .con_r select{ width: 240px; height: 38px; padding: 0 5px; margin-bottom: 20px; margin-right: 10px;}
+#bcgateway .gateway_warp .module .con ul li .con_r input[type=text]{ width: 240px; height: 38px; padding: 0 5px;  margin-bottom: 20px; margin-right: 10px;}
+#bcgateway .gateway_warp .module .con ul li .con_r label{ line-height: 40px; margin-right: 30px;}
+#bcgateway .gateway_warp .module .con ul li .con_r label input{}
+#bcgateway .gateway_warp .module .con ul li .con_r textarea{ width: 500px; height: 90px; font-size: 14px; padding: 5px;}
+#bcgateway .gateway_warp .module .con ul li .con_r span{ color: #FF6C2C;}
+#bcgateway .gateway_warp .module .con ul li .con_r button{ width: 134px; height:46px; background-color: #1FB5AD; color: #fff; border: 0; font-size: 16px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
