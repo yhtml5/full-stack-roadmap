@@ -1,0 +1,27 @@
+{
+  "name": "fis3-angular-demo",
+  "version": "0.0.2",
+  "description": "build angular app with fis3",
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/zhangtao07/fis3-angular-demo.git"
+  },
+  "keywords": [
+    "angular",
+    "fis",
+    "fis3",
+    "client-side"
+  ],
+  "dependencies": {
+    "fis3-hook-module": "*",
+    "fis3-postpackager-loader": "*",
+    "fis-parser-less": "*",
+    "fis-preprocessor-annotate": "*"
+  },
+  "author": "zhangtao07",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangtao07/fis3-angular-demo/issues"
+  },
+  "homepage": "http://fis.baidu.com"
+}

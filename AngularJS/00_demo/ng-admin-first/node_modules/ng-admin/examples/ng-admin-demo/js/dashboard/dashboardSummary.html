@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-lg-12">
+        <uib-alert type="info" close="dismissAlert()" ng-show="!has_seen_alert">
+            Welcome to the <a href="https://github.com/marmelab/ng-admin">ng-admin</a> demo! Fell free to explore and modify the data - it's local to your computer, and will reset each time you reload.
+        </uib-alert>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-usd fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.commands.revenue | number:0 }}</div>
+                        <div>Monthly revenue</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'commands'})">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.commands.pending_orders }}</div>
+                        <div>Pending orders</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'commands',search:{status:'ordered'}})">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.reviews }}</div>
+                        <div>Pending reviews</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'reviews', search:{status:'pending'}})">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-user-plus fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.customers }}</div>
+                        <div>New customers</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'customers',search:{has_ordered:true}})">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
