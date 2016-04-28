@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Google Phone Gallery</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/animations.css">
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-ui-router/angular-ui-router.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="js/app2.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/filters.js"></script>
+		<script src="js/services.js"></script>
+	</head>
+
+	<body>
+
+		<p><i>Best viewed in pop-out mode to see location changes. Click blue button on the right.</i></p>
+
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="#">Quick Start</a>
+				<ul class="nav">
+					<li><a ui-sref="route1">Route 1</a></li>
+					<li><a ui-sref="route2">Route 2</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<div class="well" ui-view></div>
+			</div>
+		</div>
+	</body>
+
+</html>
