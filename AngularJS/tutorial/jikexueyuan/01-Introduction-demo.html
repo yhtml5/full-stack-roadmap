@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>introduction</title>
+        <link rel="stylesheet" href="../../lib/bootstrap.css">
+        <link rel="stylesheet" href="../../lib/yhtml5.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="panel panel-info y-mt40">
+                <div class="panel-heading">
+                    <h3>Introduction
+					    <span class="label label-danger y-fs12">Expressions</span>
+				        <span class="label label-info y-fs12">Filters</span>
+			          	<span class="label label-warning y-fs12">model--class</span>
+				    </h3>
+                </div>
+                <div class="panel-body">
+                    <fieldset id="">
+                        <legend>First demo:</legend>
+                        <b>计算1：</b>
+                        <br>
+                        <table class="table table-hover table-striped">
+                            <tr>
+                                <th>qty</th>
+                                <th>cost</th>
+                            </tr>
+                            <tr>
+                                <td><input type="number" ng-model="qty" required></td>
+                                <td><input type="number" ng-model="cost" required></td>
+                            </tr>
+                        </table>
+                        <b>金额：</b>{{qty*cost | currency}}
+                    </fieldset>
+                    <br><br>
+                    <fieldset id="">
+                        <legend>second demo</legend>
+                        <b>改变model来控制DOM</b>
+                        <input type="text" name="" id="" value="" ng-model="data.msg">
+                        <div class="{{data.msg}}">
+                            我是一个{{data.msg}}
+                        </div>
+                    </fieldset>
+                </div>
+                <!--panel-body-->
+            </div>
+        </div>
+        <script src="../../lib/angular.js"></script>
+    </body>
+
+</html>
