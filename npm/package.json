@@ -1,0 +1,16 @@
+{
+  "name": "yhtml5",
+  "version": "1.0.0",
+  "description": "study npm",
+  "main": "index.js",
+  "keywords": [],
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jshint": "^2.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
