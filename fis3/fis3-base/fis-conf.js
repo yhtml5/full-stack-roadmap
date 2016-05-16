@@ -1,7 +1,10 @@
-// 设置项目属性
-fis.set('project.name', 'fis3-base');
-fis.set('project.static', '/static');
+//======== 设置项目属性
 fis.set('project.files', ['*.html', 'map.json', '/test/*']);
+fis.set('project.ignore', ['*.bak']); // set 为覆盖不是叠加
+fis.set('project.md5Length', 9);
+fis.set('project.md5Connector ', '.');
+fis.set('project.name', 'yhtml5');
+fis.set('project.static', '/static');
 
 // 引入模块化开发插件，设置规范为 commonJs 规范。
 
@@ -17,12 +20,10 @@ fis.match('/modules/**', {
     useSameNameRequire: true
 });
 
-
 // ------ 配置lib
 fis.match('/lib/**.js', {
     release: '${project.static}/$&'
 });
-
 
 // ------ 配置components
 fis.match('/components/**', {
@@ -36,7 +37,6 @@ fis.match('/components/**.js', {
     isMod: true,
     release: '${project.static}/$&'
 });
-
 
 // ------ 配置modules
 fis.match('/modules/(**)', {
@@ -53,7 +53,7 @@ fis.match(/^\/modules\/(.*\.scss)$/i, {
     }),
     postprocessor: fis.plugin('autoprefixer', {
         browsers: ['> 1% in CN', "last 2 versions", "IE >= 8"] // pc
-        // browsers: ["Android >= 4", "ChromeAndroid > 1%", "iOS >= 6"] // wap
+            // browsers: ["Android >= 4", "ChromeAndroid > 1%", "iOS >= 6"] // wap
     })
 });
 fis.match(/^\/modules\/(.*\.css)$/i, {
@@ -61,7 +61,7 @@ fis.match(/^\/modules\/(.*\.css)$/i, {
     release: '${project.static}/$1',
     postprocessor: fis.plugin('autoprefixer', {
         browsers: ['> 1% in CN', "last 2 versions", "IE >= 8"] // pc
-        // browsers: ["Android >= 4", "ChromeAndroid > 1%", "iOS >= 6"] // wap
+            // browsers: ["Android >= 4", "ChromeAndroid > 1%", "iOS >= 6"] // wap
     })
 })
 fis.match(/^\/modules\/(.*\.(?:png|jpg|gif))$/i, {
@@ -80,7 +80,6 @@ fis.match(/^\/modules\/(.*\.js)$/i, {
     release: '${project.static}/$1'
 });
 
-
 // ------ 配置前端模版 使用template.js
 fis.match('**.tmpl', {
     parser: fis.plugin('template', {
@@ -89,18 +88,16 @@ fis.match('**.tmpl', {
         global: 'template'
     }),
     isJsLike: true,
-    release : false
+    release: false
 });
-
 
 // ------ 配置模拟数据
 fis.match('/test/**', {
-  release: '$0'
+    release: '$0'
 });
 fis.match('/test/server.conf', {
-  release: '/config/server.conf'
+    release: '/config/server.conf'
 });
-
 
 /*************************打包规范*****************************/
 
@@ -127,7 +124,7 @@ var map = {
     }
 };
 
-fis.util.map(map, function (k, v) {
+fis.util.map(map, function(k, v) {
     var domain = v.host + v.path;
 
     fis.media(k)
@@ -183,7 +180,6 @@ fis.util.map(map, function (k, v) {
             packTo: '/pkg/aio.js'
         })
 });
-
 
 // 发布产品库
 fis.media('prd')
