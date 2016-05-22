@@ -2,6 +2,11 @@ fis.set('project.name', 'yhtml5-fis3');
 fis.set('project.md5Length', 8);
 fis.set('project.md5Connector ', '_');
 
+fis.set('new date', Date.now());
+fis.match('*.js', {
+    query: '?=t' + fis.get('new date')
+});
+
 /**************************dev******************************/
 fis.media('dev')
     .set("project.ignore", [
