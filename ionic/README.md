@@ -19,9 +19,9 @@ Make sure to substitute iOS with **Android** to build for Android.
 Then, try Ionic View to share your apps with testers and clients or to easily test on new devices. 
   
 > cd myApp
-> ionic platform add ios
-> ionic build ios
-> ionic emulate ios  --开启仿真IOS
+> ionic platform add ios  --添加平台
+> ionic build ios  --创建app
+> ionic emulate ios  --开启仿真app
 
  
 ### Develop for platforms  
@@ -35,6 +35,16 @@ Then, try Ionic View to share your apps with testers and clients or to easily te
    * "Android SDK Build-tools" (latest)
    3. if you have some problems,please go to cordova-android for help
 
+#### problems
+   1. Exception in thread "main" java.lang.RuntimeException
+      * changing distributionUrl to:
+        var distributionUrl = 'distributionUrl=http\\://services.gradle.org/distributions/gradle-2.3-all.zip';
+
+
+
+
+
 
 [java-sdk]:http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [cordova-android]:https://cordova.apache.org/docs/zh-cn/6.x/guide/platforms/android/index.html
+                  

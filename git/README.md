@@ -21,5 +21,6 @@
    * touch 1.html  创建文件
    * cat <files>  --查看文件内容
    * history  --查看命令日志
+   * source ~/.bash_profile  --命令生效
     
         

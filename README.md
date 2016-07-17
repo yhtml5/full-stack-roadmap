@@ -10,9 +10,10 @@
 
 #### Framework
 - [x] angular
-- [x] angular ui-router
-- [ ] angular Material
+- [x] angular-ui-router
+- [ ] angular-material
 - [x] bootstrap
+- [ ] ionic
 - [x] jQuery
 - [ ] Jquery EasyUI
 - [ ] react
@@ -24,8 +25,33 @@
 - [ ] echarts
 
 
+#### server
+
+- [ ] apache
+- [ ] express
+- [ ] java
+- [ ] java-vm 
+- [ ] node
+- [ ] php
+- [ ] 
+
+
 #### Tools
+ 
+ - [x] bower
+ - [x] browserify
+ - [ ] cordova  
+ - [ ] git
+ - [x] fis3  
+ - [ ] glup
+ - [ ] grunt 
+ - [x] markdown
+ - [ ] node 
+ - [x] npm
+ - [ ] webpack
+ - [ ] yeoman   
    
+```
  - [ ] 熟练使用git  --包括分支管理, 搭建git服务器, 工作流程
  - [x] 熟练使用bower  --进行前端包管理
  - [x] 熟练使用npm  --进行js包管理
@@ -34,7 +60,7 @@
  - [x] 精通FIS3  --独立构建前端应用
  - [ ] 熟悉grunt/glup  --前端构建工具
  - [ ] 熟悉yeoman 前端脚手架工作流
-
+```
 
 #### Others
  - [x] wordpress theme development
