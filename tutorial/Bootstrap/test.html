@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-1.11.3.js"></script>
+</head>
+<body>
+
+
+<div class="btn btn-info hide">hello world</div>
+
+<script>
+    function promptOnClose(e){
+
+//e = e ? e : windowevent;
+
+        var promptString = '你是否要离开此页面，离开该页面的信息将不被保存！';
+
+//event.returnValue = promptString;
+
+        return promptString;
+
+    }
+
+    if (window != top){
+
+        top.location.href = "www.baidu.com";
+
+    }else{
+
+        if (window.Event) {
+
+            window.onbeforeunload = function(event) {
+
+                return promptOnClose(event);
+            }
+        } else {
+
+            window.onbeforeunload = function() {
+
+                return promptOnClose(event);
+            }
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
