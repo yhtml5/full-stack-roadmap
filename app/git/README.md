@@ -83,19 +83,14 @@
 ### others
    * git config --global user.name "Your Name"
 
-### linux command line
-<<<<<<< HEAD
+### linux command line  
    * cat <files> --查看文件内容
    * history --查看命令日志
    * mkdir learngit --创建目录
    * cd learngit --进入目录
    * pwd --显示当前目录
-   * sudo apt-get install git  --Ubuntu安装
-=======
-   * touch 1.html  创建文件
-   * cat <files>  --查看文件内容
-   * history  --查看命令日志
-   * source ~/.bash_profile  --命令生效
+   * sudo apt-get install git  --Ubuntu安装  
+   * touch 1.html  创建文件  
+   * source ~/.bash_profile  --命令生效  
     
-        
->>>>>>> c9c4c71f85851ed72680a6bc4c83986e83dc6967
+       
