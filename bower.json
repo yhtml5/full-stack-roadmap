@@ -15,6 +15,13 @@
     "tests"
   ],
   "dependencies": {
-    "vivus": "^0.3.1"
+    "vivus": "^0.3.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "animate.css": "^3.5.2",
+    "angular-ui-bootstrap": "^2.0.0",
+    "angular-ui": "^0.4.0",
+    "angular-ui-router": "^0.3.1",
+    "echarts": "^3.2.2"
   }
 }

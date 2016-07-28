@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../../bower_components/animate.css/animate.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header class="navbar navbar-default navbar-fixed-top text-center">
+    <h1 y-animate="demo">yhtml5</h1>
+</header>
+<div class="container text-center y-mt-120">
+    <div class="">
+        <button class="btn btn-success" y-btn="init">init</button>
+        <button class="btn btn-warning" y-btn="infinite">infinite</button>
+    </div>
+    <hr>
+    <div class="row" y-animate="btnGroup">
+        <div class="col-lg-12 btn-group y-mb-20" y-animate="btnGroupInit">
+            <button type="button" class="btn btn-info" value="bounce">bounce</button>
+            <button type="button" class="btn btn-info" value="flash">flash</button>
+            <button type="button" class="btn btn-info" value="pulse">pulse</button>
+            <button type="button" class="btn btn-info" value="rubberBand">rubberBand</button>
+            <button type="button" class="btn btn-info" value="shake">shake</button>
+            <button type="button" class="btn btn-info" value="headShake">headShake</button>
+            <button type="button" class="btn btn-info" value="swing">swing</button>
+            <button type="button" class="btn btn-info" value="wobble">wobble</button>
+            <button type="button" class="btn btn-info" value="jello">jello</button>
+        </div>
+        <div class="col-lg-12 y-mb-20 btn-group btn-group-sm" y-animate="btnGroupBouncings"></div>
+        <div class="col-lg-12 y-mb-20 btn-group btn-group-sm" y-animate="btnGroupFadings"></div>
+        <div class="col-lg-4 btn-group" class="" y-animate="btnGroupSpecials"></div>
+        <div class="col-lg-4 btn-group" y-animate="btnGroupFlippers"></div>
+        <div class="col-lg-4 y-mb-20 btn-group" y-animate="btnGroupLightspeeds"></div>
+        <div class="col-lg-12 y-mb-20 btn-group btn-group-sm" y-animate="btnGroupRotatings"></div>
+        <div class="col-lg-12 y-mb-20 btn-group" y-animate="btnGroupZooms"></div>
+        <div class="col-lg-12 btn-group" class="" y-animate="btnGroupSlidings"></div>
+        <hr>
+    </div>
+</div>
+</div>
+</div>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

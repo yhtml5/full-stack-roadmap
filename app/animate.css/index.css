@@ -1,0 +1,16 @@
+
+.y-mb-20{
+    margin-bottom: 20px;
+}
+.y-mt-120 {
+    margin-top: 120px;
+}
+
+
+.y-animate-demo {
+    position: fixed;
+    top: 15%;
+    margin: auto;
+    left: 10%;
+    z-index: 2;
+}
