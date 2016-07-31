@@ -1,5 +1,5 @@
 {
-  "name": "YHTML5-Tutorial",
+  "name": "yhtml5-tutorial",
   "homepage": "https://github.com/yhtml5/YHTML5-Tutorial",
   "authors": [
     "yhtml5"
@@ -15,13 +15,14 @@
     "tests"
   ],
   "dependencies": {
-    "vivus": "^0.3.1",
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.0",
-    "animate.css": "^3.5.2",
-    "angular-ui-bootstrap": "^2.0.0",
+    "angular": "^1.5.8",
     "angular-ui": "^0.4.0",
+    "angular-ui-bootstrap": "^2.0.0",
     "angular-ui-router": "^0.3.1",
-    "echarts": "^3.2.2"
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "echarts": "^3.2.2",
+    "jquery": "^3.1.0",
+    "vivus": "^0.3.1"
   }
 }
