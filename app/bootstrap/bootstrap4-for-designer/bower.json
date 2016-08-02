@@ -1,0 +1,21 @@
+{
+  "name": "yhtml5-tutorial",
+  "homepage": "https://github.com/yhtml5/YHTML5-Tutorial",
+  "authors": [
+    "yhtml5"
+  ],
+  "description": "the components of tutorials",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap4": "bootstrap#4.0.0-alpha.3",
+    "jquery": "~2.x"
+  }
+}
