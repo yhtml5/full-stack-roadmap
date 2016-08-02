@@ -22,7 +22,9 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "echarts": "^3.2.2",
-    "jquery": "^3.1.0",
+    "jquery": "~2.x",
+    "jquery1.x": "jquery#1.x",
+    "jquery3.x": "jquery#3.x",
     "vivus": "^0.3.1"
   }
 }
