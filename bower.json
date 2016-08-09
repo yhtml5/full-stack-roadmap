@@ -26,6 +26,7 @@
     "jquery": "~2.x",
     "jquery1.x": "jquery#1.x",
     "jquery3.x": "jquery#3.x",
-    "vivus": "^0.3.1"
+    "vivus": "^0.3.1",
+    "vue": "^1.0.26"
   }
 }
