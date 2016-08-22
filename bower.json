@@ -15,11 +15,11 @@
     "bootstrap4": "bootstrap#4.0.0-alpha.3",
     "Buttons": "^2.0.0",
     "echarts": "^3.2.2",
+    "font-awesome": "Font-Awesome#^4.6.3",
     "jquery": "~2.x",
     "jquery1.x": "jquery#1.x",
     "jquery3.x": "jquery#3.x",
     "vivus": "^0.3.1",
-    "vue": "^1.0.26",
-    "font-awesome": "Font-Awesome#^4.6.3"
+    "vue": "^1.0.26"
   }
 }
