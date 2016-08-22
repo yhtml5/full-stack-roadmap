@@ -22,6 +22,7 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "bootstrap4": "bootstrap#4.0.0-alpha.3",
+    "Buttons": "^2.0.0",
     "echarts": "^3.2.2",
     "jquery": "~2.x",
     "jquery1.x": "jquery#1.x",
