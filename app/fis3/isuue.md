@@ -57,7 +57,9 @@ release both a and b
     > https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=zh-CN
 - [ ] 选择性打包 *.min.js 文件
     > *.design. *.min.js  
-
+- [ ] htmlminify  
+    > 对主页面压缩,被inline的文件,也会压缩
+- [ ] ERROR optimizer.htmlminify: Parse Error    
    
      
    
