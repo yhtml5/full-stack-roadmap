@@ -1,9 +1,0 @@
-@import url('./xcoamp_x.css');
-
-body {
-    background-image: url(./a.png);
-}
-
-body {
-    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./a.png');
-}

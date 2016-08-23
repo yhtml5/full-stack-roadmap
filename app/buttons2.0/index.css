@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.y-center {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.y-center-font {
+    text-align: center;
+}
+
+.y-mt2 {
+    margin-top: 20px;
+}
+
+.y-mb4 {
+    margin-bottom: 40px;
+}
+
+.y-pd2 {
+    padding: 20px;
+}
+
+.y-bgc088EF0 {
+    background-color: #088EF0;
+}
+
+.y-c9AD824 {
+    color: #9AD824;
+}
+
+a {
+    text-decoration: none;
+}
+
+.y-m-t-20{
+    margin-top: 20px;
+}
