@@ -1,0 +1,22 @@
+{
+  "name": "yhtml5-tutorial",
+  "version": "1.0.0",
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "description": "learning the new Front-End technology",
+  "homepage": "https://github.com/yhtml5/YHTML5-Tutorial#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhtml5/YHTML5-Tutorial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yhtml5/YHTML5-Tutorial/issues"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

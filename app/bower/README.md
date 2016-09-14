@@ -1,4 +1,4 @@
-## 什么是bower  
+## 什么是[bower]  
 
 **Bower是一个客户端技术的软件包管理器，它可用于搜索、安装和卸载如JavaScript、HTML、CSS之类的网络资源。其他一些建立在Bower基础之上的开发工具，如YeoMan和Grunt，这个会在以后的文章中介绍。[原文地址]**  
 
@@ -67,6 +67,10 @@ bower init --初始化
 
 ```
 bower install jquery --save
+
+bower install jquery#1.x
+
+bower install jquery jquery2=jquery#2.x
 ```
 
 bower就会从远程下载jquery最新版本到你的js/lib目录下
@@ -118,3 +122,4 @@ bower uninstall jquery
 ```
 
 [原文地址]:https://segmentfault.com/a/1190000002971135
+[bower]:https://bower.io
