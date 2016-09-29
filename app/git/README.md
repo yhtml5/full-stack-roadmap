@@ -1,5 +1,9 @@
 ## git tutorial
 
+
+
+![GitHub set up](principle.png)
+
 ### Create Repository
    * git init --初始化Git仓库
    * git add readme --添加文件到版本库
@@ -45,6 +49,7 @@
    * git branch -d <name> --删除分支
    * git branch -D <name> --强行删除没有合并过的分支
    * git branch --set-upstream branch-name origin/branch-name --建立本地分支和远程分支的关系
+   * git branch --set-upstream-to=origin/dev dev --建立本地分支和远程分支的关系
    * git checkout <name> --切换分支
    * git checkout -b <name> --创建+切换分支
    * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
@@ -72,10 +77,10 @@
    * git log --pretty=oneline  --简化log
    * git log --graph  --命令可以看到分支合并图
    * git log --graph --pretty=oneline --abbrev-commit
+   * git config --list  --显示当前配置信息
    * git config --global color.ui true  --让Git显示颜色
    * git config --global user.name "Your Name"  --global参数, 表示你这台机器上所有的Git仓库都会使用这个配置，
    * git config --global user.email "email@example.com"	
-
    * git config --global alias.st status
    * git config --global alias.co checkout
    * git config --global alias.ci commit
@@ -113,5 +118,5 @@
    * 恢复上一个版本:
        * git checkout -- readme.txt 还没有被放到暂存区, 撤销修改就回到和版本库一模一样的状态   
        * git reset HEAD readme.txt  已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
-  
+   * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
 

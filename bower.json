@@ -15,12 +15,14 @@
     "bootstrap4": "bootstrap#4.0.0-alpha.3",
     "Buttons": "^2.0.0",
     "echarts": "^3.2.2",
+    "form.validation": "*",
     "font-awesome": "Font-Awesome#^4.6.3",
+    "html5shiv": "^3.7.3",
     "jquery": "~2.x",
     "jquery1.x": "jquery#1.x",
     "jquery3.x": "jquery#3.x",
+    "pickadate": "^3.5.6",
     "vivus": "^0.3.1",
-    "vue": "^1.0.26",
-    "html5shiv": "^3.7.3"
+    "vue": "^1.0.26"
   }
 }
