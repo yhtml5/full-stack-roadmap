@@ -1,7 +1,6 @@
 ## git tutorial
 
 
-
 ![GitHub set up](principle.png)
 
 ### Create Repository
@@ -31,31 +30,31 @@
    * git clone --克隆
    * git pull --抓取远程分支
    * git push -u origin master --推送master分支并关联本地与远程的分支(第一次加-u)
-   * git push origin <branch-name> --推送本地分支到远程库
+   * git push origin **branch-name** --推送本地分支到远程库
    * git push origin master  --关联后简化推送命令
-   * git push origin :refs/tags/<tagname> --删除一个远程标签
-   * git push origin <tagname> --推送一个本地标签
+   * git push origin :refs/tags/**tagname** --删除一个远程标签
+   * git push origin **tagname** --推送一个本地标签
    * git push origin --tags --推送全部尚未推送到远程的本地标签
    * git remote 不带参数，列出已经存在的远程分支
-   * git remote add origin git@github.com:chenyexing/learngit.git --Adds a remote named <name> for the repository at <url>
+   * git remote add origin git@github.com:chenyexing/learngit.git --Adds a remote named **name** for the repository at **url**
    * git remote add origin git@server-name:path/repo-name.git --关联一个远程库
    * git remote -v | --verbose 列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中间。
  
 
 ### Branch Manage
    * git branch --查看分支
-   * git branch <name> --创建分支
+   * git branch **name** --创建分支
    * git branch --查看当前分支（当前分支前会标*）
-   * git branch -d <name> --删除分支
-   * git branch -D <name> --强行删除没有合并过的分支
+   * git branch -d **name** --删除分支
+   * git branch -D **name** --强行删除没有合并过的分支
    * git branch --set-upstream branch-name origin/branch-name --建立本地分支和远程分支的关系
    * git branch --set-upstream-to=origin/dev dev --建立本地分支和远程分支的关系
-   * git checkout <name> --切换分支
-   * git checkout -b <name> --创建+切换分支
+   * git checkout **name** --切换分支
+   * git checkout -b **name** --创建+切换分支
    * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
    * git log --graph --查看分支合并图
-   * git merge <name> --合并某分支到当前分支
-   * git merge <name> --no-ff -m "merge" -dev
+   * git merge **name** --合并某分支到当前分支
+   * git merge **name** --no-ff -m "merge" -dev
             --禁用 Fast formard 模式(删除分支后,丢掉分支信息,看不出历史合并记录)
    * git remote --查看远程库信息
    * git remote -v --查看详细远程库信息
@@ -64,12 +63,12 @@
    * git stash pop --回到工作现场
 
 ### Label Manage
-   * git tag <name> --打标签
+   * git tag **name** --打标签
    * git tag --查看所有标签
-   * git show <tagname> --查看标签信息
-   * git tag -a <tagname> -m <note> --创建带有说明的标签
-   * git tag -s <tagname> -m <note> --用PGP签名标签
-   * git tag -d <tagname> --删除标签（本地）
+   * git show **tagname** --查看标签信息
+   * git tag -a **tagname** -m **note** --创建带有说明的标签
+   * git tag -s **tagname** -m **note** --用PGP签名标签
+   * git tag -d **tagname** --删除标签（本地）
 
 ### Others
    * gitignore  --.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
