@@ -1,0 +1,14 @@
+{
+  "name": "yhtml5-travel",
+  "version": "0.0.1",
+  "description": "create a simple website with express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
