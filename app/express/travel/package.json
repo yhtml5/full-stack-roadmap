@@ -9,6 +9,7 @@
   "author": "yhtml5 <1417376255@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
   }
 }
