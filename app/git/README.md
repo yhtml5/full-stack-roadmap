@@ -26,14 +26,17 @@
    * git status --查看修改状态
   
 ### Remote Repository
-   * ssh-keygen -t rsa -C "youremail@example.com" --创建SSH Key
-   * git clone --克隆
-   * git pull --抓取远程分支
-   * git push -u origin master --推送master分支并关联本地与远程的分支(第一次加-u)
-   * git push origin **branch-name** --推送本地分支到远程库
-   * git push origin master  --关联后简化推送命令
-   * git push origin :refs/tags/**tagname** --删除一个远程标签
+   * ssh-keygen -t rsa -C "youremail@example.com"  --创建SSH Key
+   * git clone  --克隆
+   * git pull  --抓取远程分支
+   * git push -u origin master  --推送master分支并关联本地与远程的分支(第一次加-u)
+   * git push origin **branch-name**  --推送本地分支到远程库
    * git push origin **tagname** --推送一个本地标签
+   * git push origin master  --推送分支
+   * git push origin :**branchName**          --删除远程分支
+   * git push origin :refs/tags/**tagname**  --删除远程标签
+   * git push origin --delete **branchName**  --删除远程分支
+   * git push origin --delete **tagname**   --删除远程标签
    * git push origin --tags --推送全部尚未推送到远程的本地标签
    * git remote 不带参数，列出已经存在的远程分支
    * git remote add origin git@github.com:chenyexing/learngit.git --Adds a remote named **name** for the repository at **url**
@@ -43,6 +46,8 @@
 
 ### Branch Manage
    * git branch --查看分支
+   * git branch -a  --查看所有分支(远程)
+   * git branch -m dev1 dev2  --重命名分支
    * git branch **name** --创建分支
    * git branch --查看当前分支（当前分支前会标*）
    * git branch -d **name** --删除分支
