@@ -57,6 +57,7 @@
    * git checkout **name** --切换分支
    * git checkout -b **name** --创建+切换分支
    * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
+   * git cherry-pick 62ecb3  --合并部分提交到当前分支
    * git log --graph --查看分支合并图
    * git merge **name** --合并某分支到当前分支
    * git merge **name** --no-ff -m "merge" -dev
