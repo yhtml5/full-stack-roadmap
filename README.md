@@ -1,6 +1,11 @@
 ## Front-end study
   这里记录一些自己学习前端知识的与学习近况
 
+
+#### plan
+* study npm
+ 
+
 #### class
 * 《HTML开发知识体系图丨极客学院》
 * 《JavaScript基础教程》
