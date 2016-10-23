@@ -17,6 +17,8 @@
     "url": "https://github.com/yhtml5/YHTML5-Tutorial/issues"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "vue": "^1.x",
+    "vue-router": "^0.x"
   }
 }
