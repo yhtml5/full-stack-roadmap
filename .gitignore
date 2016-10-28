@@ -55,3 +55,11 @@ Temporary Items
 tmp
 .DS_Store
 .idea
+app/angular-ui/
+app/express/travel/site/
+app/fis3/demo-fis3/
+app/fis3/fis3-base/
+app/ionic/appcamp/
+app/vim/
+app/yeoman/webapp/app/fonts/
+app/yeoman/webapp/app/images/

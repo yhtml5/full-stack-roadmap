@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <template id="home">
+        <div>
+            <h1>Home</h1>
+            <p>{{msg}}</p>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li>
+                    <a v-link="{ path: '/home/news'}">News</a>
+                </li>
+                <li>
+                    <a v-link="{ path: '/home/message'}">Messages</a>
+                </li>
+            </ul>
+            <router-view></router-view>
+        </div>
+    </template>
+
+    <template id="news">
+        <ul>
+            <li>News 01</li>
+            <li>News 02</li>
+            <li>News 03</li>
+        </ul>
+    </template>
+    <template id="message">
+        <ul>
+            <li>Message 01</li>
+            <li>Message 02</li>
+            <li>Message 03</li>
+        </ul>
+    </template>
+</div>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="../../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    //组件构造器
+    var Home = Vue.extend({
+        template: '#home',
+        data: function () {
+            return {
+                msg: 'Hello, vue router!'
+            }
+        }
+    })
+    var News = Vue.extend({
+        template: '#news'
+    })
+    var Message = Vue.extend({
+        template: '#message'
+    })
+    var router = new VueRouter()
+    //路由映射
+    router.map({
+        '/home': {
+            component: Home,
+            // 定义子路由
+            subRoutes: {
+                '/news': {
+                    component: News
+                },
+                '/message': {
+                    component: Message
+                }
+            }
+        },
+//        '/about': {
+//            component: About
+//        }
+    })
+    var App = Vue.extend({})
+    router.start(App, '#app')
+</script>
+</body>
+</html>

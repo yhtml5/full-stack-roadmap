@@ -1,7 +1,18 @@
-## git tutorial
+## Git Tutorial
 
+### git 常用命令大全
 
 ![GitHub set up](principle.png)
+
+### add ssh
+   * cat ~/.ssh/id_rsa.pub
+   * ls -al ~/.ssh  --列出证书
+   
+   * ssh-keygen -t rsa -b 4096 -C "1417376255@qq.com"  --创建ssh证书
+   * eval "$(ssh-agent -s)"  --??  
+   * ssh-add ~.ssh/id_rsa  --??
+   * clip < ~/.ssh/id_rsa.pub  --克隆
+   
 
 ### Create Repository
    * git init --初始化Git仓库
@@ -123,4 +134,3 @@
        * git checkout -- readme.txt 还没有被放到暂存区, 撤销修改就回到和版本库一模一样的状态   
        * git reset HEAD readme.txt  已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
    * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
-

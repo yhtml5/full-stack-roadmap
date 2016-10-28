@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="list-group">
+        <a class="list-group-item" v-link="{ path: '/home'}">Home</a>
+        <a class="list-group-item" v-link="{ path: '/about'}">About</a>
+    </div>
+    <router-view></router-view>
+</div>
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="../../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    var Home = Vue.extend({
+        template: '<div><h1>Home</h1><p>{{msg}}</p></div>',
+        data: function () {
+            return {
+                msg: 'Hello, vue router!'
+            }
+        }
+    })
+    var About = Vue.extend({
+        template: '<div><h1>About</h1><p>This is the tutorial about vue-router.</p></div>'
+    })
+    var router = new VueRouter()
+    router.map({
+        '/home': {component: Home},
+        '/about': {component: About}
+    })
+    var App = Vue.extend({})
+    router.start(App, '#app')
+</script>
+</body>
+</html>
+
