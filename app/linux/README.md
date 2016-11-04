@@ -9,5 +9,8 @@
    * sudo apt-get install git  --Ubuntu安装  
    * source ~/.bash_profile  --命令生效  
    * touch 1.html  创建文件  
+   
+   
+   
     
        
