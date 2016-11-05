@@ -16,6 +16,9 @@
 |command+Option+Esc|强制退出|
 |command+Q|退出程序|
 |command+Space|调用Siri|hold|
+|control+space|切换输入法|
+|command+tab|切换程序|再按Q退出|
+|ifconfig|查看IP|
 |vi /etc/hosts |修改host文件|sudo|
 |which node|查找Node程序|
  
@@ -24,7 +27,11 @@
 |Command Line|Usage|Notice|
 |---|---|---|
 |brew|简书|http://www.jianshu.com/p/20ea93641bda|
+|brew cleanup|清理brew的link|
 |brew doctor|检查brew情况|
 |brew install node|安装node|
 |brew uninstall node|卸载node|
+|brew update|更新 brew|
+|brew edit wget|opens in $EDITOR!|
  
+### Solarized
