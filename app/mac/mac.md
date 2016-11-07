@@ -1,6 +1,5 @@
 # basics
 
-
 ### MAC常用快捷键
 
 |Shortcut Key|Usage|Notice|
@@ -21,17 +20,32 @@
 |ifconfig|查看IP|
 |vi /etc/hosts |修改host文件|sudo|
 |which node|查找Node程序|
+|source ~/.zshrc|生效文件|
  
  
-### Brew
+### Brew  
+
+[official website][brew]  
+
+install brew  
+ 
+> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 |Command Line|Usage|Notice|
 |---|---|---|
+|brew|简书|http://www.jianshu.com/p/078d9900a7c8|
 |brew|简书|http://www.jianshu.com/p/20ea93641bda|
 |brew cleanup|清理brew的link|
+|brew deps|显示包依赖|
 |brew doctor|检查brew情况|
+|brew edit wget|opens in $EDITOR!|
+|brew home|用浏览器打开brew的官方网站|
+|brew info|显示软件信息|
 |brew install node|安装node|
+|brew list|列出已安装的软件|
+|brew search /wge*/ |正则|
 |brew uninstall node|卸载node|
 |brew update|更新 brew|
-|brew edit wget|opens in $EDITOR!|
  
-### Solarized
+ 
+[brew]:http://brew.sh/
