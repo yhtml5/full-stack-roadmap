@@ -1,6 +1,6 @@
 # basics
 
-### MAC常用快捷键
+### Mac shortcut key
 
 |Shortcut Key|Usage|Notice|
 |---|---|---|
@@ -21,7 +21,6 @@
 |vi /etc/hosts |修改host文件|sudo|
 |which node|查找Node程序|
 |source ~/.zshrc|生效文件|
- 
  
 ### Brew  
 

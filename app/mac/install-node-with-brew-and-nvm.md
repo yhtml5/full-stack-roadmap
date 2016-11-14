@@ -57,7 +57,7 @@ $ npm -v
 2.14.12
 ```
 
-### 7.切换 npm 到国内镜像
+### 7.切换 npm 到[国内镜像][cnpm]
 
 命令行输入，注意使用 bash 的对应修改相关 .bashrc 或 .bash_profile 文件
 
@@ -73,3 +73,5 @@ $ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taoba
 > $ cnpm -v
 
 以后就可以使用 cnpm 替换 npm 命令以达到提高速度、解决死链的目的。
+
+[cnpm]:https://npm.taobao.org/
