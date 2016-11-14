@@ -8,12 +8,14 @@
    * cat ~/.ssh/id_rsa.pub
    * ls -al ~/.ssh  --列出证书
    * ssh-keygen -t rsa -b 4096 -C "1417376255@qq.com"  --创建ssh证书
+   * ssh-keygen -t rsa -C "youremail@example.com"  --创建SSH Key
    * eval "$(ssh-agent -s)"  --??  
    * ssh-add ~.ssh/id_rsa  --??
    * clip < ~/.ssh/id_rsa.pub  --克隆
-
 ### Create Repository
    * git init --初始化Git仓库
+   * sudo git init --bare sample.git --创建裸仓库
+   * sudo chown -R git:git sample.git  --改变权限
    * git add readme --添加文件到版本库
    * git add readme.txt --编写一个 readme.txt 文件
    * git commit -m "info" --用命令把文件提交到仓库，info本次提交的说明
@@ -35,8 +37,9 @@
    * git status --查看修改状态
   
 ### Remote Repository
-   * ssh-keygen -t rsa -C "youremail@example.com"  --创建SSH Key
    * git clone  --克隆
+   * git clone `ssh://git@XXX.com:8120/username/resources.git`
+   * git clone `../test/sample.git`
    * git pull  --抓取远程分支
    * git push -u origin master  --推送master分支并关联本地与远程的分支(第一次加-u)
    * git push origin **branch-name**  --推送本地分支到远程库

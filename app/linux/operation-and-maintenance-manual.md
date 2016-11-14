@@ -6,9 +6,9 @@
 
 ```
 ssh root@127.0.0.1
-adduser test
+adduser test 
 passwd test
-gpasswd -a test wheel
+gpasswd -a test wheel | add test to whell group
 su test | su -
 cat /etc/sudoers
 sudo cat /etc/sudoers
