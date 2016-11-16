@@ -75,12 +75,12 @@ $ netstat -ntlp
 |---|---|
 |$ sudo nginx -t| 测试配置|
 |sudo systemctl reload nginx|重新加载服务配置文件|
-|# systemctl status nginx.service|查看服务器状态|
-|# systemctl start nginx.service|启动nginx服务|
-|# systemctl restart nginx.service|重新启动|
-|# systemctl stop nginx.service|停止服务|
-|# systemctl enable nginx.service|开机启动|
-|# systemctl disable nginx.service|禁止开机启动|
+|sudo systemctl status nginx.service|查看服务器状态|
+|sudo systemctl start nginx.service|启动nginx服务|
+|sudo systemctl restart nginx.service|重新启动|
+|sudo systemctl stop nginx.service|停止服务|
+|sudo systemctl enable nginx.service|开机启动|
+|sudo systemctl disable nginx.service|禁止开机启动|
 
 
 更改本地host地址指向域名
