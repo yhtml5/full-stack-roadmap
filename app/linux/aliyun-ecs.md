@@ -1,5 +1,7 @@
 ## operation-and-maintenance-manual
 
+[Aliyun Elastic Compute Service][aliecs]
+
 ## Initial configuration
 
 #### 1.create account named yhtml5:
@@ -65,6 +67,24 @@ connect to host 47.89.194.18 port 22: Connection refused
 ssh test@127.0.0.1 -p xxx
 ```
 
+### 6.change host name
+
+```
+# hostname
+# vi /etc/sysconfig/network
+restart Ali ECS
+```
+
+### 7.add a disk
+
+```
+# pwd
+# df -h
+# bash auto_fdisk.sh
+# df -h
+
+```
+
 ## 阿里控制台操作
 
 1. 设置实例快照
@@ -84,3 +104,4 @@ ssh test@127.0.0.1 -p xxx
 
 
 [安全组应用案例]:https://help.aliyun.com/document_detail/25475.html?spm=5176.2020520101.121.2.9mmMov
+[aliecs]:http://ninghao.net/course/1584

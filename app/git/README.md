@@ -38,7 +38,7 @@
   
 ### Remote Repository
    * git clone  --克隆
-   * git clone `ssh://git@XXX.com:8120/username/resources.git`
+   * git clone `ssh://userName@ipAddress:port/path/repository.git`
    * git clone `../test/sample.git`
    * git pull  --抓取远程分支
    * git push -u origin master  --推送master分支并关联本地与远程的分支(第一次加-u)
