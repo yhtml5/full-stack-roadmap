@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <style>
+        .title {
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1 class="title">{{ message }}</h1>
+    <h1 v-once>This will never change: {{ message }}</h1>
+    <div v-bind:title="title">
+        Hover your mouse over me for a few seconds to see my dynamically bound title!
+    </div>
+    <p v-if="seen">Now you see me</p>
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+    <p>{{ inputValue }}</p>
+    <input v-model="inputValue">
+    <ol>
+        <!-- Now we provide each todo-item with the todo object    -->
+        <!-- it's representing, so that its content can be dynamic -->
+        <todo-item v-for="item in todos" v-bind:todo="item"></todo-item>
+    </ol>
+    <button :id="btnId" v-bind:disabled="isDisable">Button</button>
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    var data = {
+        message: 'Hello Vue!',
+        title: 'You loaded this page on ' + new Date(),
+        seen: true,
+        todos: [
+            {text: 'Learn JavaScript'},
+            {text: 'Learn Vue'},
+            {text: 'Build something awesome'}
+        ],
+        inputValue: '',
+        isDisable: true,
+        btnId: 'test'
+    }
+    var app = new Vue({
+        el: '#app',
+        data: data,
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        },
+        computed: {
+            // a computed getter
+            reversedMessage: function () {
+                // `this` points to the vm instance
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+    Vue.component('todo-item', {
+        // The todo-item component now accepts a
+        // "prop", which is like a custom attribute.
+        // This prop is called todo.
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+</script>
+</body>
+</html>

@@ -33,6 +33,7 @@
 |date|display date|`+%Y/%m/%d`;`+%H:%M`;格式|
 |bc|Calculator|`+`加法,`-`減法,`*`乘法,`/`除法,`^`指數,`%`餘數;`quit`exit|
 |cal `month` `year`|display calendar|
+|ifconfig -a|查看ip|
 |ip addr|查看ip地址|
 |man `command`|manual|`q`exit;`space`page down|
 |who|view who online|
