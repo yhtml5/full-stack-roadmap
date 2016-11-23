@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="example-1">
+    <button v-on:click="counter += 1">增加 1</button>
+    <p>这个按钮被点击了 {{ counter }} 次。</p>
+    <br>
+    <button v-on:click="greet">Greet</button>
+    <button v-on:click="say('hi')">Say hi</button>
+    <button v-on:click="say('what')">Say what</button>
+    <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            counter: 0,
+            name: 'Vue.js'
+        },
+        methods: {
+            greet: function (event) {
+                // `this` 在方法里指当前 Vue 实例
+                console.log('Hello ' + this.name + '!')
+                // `event` 是原生 DOM 事件
+                console.log(event.target.tagName)
+            },
+            say: function (message) {
+                console.warn(message)
+            },
+            warn: function (message, event) {
+                // 现在我们可以访问原生事件对象
+                if (event) event.preventDefault()
+                console.log(message)
+            }
+        }
+    })
+</script>
+</body>
+</html>

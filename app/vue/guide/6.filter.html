@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="todo-list-example">
+    <ul>
+        <li v-for="n in evenNumbers">{{ n }}</li>
+        <li v-for="n in even(numbers)">{{ n }}</li>
+    </ul>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#todo-list-example',
+        data: {
+            numbers: [1, 2, 3, 4, 5]
+        },
+        methods: {
+            even: function (numbers) {
+                return numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        },
+        computed: {
+            evenNumbers: function () {
+                return this.numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

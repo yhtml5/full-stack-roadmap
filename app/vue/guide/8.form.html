@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="msg1" placeholder="edit me">
+    <p>Message is: {{ msg1 }}</p>
+
+    <span>Multiline message is:</span>
+    <p style="white-space: pre">{{ msg2 }}</p>
+    <br>
+    <textarea v-model="msg2" placeholder="add multiple lines"></textarea><br>
+    <input type="checkbox" id="checkbox" v-model="checked">
+    <label for="checkbox">{{ checked }}</label><br>
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames">
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+    <label for="mike">Mike</label>
+    <br>
+    <span>Checked names: {{ checkedNames }}</span><br>
+    <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <br>
+    <div>Picked: {{ picked }}</div>
+    <select v-model="selected">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <div>Selected: {{ selected }}</div>
+    <select v-model="selected2" multiple>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <br>
+    <div>Selected: {{ selected2 }}</div>
+    <select v-model="selected3">
+        <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+        </option>
+    </select>
+    <div>Selected: {{ selected3 }}</div>
+    <h1>绑定 value</h1>
+    <input type="checkbox" v-model="toggle4" v-bind:true-value="a" v-bind:false-value="b">
+    <div>Selected: {{ toggle4 }}</div>
+    <br>
+    <input type="radio" v-model="picked4" v-bind:value="c">
+    <div>Selected: {{ picked4 }}</div>
+    <br>
+    <select v-model="selected5">
+        <!-- 内联对象字面量 -->
+        <option v-bind:value="{ number: 123 }">123</option>
+    </select>
+    <div>Selected: {{ selected5 }}</div>
+    <br>
+    <input v-model.lazy="msg6" >
+    <div>v-model.lazy: {{ msg6 }}</div>
+    <input v-model.number="age6" type="number">
+    <div>v-model.number: {{ age6 }}</div>
+    <br>
+    <!--<input v-model="msg7">-->
+    <input v-model.trim="msg7">
+    <div>过滤首位空格: {{ msg7 }}</div>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg1: '',
+            msg2: '',
+            msg6: '',
+            msg7: '',
+            age6: '',
+            checked: false,
+            picked: false,
+            picked4: false,
+            selected: '',
+            selected2: [],
+            a: 'a1',
+            b: 'b2',
+            c: 'c3',
+            toggle4: 'a',
+            checkedNames: [],
+            selected3: 'A',
+            selected5: 'E5',
+            options: [
+                {text: 'One', value: 'A'},
+                {text: 'Two', value: 'B'},
+                {text: 'Three', value: 'C'}
+            ]
+        }
+    })
+
+</script>
+</body>
+</html>

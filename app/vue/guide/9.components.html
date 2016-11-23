@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="example-2">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <br>
+    <single-counter></single-counter>
+    <single-counter></single-counter>
+    <single-counter></single-counter>
+    <br>
+    <child message="hello!"></child>
+    <child2 my-message="hello!"></child2>
+    <br>
+    <div>
+        <input v-model="parentMSG">
+        <br>
+        <child3 :m-sg="parentMSG"></child3>
+    </div>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    var data = {
+        counter: 0,
+        parentMSG:'1'
+    }
+    Vue.component('simple-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        // data 是一个函数，因此 Vue 不会警告，
+        // 但是我们为每一个组件返回了同一个对象引用
+        data: function () {
+            return data//为每一个组件返回了同一个对象引用
+        }
+    })
+    Vue.component('single-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        // data 是一个函数，因此 Vue 不会警告，
+        // 但是我们为每一个组件返回了同一个对象引用
+        data: function () {
+            return {
+                counter: 0//为每个组件返回新的 data 对象
+            }
+        }
+    })
+    Vue.component('child', {
+        // 声明 props
+        props: ['message'],
+        // 就像 data 一样，prop 可以用在模板内
+        // 同样也可以在 vm 实例中像 “this.message” 这样使用
+        template: '<span>{{ message }}</span>'
+    })
+    Vue.component('child2', {
+        // camelCase in JavaScript
+        props: ['myMessage'],
+        template: '<span>{{ myMessage }}</span>'
+    })
+    Vue.component('child3', {
+        props: ['mSg'],
+        template: '<span>{{ mSg }}</span>'
+    })
+    new Vue({
+        el: '#example-2',
+        data:data
+    })
+
+</script>
+</body>
+</html>
