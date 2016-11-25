@@ -2,9 +2,16 @@
 
 |Tutorial|url|
 |---|---|
+|vue1|https://vuejs.org.cn/|
+|vue2|http://cn.vuejs.org/|
+|vuex|https://github.com/vuejs/vuex|
+|vux|https://www.gitbook.com/book/vuxjs/vux|
+|vue-awesome|https://github.com/vuejs/awesome-vue|
+|vue-devtool|https://github.com/vuejs/vue-devtools|
+|vue-loader|https://vue-loader.vuejs.org/|
+|vue-router2|http://router.vuejs.org/zh-cn/|
 |vue tutorial| https://github.com/keepfool/vue-tutorials |
 |cnblogs| http://www.cnblogs.com/keepfool/p/5619070.html |
-
 
 ### Expression  
 

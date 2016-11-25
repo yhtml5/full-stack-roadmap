@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <anchored-heading :level="1">Hello world!</anchored-heading>
+    <anchored-heading :level="2">Hello world!</anchored-heading>
+    <anchored-heading2 :level="2">Hello world!</anchored-heading2>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    Vue.component('anchored-heading', {
+        render: function (createElement) {
+            return createElement(
+                    'h' + this.level,   // tag name 标签名称
+                    this.$slots.default // 子组件中的阵列
+            )
+        },
+        props: {
+            level: {
+                type: Number,
+                required: true
+            }
+        }
+    })
+    var getChildrenTextContent = function (children) {
+        return children.map(function (node) {
+            return node.children
+                    ? getChildrenTextContent(node.children)
+                    : node.text
+        }).join('')
+    }
+    Vue.component('anchored-heading2', {
+        render: function (createElement) {
+            // create kebabCase id
+            var headingId = getChildrenTextContent(this.$slots.default)
+                    .toLowerCase()
+                    .replace(/\W+/g, '-')
+                    .replace(/(^\-|\-$)/g, '')
+            return createElement(
+                    'h' + this.level,
+                    [
+                        createElement('a', {
+                            attrs: {
+                                name: headingId,
+                                href: '#' + headingId
+                            }
+                        }, this.$slots.default)
+                    ]
+            )
+        },
+        props: {
+            level: {
+                type: Number,
+                required: true
+            }
+        }
+    })
+    var vm = new Vue({
+        el: '#app',
+    })
+</script>
+</body>
+</html>

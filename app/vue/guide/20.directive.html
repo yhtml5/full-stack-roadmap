@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input2 type="text"></input2>
+</div>
+<script src="../../../bower_components/vue2/dist/vue.js"></script>
+<script>
+    Vue.component('input2', {
+        template: '<input type="text" v-focus>',
+        directives: {
+            focus: function (el) {
+                el.focus()
+            }
+        }
+    })
+    var vm = new Vue({
+        el: '#app',
+    })
+</script>
+</body>
+</html>
