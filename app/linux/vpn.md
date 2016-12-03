@@ -4,6 +4,9 @@
 
 you need sudo
 
+In centos7, vpn will not work if you set firewalld wrong,
+> systemctl stop firewalld.service
+
 ```
 $ yum install ppp iptables pptpd
 

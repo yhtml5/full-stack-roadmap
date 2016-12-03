@@ -1,7 +1,7 @@
 ## Vue Tutorial
 
-|Tutorial|url|
-|---|---|
+|Tutorial|url|note|
+|---|---|---|
 |vue1|https://vuejs.org.cn/|
 |vue2|http://cn.vuejs.org/|
 |vuex|https://github.com/vuejs/vuex|
@@ -10,6 +10,7 @@
 |vue-devtool|https://github.com/vuejs/vue-devtools|
 |vue-loader|https://vue-loader.vuejs.org/|
 |vue-router2|http://router.vuejs.org/zh-cn/|
+|vue-template|http://vuejs-templates.github.io/webpack/|
 |vue tutorial| https://github.com/keepfool/vue-tutorials |
 |cnblogs| http://www.cnblogs.com/keepfool/p/5619070.html |
 

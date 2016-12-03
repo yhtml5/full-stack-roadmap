@@ -1,5 +1,7 @@
 ## NPM Tutorial
 
+[npm scripts 使用指南][npm-script-ruan]
+
 ### Command Lind
 
 use Taobao cnpm
@@ -11,9 +13,10 @@ use Taobao cnpm
 |command|usage|
 |---|---|
 |npm -v|显示版本，检查npm 是否正确安装|
-|npm install modules|安装模块|
-|npm install modules -g|全局安装|
+|npm install modules|安装模块,参数: -g, --save, --save-dev, --production|
 |npm list|列出已安装模块|
+|npm run|list all scripts|
+|npm run dev|do something|
 |npm show modules|显示模块详情|
 |npm update|升级当前目录下的项目的所有模块|
 |npm update modules|升级当前目录下的项目的指定模块|
@@ -57,3 +60,5 @@ demo:
 ^2 <2.2 || > 2.3
 ```
 注意，如果使用连字号，它的两端必须有空格。如果不带空格，会被 npm 理解成预发布的 tag，比如1.0.0-rc.1。
+
+[npm-script-ruan]:http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html

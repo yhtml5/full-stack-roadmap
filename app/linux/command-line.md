@@ -38,7 +38,9 @@
 |man `command`|manual|`q`exit;`space`page down|
 |who|view who online|
 |netstat -a|view net status|
-|netstat -ntlp|list port|
+|netstat -ntlp|list port|linux|
+|sudo lsof -i:port|查看端口占用|mac|
+|sudo kill -9 PID|关闭进程||
 |ps -aux|后台执行的程序
 |su -|切换管理者身份;`exit`|
 |systemctl start firewalld|开启防火墙|
