@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "eslint-plugin-promise": "^3.3.0",
-    "vue": "^2.1.0"
+    "vue": "^2.1.0",
+    "vue-router": "^2.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -69,6 +70,7 @@
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
+    "vue-html-loader": "^1.2.3",
     "vue-loader": "^10.0.0",
     "vue-style-loader": "^1.0.0",
     "vue-template-compiler": "^2.1.0",
