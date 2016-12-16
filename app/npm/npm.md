@@ -4,9 +4,19 @@
 
 ### Command Lind
 
-use Taobao cnpm
-
+#### 1. use Taobao cnpm
 > npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+#### 2. change registry 
+Edit ~/.npmrc and add :
+
+````
+registry=https://registry.npm.taobao.org
+init.license=MIT
+init.author.email=1417376255@qq.com
+init.author.name=yhtml5
+````
+
 > npm install npm -g  |update npm itself
 
 ### NPM

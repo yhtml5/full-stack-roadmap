@@ -15,7 +15,6 @@
 ### Create Repository
    * git init --初始化Git仓库
    * sudo git init --bare sample.git --创建裸仓库
-   * sudo chown -R git:git sample.git  --改变权限
    * git add readme --添加文件到版本库
    * git add readme.txt --编写一个 readme.txt 文件
    * git commit -m "info" --用命令把文件提交到仓库，info本次提交的说明
@@ -31,7 +30,8 @@
    * git log --pretty=oneline --查看减少后的历史记录
    * git reset --hard HEAD^ --返回到上个版本（上上个版本：HEAD^^；往上100个版本：HEAD~100）
    * git reset --hard 版本号 --回到删除的版本（当前命令行窗口未关闭；版本号没必要写全）
-   * git reset HEAD file --将暂存区的修改退回工作区
+   * git reset HEAD file --将暂存区的修改退回工作区   * sudo chown -R git:git sample.git  --改变权限
+
    * git reflog --查看命令历史，以便确定要回到未来的哪个版本
    * git rm --用于删除一个文件
    * git status --查看修改状态
