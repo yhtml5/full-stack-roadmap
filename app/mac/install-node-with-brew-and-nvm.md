@@ -67,10 +67,18 @@ $ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taoba
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"' >> ~/.zshrc && source ~/.zshrc
 ```
-
-### 8.测试 cnpm 命令
-
+测试 cnpm 命令:  
 > $ cnpm -v
+
+#### 8. change registry 
+Edit ~/.npmrc and add :
+
+````
+registry=https://registry.npm.taobao.org
+init.license=MIT
+init.author.email=1417376255@qq.com
+init.author.name=yhtml5
+````
 
 以后就可以使用 cnpm 替换 npm 命令以达到提高速度、解决死链的目的。
 
