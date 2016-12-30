@@ -15,6 +15,10 @@ git clone git://github.com/altercation/solarized.git
 * Failed to load preferences form custom directory. Falling back to local copy
 > 不勾选 load preferences from a custom folder 
 
+* 颜色不生效
+> iTerm2 - Preferences - Profiles - Text - Text Rendering ，
+> 将 Draw bold text in bright colors 前面的勾去掉. 然后重启 iterm2 看看.
+
 #### hight light
 
 ```

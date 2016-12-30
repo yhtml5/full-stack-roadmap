@@ -2,7 +2,7 @@
 
 [official website](http://www.jianshu.com/p/078d9900a7c8)
 
-### 1.使用 brew 安装 nvm。
+### 1.使用 brew 安装 [nvm][nvm]。
 
 nvm(Node Version Manager) 是 Node 的版本管理器。用于安装、管理、切换 Node。
 
@@ -57,7 +57,18 @@ $ npm -v
 2.14.12
 ```
 
-### 7.切换 npm 到[国内镜像][cnpm]
+### 7. change registry 
+
+Edit ~/.npmrc and add :
+
+````
+registry=https://registry.npm.taobao.org
+init.license=MIT
+init.author.email=1417376255@qq.com
+init.author.name=yhtml5
+````
+
+### 8.切换 npm 到[国内镜像][cnpm]
 
 命令行输入，注意使用 bash 的对应修改相关 .bashrc 或 .bash_profile 文件
 
@@ -70,16 +81,7 @@ $ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taoba
 测试 cnpm 命令:  
 > $ cnpm -v
 
-#### 8. change registry 
-Edit ~/.npmrc and add :
-
-````
-registry=https://registry.npm.taobao.org
-init.license=MIT
-init.author.email=1417376255@qq.com
-init.author.name=yhtml5
-````
-
-以后就可以使用 cnpm 替换 npm 命令以达到提高速度、解决死链的目的。
+以后就可以使用 阿里镜像 替换 npm 命令以达到提高速度、解决死链的目的。
 
 [cnpm]:https://npm.taobao.org/
+[nvm]:https://github.com/creationix/nvm
