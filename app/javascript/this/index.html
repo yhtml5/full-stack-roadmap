@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THIS</title>
+</head>
+<body>
+
+
+<script>
+    var xw = {
+        name: "小王",
+        gender: "男",
+        age: 24,
+        say: function (school, grade) {
+            console.log(this.name + " , " +
+                this.gender + " ,今年" + this.age + " ,在" + school + "上" + grade);
+        }
+    }
+    var xh = {
+        name: "小红",
+        gender: "女",
+        age: 18
+    }
+
+    xw.say();
+    xw.say.call(xh, "实验小学", "六年级1");
+    xw.say.apply(xh, ["实验小学", "六年级2"]);
+    xw.say.bind(xh, "实验小学", "六年级3")();
+    xw.say.bind(xh)("实验小学", "六年级4");
+</script>
+</body>
+</html>

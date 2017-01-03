@@ -48,6 +48,7 @@
 * hierarchy `{n:[阶层,层次]}`
 * hint `{{n:[线索,提示]},{v:暗示}}`
 * identical `[相同]`
+* increment `{n:增量}`
 * infer `{v:推断}`
 * internal `内部`
 * integrate `{v:[统一,整合]}`
