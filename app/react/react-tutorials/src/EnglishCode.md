@@ -1,9 +1,3 @@
-## English-code
-
-* complex  --复杂的
-* colletions  --子集
-* reference  --引用
-
 ## Technology English
  
 ### Word 
@@ -15,7 +9,6 @@
 * architecture `{n:[结构,架构]}`
 * argument `{n:[论据,争论]}`
 * assign `[分配,指派]` 
-* assume `{v:[承当,设想]}` 
 * associated `{adj:[联合的,关联]}`
 * benefit `{{n:[好处,效益]},{v:[造福,盈利]}}`
 * celsius `{n:摄氏度}`
@@ -23,10 +16,8 @@
 * concept `{n:[概念,学说]}`
 * conditional `{{adj:条件的},{n:条件}}`
 * contradicts `{v:[驳斥,矛盾]}`
-* controlled `{adj:[受控,义务]}`
 * convenient `{adj:方便}`
 * converting `{v:[变换,改造]}`
-* compact `{adj:[紧凑,简洁的]}`
 * complicated `{adj:[复杂,繁琐]}`
 * curly braces `{n:[花括号,大括号]}`
 * declare `[宣布,声明]`
@@ -45,7 +36,7 @@
 * handler `事件处理器`
 * handles `{{adj:处理},{n:把手}}`
 * hierarchies `{n:[继承,层次]}`
-* hierarchy `{n:[阶层,层次]}`
+* Hierarchy `{n:[阶层,层次]}`
 * hint `{{n:[线索,提示]},{v:暗示}}`
 * identical `[相同]`
 * infer `{v:推断}`
@@ -111,4 +102,3 @@
 * a library of `一系列`
 * A Brief Interlude `简单插曲`
 * Figure out `断定`
-
