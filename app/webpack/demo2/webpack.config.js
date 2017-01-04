@@ -5,12 +5,9 @@ const webpack = require('webpack')
 
 const version = require('./webpack.version')
 
-console.log(__dirname)
-
 module.exports = {
     entry: {
         main: './app/index.js',
-        login: './app/login.js'
     },
     output: {
         filename: '[name].js',
