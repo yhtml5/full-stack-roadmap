@@ -5,11 +5,17 @@ const webpack = require('webpack')
 
 const version = require('./webpack.version')
 
+console.log(__dirname)
+
 module.exports = {
-    entry: './app/index.js',
+    entry: {
+        main: './app/index.js',
+        login: './app/login.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
+        publicPath: "./"
     },
     module: {
         rules: [
