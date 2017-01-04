@@ -6,9 +6,12 @@
   "author": "yhtml5 <1417376255@qq.com>",
   "license": "MIT",
   "scripts": {
+    "start": "npm i && npm run build",
     "prebuild": "rimraf dist && clear",
-    "build": "webpack --progress --hide-modules --colors --config webpack.config.js",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "build": "webpack --progress --hide-modules --watch --colors --config webpack.config.js",
+    "predev": "clear",
+    "dev": "webpack-dev-server --open",
+    "dev2": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
@@ -16,16 +19,25 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "react": "^15.4.1"
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
   },
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "css-loader": "^0.26.1",
+    "babel": "^6.5.2",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.13.0",
+    "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-minifier": "^3.2.3",
     "html-webpack-plugin": "^2.26.0",
+    "postcss-loader": "^0.9.1",
+    "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.5.4",
-    "webpack": "^2.2.0-rc.3"
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.0"
   }
 }

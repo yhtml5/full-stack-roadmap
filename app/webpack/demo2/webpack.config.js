@@ -28,7 +28,15 @@ module.exports = {
             })
         }]
     },
-    devtool: 'source-map',
+    devServer: {
+        hot: true,
+        // enable HMR on the server
+        contentBase: resolve(__dirname, 'dist'),
+        // match the output path
+        publicPath: '/'
+        // match the output `publicPath`
+    },
+    devtool: "cheap-eval-source-map",
     plugins: [
         new ExtractTextPlugin({
             filename: '[name].css?[hash]',

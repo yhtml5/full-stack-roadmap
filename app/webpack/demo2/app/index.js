@@ -4,13 +4,11 @@ import './style2.css'
 
 function component() {
     var element = document.createElement('div');
-
     /* lodash is required for the next line to work */
     element.innerHTML = _.map(['Hello', 'webpack'], function (item) {
         return item + ' ';
     });
-
-    return element;
+    return element3;
 }
 
 document.body.appendChild(component());
