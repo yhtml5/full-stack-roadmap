@@ -1,0 +1,20 @@
+{
+  "name": "webpack-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "clear",
+    "build": "webpack --progress --hide-modules --colors --config build/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^15.4.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.26.0",
+    "webpack": "^1.14.0"
+  }
+}
