@@ -11,7 +11,7 @@ module.exports = {
         'webpack/hot/only-dev-server',
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
-        './src/index.js'
+        './index.js'
         // the entry point of our app
     ],
     output: {
