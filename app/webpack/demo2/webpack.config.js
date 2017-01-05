@@ -1,31 +1,44 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const minify = require('html-minifier').minify;
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const minify = require('html-minifier').minify;
 
 const version = require('./webpack.version')
 
 module.exports = {
+    context: path.resolve(__dirname, "./"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
     entry: {
-        main: './app/index.js',
+        index: './app/index.js',
+        login: './app/login.js',
     },
     output: {
-        filename: '[name].js?[hash]',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: "./"
+        filename: 'static/[name].js?[hash:6]',//determines the name of each output bundle
+        path: path.resolve(__dirname, 'dist/' + version),//The base directory, an absolute path
+        pathinfo: false,//include comments in bundles with information about the contained modules
+        publicPath: "./",//the URL of your output.path from the view of the HTML page,if you want to open from the local files, you can set './'
     },
     module: {
         rules: [{
-            test: /\.(js|jsx)$/,
-            use: 'babel-loader'
+            test: /\.app\/(js|jsx)$/,
+            use: 'babel-loader',
+        }, {
+            test: /\.jsx?$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel', // 'babel-loader' is also a legal name to reference
+            query: {
+                presets: ['react', 'es2015']
+            }
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract({
                 notExtractLoader: "style-loader",
                 loader: "css-loader?sourceMap",
-                publicPath: "./"
+                publicPath: "/"
             })
+        }, {
+            test: /\.html$/,
+            loader: 'html-loader'
         }]
     },
     devServer: {
@@ -43,12 +56,31 @@ module.exports = {
     devtool: "cheap-eval-source-map",
     plugins: [
         new ExtractTextPlugin({
-            filename: '[name].css?[hash]',
+            filename: 'static/[name].css?[hash:7]',
             disable: false,
             allChunks: true
         }),
         new HtmlWebpackPlugin({
-            template: 'app/index.html',
+            chunks: ['index'],//only certain chunks you can limit the chunks being used
+            excludeChunks: '',//exclude certain chunks
+            filename: 'index.html',
+            template: 'app/template.js',
+            title: 'HOME',
+            favicon: 'app/favicon.ico',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                trimCustomFragments: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            excludeChunks: ['index'],
+            filename: 'login.html',
+            template: 'app/template.js',
+            title: 'LOGIN',
+            favicon: 'app/favicon.ico',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,

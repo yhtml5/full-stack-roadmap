@@ -1,3 +1,5 @@
+// const moment = require('moment');
+
 import './style.css'
 import './style2.css'
 
@@ -6,5 +8,7 @@ function component() {
     element.innerHTML = 'Hello webpack'
     return element;
 }
+
+// console.log(moment().format());
 
 document.body.appendChild(component());

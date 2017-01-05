@@ -14,10 +14,4 @@ function getVersionDate() {
     return versionDate
 }
 
-const indexVersion = 'dist/v' + packageConfig.version + '-' + getVersionDate() + '/index.html'
-const assetsRootVersion = 'dist/v' + packageConfig.version + '-' + getVersionDate()
-
-module.exports = {
-    indexVersion,
-    assetsRootVersion
-}
+module.exports = 'v' + packageConfig.version + '-' + getVersionDate()
