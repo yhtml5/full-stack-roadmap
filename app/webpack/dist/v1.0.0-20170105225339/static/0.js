@@ -1,0 +1,1 @@
+webpackJsonp([0,4],{"./b.js":function(n,o){console.log("***** I AM B *****");(function(){"undefined"==typeof __REACT_HOT_LOADER__})()}});

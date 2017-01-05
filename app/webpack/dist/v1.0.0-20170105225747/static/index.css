@@ -1,0 +1,22 @@
+.app {
+    text-size-adjust: none;
+    font-family: helvetica, arial, sans-serif;
+    line-height: 200%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 6px 20px 30px;
+}.y-m-t-20 {
+    margin-top: 20px;
+}
+
+.y-blue {
+    color: blue;
+}
+.y-m-t-20 {
+    margin-top: 20px;
+}
+
+.y-blue2222 {
+    color: blue;
+}
