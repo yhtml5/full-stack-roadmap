@@ -12,10 +12,11 @@ module.exports = {
     context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
     entry: {
         index: './app/index.js',
+        vendor: 'moment',
         login: './app/login.js',
     },
     output: {
-        filename: 'static/[name].js?[hash:6]',//determines the name of each output bundle
+        filename: 'static/[name].js?[chunkhash:6]',//determines the name of each output bundle
         path: path.resolve(__dirname, '../dist/' + version),//The base directory, an absolute path
         pathinfo: false,//include comments in bundles with information about the contained modules
         publicPath: "./",//the URL of your output.path from the view of the HTML page,if you want to open from the local files, you can set './'
@@ -58,13 +59,13 @@ module.exports = {
     devtool: "cheap-eval-source-map",
     plugins: [
         new ExtractTextPlugin({
-            filename: 'static/[name].css?[hash:7]',
+            filename: 'static/[name].css?[hash:6]',
             disable: false,
             allChunks: true
         }),
         new HtmlWebpackPlugin({
-            chunks: ['index'],//only certain chunks you can limit the chunks being used
-            excludeChunks: '',//exclude certain chunks
+            chunks: ['index', 'vendor', 'manifest'],//only certain chunks you can limit the chunks being used
+            excludeChunks: ['login'],//exclude certain chunks
             filename: 'index.html',
             template: 'app/template.js',
             title: 'HOME',
@@ -78,7 +79,7 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            excludeChunks: ['index'],
+            chunks: ['login'],//only certain chunks you can limit the chunks being used
             filename: 'login.html',
             template: 'app/template.js',
             title: 'LOGIN',
@@ -91,6 +92,9 @@ module.exports = {
                 trimCustomFragments: true
             }
         }),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['vendor', 'manifest'] // Specify the common bundle's name.
+        }),
     ]
 };

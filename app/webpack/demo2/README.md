@@ -9,7 +9,8 @@
 
 ### problems
 
-- [ ] How to webpack Multi Page
+- [x] How to webpack Multi Page
+- [x] How to custom page
 - [ ] How to clear repeated css class
 - [x] Allow server can accessible externally
 - [x] Dynamically generated html
