@@ -28,4 +28,4 @@ Welcome to front-end world and enjoy yourself
     * don't pack other lib  
     * http://www.jianshu.com/p/a64735eb0e2b
 - [ ] 版本管理与升级
-- [ ]     
+- [ ] Hot Module Replacement    

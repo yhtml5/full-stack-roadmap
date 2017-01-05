@@ -23,7 +23,8 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.app\/(js|jsx)$/,
+            test: /app\/\S+\.(js|jsx)$/,
+            exclude: /(node_modules|bower_components)/,
             use: 'babel-loader',
         }, {
             test: /\.jsx?$/,

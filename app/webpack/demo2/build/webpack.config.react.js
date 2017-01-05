@@ -1,7 +1,7 @@
 const {resolve} = require('path');
 const webpack = require('webpack');
 
-console.log("Webpack path: ", resolve(__dirname, '../src'),)
+console.log("Webpack path: ", resolve(__dirname, '../src'))
 
 module.exports = {
     context: resolve(__dirname, '../src'),
@@ -20,7 +20,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         // the output bundle
-        path: resolve(__dirname, 'dist'),
+        path: resolve(__dirname, '../dist'),
         publicPath: '/'
         // necessary for HMR to know where to load the hot update chunks
     },
@@ -28,7 +28,7 @@ module.exports = {
     devServer: {
         hot: true,
         // enable HMR on the server
-        contentBase: resolve(__dirname, 'dist'),
+        contentBase: resolve(__dirname, '../dist'),
         // match the output path
         publicPath: '/'
         // match the output `publicPath`
