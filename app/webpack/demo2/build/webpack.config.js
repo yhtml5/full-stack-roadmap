@@ -7,6 +7,7 @@ const minify = require('html-minifier').minify;
 const version = require('./webpack.version')
 
 console.log(path.resolve())
+console.log("Webpack absolute path: ", path.resolve(__dirname, "./"))
 
 module.exports = {
     context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
@@ -16,7 +17,7 @@ module.exports = {
     },
     output: {
         filename: 'static/[name].js?[hash:6]',//determines the name of each output bundle
-        path: path.resolve(__dirname, 'dist/' + version),//The base directory, an absolute path
+        path: path.resolve(__dirname, '../dist/' + version),//The base directory, an absolute path
         pathinfo: false,//include comments in bundles with information about the contained modules
         publicPath: "./",//the URL of your output.path from the view of the HTML page,if you want to open from the local files, you can set './'
     },

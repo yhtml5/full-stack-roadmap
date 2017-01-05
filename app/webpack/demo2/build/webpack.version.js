@@ -1,4 +1,4 @@
-const packageConfig = require('./package.json')
+const packageConfig = require('../package.json')
 
 const formatMoment = (moment) => (moment < 10) ? "0" + "" + moment : moment;
 
