@@ -1,7 +1,10 @@
 const {resolve} = require('path');
 const webpack = require('webpack');
 
+console.log("Webpack path: ", resolve(__dirname, '../src'),)
+
 module.exports = {
+    context: resolve(__dirname, '../src'),
     entry: [
         'react-hot-loader/patch',
         // activate HMR for React
@@ -21,8 +24,7 @@ module.exports = {
         publicPath: '/'
         // necessary for HMR to know where to load the hot update chunks
     },
-    context: resolve(__dirname, 'src'),
-    devtool: 'inline-source-map',
+    devtool: false,
     devServer: {
         hot: true,
         // enable HMR on the server
@@ -34,9 +36,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.js$/,
-            use: [
-                'babel-loader',
-            ],
+            use: ['babel-loader',],
             exclude: /node_modules/
         }, {
             test: /\.css$/,
