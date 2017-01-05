@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "yhtml5 <1417376255@qq.com>",
   "license": "MIT",
+  "repository": "https://github.com/yhtml5",
   "scripts": {
     "prestart": "clear",
     "start": "npm i && npm run build && npm run dev",
@@ -19,13 +20,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "webpack": "^2.x"
+    "webpack": "*"
   },
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",
