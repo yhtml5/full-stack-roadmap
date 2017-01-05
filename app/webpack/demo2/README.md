@@ -14,4 +14,4 @@
 - [x] Allow server can accessible externally
 - [x] Dynamically generated html
 - [x] Custom domain name 
-- [x] Creact git npm script
+- [x] Create git npm script
