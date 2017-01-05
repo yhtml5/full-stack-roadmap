@@ -6,8 +6,10 @@ const minify = require('html-minifier').minify;
 
 const version = require('./webpack.version')
 
+console.log(path.resolve())
+
 module.exports = {
-    context: path.resolve(__dirname, "./"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
+    context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
     entry: {
         index: './app/index.js',
         login: './app/login.js',
