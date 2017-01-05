@@ -29,12 +29,16 @@ module.exports = {
         }]
     },
     devServer: {
-        hot: true,
-        // enable HMR on the server
-        contentBase: resolve(__dirname, 'dist'),
-        // match the output path
-        publicPath: '/'
-        // match the output `publicPath`
+        clientLogLevel: "info", //none, error, warning or info (default)
+        contentBase: path.join(__dirname, "dist"), //serves everything from our dist/ directory
+        compress: true, //enable gzip
+        host: "0.0.0.0",// server can accessible externally
+        inline: true,//defult inline, <iframe>
+        noInfo: false,
+        port: 61200,
+        publicPath: '/', //The bundled files will be available in the browser under this path.|| demo: /assets/
+        quiet: false,//means that errors or warnings from webpack are not visible.
+        watchContentBase: false,//File changes will trigger a full page reload
     },
     devtool: "cheap-eval-source-map",
     plugins: [

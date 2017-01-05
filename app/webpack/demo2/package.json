@@ -6,12 +6,13 @@
   "author": "yhtml5 <1417376255@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm i && npm run build",
+    "prestart": "clear",
+    "start": "npm i && npm run build && npm run dev",
     "prebuild": "rimraf dist && clear",
-    "build": "webpack --progress --hide-modules --watch --colors --config webpack.config.js",
+    "build": "webpack --progress --hide-modules --colors --config webpack.config.js",
     "predev": "clear",
-    "dev": "webpack-dev-server --open",
-    "dev2": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "dev": "webpack-dev-server --open  --config webpack.config.js",
+    "postdev": "clear",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
