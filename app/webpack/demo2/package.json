@@ -14,7 +14,7 @@
     "dev": "webpack-dev-server --open  --config webpack.config.js",
     "postdev": "clear",
     "pregit": "clear && git status",
-    "git": "git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkput dev",
+    "git": "git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev",
     "postgit": "clear && git status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
