@@ -14,7 +14,7 @@ module.exports = {
         'webpack/hot/only-dev-server',
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
-        './index.js'
+        './index.jsx'
         // the entry point of our app
     ],
     output: {
@@ -30,12 +30,13 @@ module.exports = {
         // enable HMR on the server
         contentBase: resolve(__dirname, '../dist'),
         // match the output path
-        publicPath: '/'
+        publicPath: '/',
+        noInfo: true,
         // match the output `publicPath`
     },
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             use: ['babel-loader',],
             exclude: /node_modules/
         }, {

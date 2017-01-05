@@ -27,5 +27,6 @@ Welcome to front-end world and enjoy yourself
     * set devtool: "false" in production environment
     * don't pack other lib  
     * http://www.jianshu.com/p/a64735eb0e2b
-- [ ] 版本管理与升级
-- [ ] Hot Module Replacement    
+- [ ] 版本管理与升级,自定义发布包
+- [ ] Hot Module Replacement  
+- [ ] support less sass css-module    
