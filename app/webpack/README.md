@@ -27,8 +27,12 @@ Welcome to front-end world and enjoy yourself
     * set devtool: "false" in production environment
     * don't pack other lib  
     * http://www.jianshu.com/p/a64735eb0e2b
+- [ ] It looks like you're using a minified copy of the development build of React. 
+      When deploying React apps to production, 
+      make sure to use the production build which skips development warnings and is faster. 
+      See https://fb.me/react-minification for more details.
 - [ ] 版本管理与升级,自定义发布包
-- [ ] Hot Module Replacement VS reload 
+- [x] Hot Module Replacement VS reload 
     * [react-hot-loader][react-hot-loader]
     * [react-hot-boilerplate][react-hot-boilerplate]
 - [ ] Hot Module Replacement can't work when *.css changed
