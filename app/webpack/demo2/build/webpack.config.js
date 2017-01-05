@@ -12,7 +12,7 @@ module.exports = {
     context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
     entry: {
         index: './app/index.js',
-        vendor: 'moment',
+        vendor: ['moment', 'react'],
         login: './app/login.js',
     },
     output: {
@@ -45,7 +45,7 @@ module.exports = {
         }]
     },
     devServer: {
-        clientLogLevel: "info", //none, error, warning or info (default)
+        clientLogLevel: "info", //[none, error, warning, info (default)]
         contentBase: path.join(__dirname, "dist"), //serves everything from our dist/ directory
         compress: true, //enable gzip
         host: "0.0.0.0",// server can accessible externally
@@ -56,7 +56,7 @@ module.exports = {
         quiet: false,//means that errors or warnings from webpack are not visible.
         watchContentBase: false,//File changes will trigger a full page reload
     },
-    devtool: "cheap-eval-source-map",
+    devtool: "false",// [cheap-eval-source-map,false] , production set false
     plugins: [
         new ExtractTextPlugin({
             filename: 'static/[name].css?[hash:6]',
@@ -93,8 +93,8 @@ module.exports = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['vendor', 'manifest'] // Specify the common bundle's name.
+        new webpack.optimize.CommonsChunkPlugin({ //https://webpack.js.org/plugins/commons-chunk-plugin/
+            name: ['vendor', 'manifest'],// Specify the common bundle's name.
         }),
     ]
 };
