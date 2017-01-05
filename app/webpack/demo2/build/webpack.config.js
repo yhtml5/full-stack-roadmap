@@ -6,8 +6,18 @@ const minify = require('html-minifier').minify;
 
 const version = require('./webpack.version')
 
-console.log(path.resolve())
-console.log("Webpack absolute path: ", path.resolve(__dirname, "./"))
+console.log("Webpack absolute path: ", path.resolve(__dirname, "../"))
+
+const HtmlWebpackPluginParams = {
+    favicon: 'app/favicon.ico',
+    minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        trimCustomFragments: true
+    }
+}
 
 module.exports = {
     context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
@@ -69,28 +79,14 @@ module.exports = {
             filename: 'index.html',
             template: 'app/template.js',
             title: 'HOME',
-            favicon: 'app/favicon.ico',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                trimCustomFragments: true
-            }
+            ...HtmlWebpackPluginParams,
         }),
         new HtmlWebpackPlugin({
             excludeChunks: ['index'],
             filename: 'login.html',
             template: 'app/template.js',
             title: 'LOGIN',
-            favicon: 'app/favicon.ico',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                trimCustomFragments: true
-            }
+            ...HtmlWebpackPluginParams,
         }),
         new webpack.optimize.UglifyJsPlugin()
     ]
