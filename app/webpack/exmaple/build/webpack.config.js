@@ -7,14 +7,14 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const version = require('./webpack.version')
 
-console.log("Webpack absolute path: ", path.resolve(__dirname, "../"))
+console.log("Webpack absolute path: ", path.resolve(__dirname, "../app"))
 
 module.exports = {
-    context: path.resolve(__dirname, "../"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
+    context: path.resolve(__dirname, "../app"),//The base directory, an absolute path, for resolving entry points and loaders from configuration.
     entry: {
-        index: './app/index.jsx',
+        index: './index.jsx',
         vendor: ['react', 'react-dom', 'react-redux', 'react-router', 'react-router-redux', 'redux',],
-        login: './app/login.js',
+        login: './login.js',
         hot: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:61200', 'webpack/hot/only-dev-server'],
     },
     resolve: {
@@ -57,7 +57,7 @@ module.exports = {
     },
     devServer: {
         clientLogLevel: "info", //[none, error, warning, info (default)]
-        contentBase: path.join(__dirname, "dist"), //serves everything from our dist/ directory
+        contentBase: path.join(__dirname, "../dist"), //serves everything from our dist/ directory
         compress: true, //enable gzip
         host: "0.0.0.0",// server can accessible externally
         hot: true,// enable HMR on the server
@@ -80,9 +80,9 @@ module.exports = {
             chunks: ['index', 'vendor', 'hot', 'manifest'],//only certain chunks you can limit the chunks being used
             excludeChunks: ['login'],//exclude certain chunks
             filename: 'index.html',
-            template: 'app/template.js',
+            template: 'template.js',
             title: 'INDEX',
-            favicon: 'app/favicon.ico',
+            favicon: 'favicon.ico',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -94,9 +94,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks: ['login'],//only certain chunks you can limit the chunks being used
             filename: 'login.html',
-            template: 'app/template.js',
+            template: 'template.js',
             title: 'LOGIN',
-            favicon: 'app/favicon.ico',
+            favicon: 'favicon.ico',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
