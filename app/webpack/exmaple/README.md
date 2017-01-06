@@ -48,7 +48,7 @@ Welcome to front-end world and enjoy yourself
     * you can use postCSS (using CSS Modules)
 - [ ] 加载策略：按需加载，预加载，并线加载，异步加载
 - [ ] support less sass css-module    
-- [ ] add .eslintrc
+- [ ] add .eslintrc, eslint
 - [ ] webpack打包第三方类库的正确姿势
 - [ ] 推送线上，接收脚本，自动化部署
 - [ ] A CLI dashboard for webpack dev server [webpack-dashboard]
