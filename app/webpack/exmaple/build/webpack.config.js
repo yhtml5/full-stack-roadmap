@@ -68,7 +68,7 @@ module.exports = {
         quiet: false,//errors or warnings from webpack are not visible.
         watchContentBase: false,//File changes will trigger a full page reload
     },
-    devtool: "false",// [cheap-eval-source-map,false] , production set false
+    devtool: "false",// [cheap-eval-source-map,false] , production set false, https://webpack.js.org/configuration/devtool/
     plugins: [
         new ExtractTextPlugin({
             filename: 'static/[name].[hash:6].css',

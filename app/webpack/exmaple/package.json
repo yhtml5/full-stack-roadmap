@@ -44,6 +44,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "css-loader": "^0.23.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-loader": "^0.4.4",
     "html-minifier": "^3.2.3",
@@ -54,6 +55,7 @@
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.28",
     "webpack-dashboard": "^0.2.1",
+    "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "^2.1.0-beta.0"
   }
 }

@@ -52,10 +52,16 @@ Welcome to front-end world and enjoy yourself
 - [ ] webpack打包第三方类库的正确姿势
 - [ ] 推送线上，接收脚本，自动化部署
 - [ ] A CLI dashboard for webpack dev server [webpack-dashboard]
+- [ ] [Development][webpack-development],Never use any of these tools in production. Ever
+    * Adjusting Your Text Editor
+    * Source Maps
+    * devtool: "cheap-eval-source-map"
+   
 
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next
 [webpack-dashboard]:https://github.com/FormidableLabs/webpack-dashboard
+[webpack-development]:https://webpack.js.org/guides/development/
 [webpack-optimize-resolve]:http://www.tuicool.com/articles/fQB3IjE
 [webpack-optimize-uglify]:http://blog.csdn.net/code_for_free/article/details/51583737
 [webpack-optimize-production]:http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/
