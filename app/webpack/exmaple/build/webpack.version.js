@@ -14,4 +14,6 @@ function getVersionDate() {
     return versionDate
 }
 
-module.exports = 'v' + packageConfig.version + '-' + getVersionDate()
+const version = 'v' + packageConfig.version + ((/[a-zA-Z]/.test(packageConfig.version)) ? '' : ('-' + getVersionDate()))
+
+module.exports = version

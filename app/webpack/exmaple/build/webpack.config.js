@@ -7,6 +7,9 @@ const version = require('./webpack.version')
 
 const isEnvPro = () => process.env.NODE_ENV == 'production'
 const isEnvDev = () => process.env.NODE_ENV == 'development'
+const isEnvDebug = () => process.env.NODE_ENV == 'debug'
+
+let hasMinString = () => (isEnvPro() || isEnvDebug()) ? ".min" : ""
 
 let config = function () {
     return {
@@ -18,12 +21,12 @@ let config = function () {
         },
         resolve: {
             alias: {
-                react: "react/dist/react.min.js",
-                "react-dom": "react-dom/dist/react-dom.min.js",
-                "react-redux": "react-redux/dist/react-redux.min.js",
-                "react-router": "react-router/umd/ReactRouter.min.js",
-                "react-router-redux": "react-router-redux/dist/ReactRouterRedux.min.js",
-                redux: "redux/dist/redux.min.js",
+                react: "react/dist/react" + hasMinString() + ".js",
+                "react-dom": "react-dom/dist/react-dom" + hasMinString() + ".js",
+                "react-redux": "react-redux/dist/react-redux" + hasMinString() + ".js",
+                "react-router": "react-router/umd/ReactRouter" + hasMinString() + ".js",
+                "react-router-redux": "react-router-redux/dist/ReactRouterRedux" + hasMinString() + ".js",
+                redux: "redux/dist/redux" + hasMinString() + ".js",
             }
         },
         output: {
@@ -59,7 +62,7 @@ let config = function () {
         },
         plugins: [
             new ExtractTextPlugin({
-                filename: 'static/[name].[hash:6].css',
+                filename: 'static/[name].[chunkhash:6].css',
                 disable: false,
                 allChunks: true
             }),
@@ -73,6 +76,8 @@ let config = function () {
                 filename: 'index.html',
                 template: 'template.js',
                 title: 'INDEX',
+                hash: false,//if true (!default) append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
+                cache: true, //if true (default) try to emit the file only if it was changed
                 favicon: 'favicon.ico',
                 minify: {
                     collapseWhitespace: true,
@@ -87,6 +92,8 @@ let config = function () {
                 filename: 'login.html',
                 template: 'template.js',
                 title: 'LOGIN',
+                hash: false,
+                cache: false,
                 favicon: 'favicon.ico',
                 minify: {
                     collapseWhitespace: true,
@@ -99,6 +106,7 @@ let config = function () {
         ]
     };
 }
+
 
 console.log("Node environment: ", process.env.NODE_ENV)
 console.log("Webpack absolute path: ", path.resolve(__dirname, "../app"))

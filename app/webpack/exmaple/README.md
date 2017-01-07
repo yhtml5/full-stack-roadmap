@@ -52,7 +52,7 @@ Welcome to front-end world and enjoy yourself
 - [ ] Hot Module Replacement can't work when *.css changed
     * you can use postCSS (using CSS Modules)
 - [ ] 加载策略：按需加载，预加载，并线加载，异步加载
-- [ ] support less sass css-module    
+- [ ] support less sass css-module, 首屏内联样式    
 - [ ] add .eslintrc, eslint
 - [ ] webpack打包第三方类库的正确姿势
 - [ ] 推送线上，接收脚本，自动化部署
@@ -65,8 +65,9 @@ Welcome to front-end world and enjoy yourself
 - [ ] support markdown 
 - [ ] Source Maps
 - [ ] console info
-   
-
+- [ ] set `*.*?hash` 
+    * `HtmlWebpackPlugin.hash=true`append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.   
+    * `webpack.filename *.*?[hash]`
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next
 [webpack-dashboard]:https://github.com/FormidableLabs/webpack-dashboard

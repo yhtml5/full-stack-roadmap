@@ -1,5 +1,6 @@
-## HTML DOM Tutorial (Document Object Model)
+## [HTML DOM Tutorial][htmldom-tutorial] (Document Object Model)
 
+[参考手册][dom-obj-document]
 ### Concept
 
 **HTML DOM**: 是关于如何获取、修改、添加或删除 HTML 元素的标准
@@ -46,4 +47,6 @@
 
 ![img-htmltree]
 
+[dom-obj-document]:http://www.runoob.com/jsref/dom-obj-document.html
+[htmldom-tutorial]:http://www.runoob.com/htmldom/htmldom-tutorial.html
 [img-htmltree]:./htmltree.gif

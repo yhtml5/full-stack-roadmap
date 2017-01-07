@@ -7,7 +7,6 @@ module.exports = function (templateParams) {
         + '<title>' + templateParams.htmlWebpackPlugin.options.title + '</title>'
         + '</head>'
         + '<body>'
-        + '<dev id="root"></dev>'
         + '</body>'
         + '</html>'
     return html

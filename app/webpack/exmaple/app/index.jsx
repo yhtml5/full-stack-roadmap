@@ -15,8 +15,9 @@ require('./a');
 // require.ensure([], function (require) {
 //     require('./b');
 // });
+
 // const rootElement = document.createElement("div")
-// rootElement.
+// rootElement.id = 'root'
 // document.body.appendChild(rootElement)
 
 const render = (Component) => {
@@ -24,7 +25,8 @@ const render = (Component) => {
         <AppContainer>
             <Component/>
         </AppContainer>,
-        document.getElementById('root')
+        // document.getElementById('root')
+        document.body.appendChild(document.createElement("div"))
     );
 };
 render(App);
