@@ -15,9 +15,9 @@ require('./a');
 // require.ensure([], function (require) {
 //     require('./b');
 // });
-const rootElement = document.createElement("div")
-rootElement.
-document.body.appendChild(rootElement)
+// const rootElement = document.createElement("div")
+// rootElement.
+// document.body.appendChild(rootElement)
 
 const render = (Component) => {
     ReactDOM.render(

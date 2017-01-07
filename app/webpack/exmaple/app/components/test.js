@@ -1,3 +1,3 @@
-const num =2
+const num =1
 
 export default num
