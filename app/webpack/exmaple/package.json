@@ -10,11 +10,10 @@
     "prestart": "clear",
     "start": "npm i && npm run build && npm run dev",
     "prebuild": "clear",
-    "build": "NODE_ENV=production  webpack --progress --hide-modules --colors --config build/webpack.config.js",
-    "build-debug": "NODE_ENV=production  webpack-dashboard -- webpack --progress --display-modules --profile --colors --config build/webpack.config.js",
+    "build": "NODE_ENV=production  webpack --progress --hide-modules --colors --config build/webpack.pro.js",
+    "build-debug": "NODE_ENV=production  webpack-dashboard -- webpack --progress --profile --colors --config build/webpack.pro.js",
     "predev": "clear",
-    "dev": "NODE_ENV=production  webpack-dashboard -- webpack-dev-server --open  --config build/webpack.config.js",
-    "dev-react": "webpack-dev-server --open  --config build/webpack.config.react.js",
+    "dev": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --open  --config build/webpack.dev.js",
     "postdev": "clear",
     "pregit": "clear && git status",
     "git": "git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev",
@@ -46,6 +45,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-minifier": "^3.2.3",
     "html-webpack-plugin": "^2.26.0",
@@ -53,9 +53,11 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.28",
     "webpack-dashboard": "^0.2.1",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-dev-server": "^2.1.0-beta.0"
+    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-merge": "^2.3.1"
   }
 }

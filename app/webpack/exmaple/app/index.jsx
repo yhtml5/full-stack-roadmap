@@ -12,9 +12,9 @@ import './style2.css'
 
 require('./a');
 //webpack splits code using require.ensure()
-require.ensure([], function (require) {
-    require('./b');
-});
+// require.ensure([], function (require) {
+//     require('./b');
+// });
 
 const render = (Component) => {
     ReactDOM.render(

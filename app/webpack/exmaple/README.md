@@ -38,6 +38,11 @@ Welcome to front-end world and enjoy yourself
     * https://github.com/mishoo/UglifyJS2#usage  
 - [ ] 版本管理与升级,自定义发布包
 - [x] Hot Module Replacement VS reload 
+    * index.jsx | add `import {AppContainer} from 'react-hot-loader';` 
+    * index.jsx | add `if (module.hot) {}` in the index.jsx
+    * webpack.js | add `entry: {hot: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:61200', 'webpack/hot/only-dev-server'] },`
+    * webpack.js | add `new HtmlWebpackPlugin` and set `{chunks: ['index', 'vendor', 'hot', 'manifest']` 
+    * webpack.js | set `devServer.hot: true`
     * [react-hot-loader][react-hot-loader]
     * [react-hot-boilerplate][react-hot-boilerplate]
 - [x] externals vs resolve vs require [use resolve][webpack-optimize-resolve]
@@ -56,6 +61,10 @@ Welcome to front-end world and enjoy yourself
     * Adjusting Your Text Editor
     * Source Maps
     * devtool: "cheap-eval-source-map"
+- [ ] require.ensure()    
+- [ ] support markdown 
+- [ ] Source Maps
+- [ ] console info
    
 
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader

@@ -17,7 +17,7 @@ class App extends Component {
         return (
             <Layout>
                 <div className={styles.app}>
-                    <h2 className='color'>Hello2</h2>
+                    <h2 className='color'>Hello19</h2>
                     <Counter />
                 </div>
             </Layout>
