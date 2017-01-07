@@ -12,9 +12,13 @@ import './style2.css'
 
 require('./a');
 //webpack splits code using require.ensure()
-require.ensure([], function (require) {
-    require('./b');
-});
+// require.ensure([], function (require) {
+//     require('./b');
+// });
+
+const rootElement = document.createElement("div")
+rootElement.
+document.body.appendChild(rootElement)
 
 const render = (Component) => {
     ReactDOM.render(
