@@ -2,6 +2,8 @@
 
 ### Introduction
 
+提供开箱即用的诸多功能
+
 ### Target
 
 * 优化丨极致性能体验，前端性能优化，永无止境。  
@@ -14,9 +16,13 @@
 
 * babel
 * express
+* node
+* npm 
+* PM2
 * postCSS
 * react-hot-loader
 * webpack
+* Etc，etc
 
 ### Feature
 
@@ -28,6 +34,8 @@
    - [x] 环境分离 --production, development, debug model
    - [x] 支持单页面，多页面应用
    - [x] html页面模板，动态生成页面
+   - [x] 支持markdown、html
+   - [ ] 支持sass, less, postCSS
 - [x] 高级功能
    - [x] 热更新 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
    - [x] 源码映射 --追踪错误代码到开发源码的错误一行
@@ -52,3 +60,6 @@
 - [ ] server
    - [ ] mock
    - [ ] 外网访问  --端口映射
+- [ ] others
+   - [ ] 编写shell脚本，制作命令行界面（CLI）
+   - [ ] 发布到Npm, Bower
