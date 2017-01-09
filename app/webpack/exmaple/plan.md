@@ -16,6 +16,7 @@
 
 * babel
 * express
+* handlebars.js
 * node
 * npm 
 * PM2
@@ -32,8 +33,8 @@
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
    - [x] 环境分离 --production, development, debug model
-   - [x] 支持单页面，多页面应用
-   - [x] html页面模板，动态生成页面
+   - [x] 支持单页面，多页面应用，混合应用
+   - [x] 模板引擎 --html模板，动态生成页面
    - [ ] support sass, less, postCSS(recommend)
 - [x] 高级功能
    - [x] 热更新 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
@@ -45,6 +46,7 @@
 - [x] 可选功能  
    - [ ] reload VS Hot Module Replacement(recommend)
    - [ ] externals VS resolve VS require
+   - [ ] jade/pug VS ejs VS underscore VS handlebars VS html-loader
 
 #### Doing
 
@@ -55,7 +57,7 @@
 - [ ] 优化策略 
    - [ ] 生产环境优化
    - [ ] 删除热更新模块
-   - [ ] 删除调试信息
+   - [ ] 删除调试信息  --console.log
    - [ ] 清理重复cssClass等等
    - [ ] 首屏内联样式
    - [ ] 浏览器兼容性: IE系列,html5shim,css,js,
@@ -68,6 +70,6 @@
    - [ ] 外网访问  --端口映射
    - [ ] 自动化部署  -- 一键推送线上
 - [ ] others
-   - [x] 支持markdown
+   - [ ] 支持markdown
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
