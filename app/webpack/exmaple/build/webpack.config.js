@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const minify = require('html-minifier').minify;
-const version = require('./webpack.version')
+const {version, sortChunks} = require('./webpack.tools')
 
 const isEnvPro = () => process.env.NODE_ENV == 'production'
 const isEnvDev = () => process.env.NODE_ENV == 'development'
@@ -67,14 +67,15 @@ let config = function () {
                 allChunks: true
             }),
             new webpack.optimize.CommonsChunkPlugin({ //https://webpack.js.org/plugins/commons-chunk-plugin/
-                name: ['vendor', 'manifest'],// Specify the common bundle's name.
-                // minChunks: Infinity
+                names: ['vendor', 'manifest'],// Specify the common bundle's name.
+                chunks: ['vendor', 'index'],
+                minChunks: 'Infinity', //number|Infinity|function(module, count) -> boolean
             }),
-            new HtmlWebpackPlugin({
+            new HtmlWebpackPlugin({//https://github.com/ampedandwired/html-webpack-plugin
                 chunks: ['index', 'vendor', 'hot', 'manifest'],//only certain chunks you can limit the chunks being used
                 excludeChunks: ['login'],//exclude certain chunks
                 filename: 'index.html',
-                template: 'template.js',
+                template: 'template.html',
                 title: 'INDEX',
                 hash: false,//if true (!default) append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
                 cache: true, //if true (default) try to emit the file only if it was changed
@@ -88,12 +89,13 @@ let config = function () {
                 }
             }),
             new HtmlWebpackPlugin({
-                chunks: ['login'],//only certain chunks you can limit the chunks being used
+                chunks: ['login', 'hot'],//only certain chunks you can limit the chunks being used
+                excludeChunks: ['index', 'hot', 'vendor'],
                 filename: 'login.html',
-                template: 'template.js',
+                template: 'login/login.html',
+                // template: '!!handlebars!src/index.hbs', // For details on `!!` see https://webpack.github.io/docs/loaders.html#loader-order
+                chunksSortMode: 'auto',//'none' | 'auto' | 'dependency' | function
                 title: 'LOGIN',
-                hash: false,
-                cache: false,
                 favicon: 'favicon.ico',
                 minify: {
                     collapseWhitespace: true,
@@ -106,7 +108,6 @@ let config = function () {
         ]
     };
 }
-
 
 console.log("Node environment: ", process.env.NODE_ENV)
 console.log("Webpack absolute path: ", path.resolve(__dirname, "../app"))

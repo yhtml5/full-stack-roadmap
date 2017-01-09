@@ -16,8 +16,9 @@ class App extends Component {
     render() {
         return (
             <Layout>
+                <a href="http://0.0.0.0:61200/login.html">login11111111111</a>
                 <div className={styles.app}>
-                    <h2 className='color'>Hello19</h2>
+                    <h2 className='color'>App2</h2>
                     <Counter />
                 </div>
             </Layout>

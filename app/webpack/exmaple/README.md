@@ -45,6 +45,7 @@ Welcome to front-end world and enjoy yourself
     * webpack.js | set `devServer.hot: true`
     * [react-hot-loader][react-hot-loader]
     * [react-hot-boilerplate][react-hot-boilerplate]
+    * [热更新教程][react-hot-tutorial]
 - [x] externals vs resolve vs require [use resolve][webpack-optimize-resolve]
     * set `externals: { moment: true}` and add `<script src="//cdn.com/moment.min.js"></script>`
     * set `resolve: { alias: {moment: "moment/min/moment-with-locales.min.js"}}`
@@ -68,10 +69,18 @@ Welcome to front-end world and enjoy yourself
 - [ ] set `*.*?hash` 
     * `HtmlWebpackPlugin.hash=true`append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.   
     * `webpack.filename *.*?[hash]`
+- [ ] wrong chunks order[wrong-chunks-order]
+- [ ] set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin
+    
+    
+    
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next
+[react-hot-tutorial]:http://www.jianshu.com/p/941bfaf13be1
 [webpack-dashboard]:https://github.com/FormidableLabs/webpack-dashboard
 [webpack-development]:https://webpack.js.org/guides/development/
 [webpack-optimize-resolve]:http://www.tuicool.com/articles/fQB3IjE
 [webpack-optimize-uglify]:http://blog.csdn.net/code_for_free/article/details/51583737
 [webpack-optimize-production]:http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/
+[wrong-chunks-order]:https://github.com/ampedandwired/html-webpack-plugin/issues/481
+[template-option]:https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md

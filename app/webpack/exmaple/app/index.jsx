@@ -16,17 +16,12 @@ require('./a');
 //     require('./b');
 // });
 
-// const rootElement = document.createElement("div")
-// rootElement.id = 'root'
-// document.body.appendChild(rootElement)
-
-const render = (Component) => {
+const render = (Component, hot) => {
     ReactDOM.render(
         <AppContainer>
             <Component/>
         </AppContainer>,
-        // document.getElementById('root')
-        document.body.appendChild(document.createElement("div"))
+        document.getElementById('root')
     );
 };
 render(App);

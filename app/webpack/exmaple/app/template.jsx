@@ -1,4 +1,4 @@
-const login = require('./login/login.html')
+// const meta = require('./components/meta.html')
 // Export a function / promise / or a string:
 // This function has to return a string or promised string:
 module.exports = function (templateParams) {
@@ -7,7 +7,7 @@ module.exports = function (templateParams) {
         + '<head>'
         + '<title>' + templateParams.htmlWebpackPlugin.options.title + '</title>'
         + '</head>'
-        + '<body>' + login + '</body>'
+        + '<body>' + '</body>'
         + '</html>'
     return html
 };

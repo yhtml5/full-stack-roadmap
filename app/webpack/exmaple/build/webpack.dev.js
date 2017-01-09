@@ -8,7 +8,12 @@ const config = require('./webpack.config')
 module.exports = function (env) {
     return webpackMerge(config(), {
         entry: {
-            hot: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:61200', 'webpack/hot/only-dev-server']
+            hot: [
+                'react-hot-loader/patch',//activate HMR for React;
+                'webpack/hot/only-dev-server'//bundle the client for hot reloading only- means to only hot reload for successful updates
+                // 'webpack-dev-server/client?http://localhost:8080', (--inline,inline:true)
+                // --bundle the client for webpack-dev-server and connect to the provided endpoint
+            ]
         },
         devServer: {
             clientLogLevel: "info", //[none, error, warning, info (default)]
