@@ -40,6 +40,7 @@ let config = function () {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: 'babel-loader',
+                // use: ['babel-loader', 'eslint-loader']
             }, {
                 test: /\.css$/,
                 // use: [
@@ -47,6 +48,10 @@ let config = function () {
                 //     'css-loader?modules',
                 //     'postcss-loader',
                 // ],
+                // {
+                //     test: /\.css$/,
+                //     use: ['style-loader', 'css-loader', 'postcss-loader']
+                // },
                 loader: ExtractTextPlugin.extract({
                     notExtractLoader: "style-loader",
                     loader: "css-loader?sourceMap",
@@ -56,9 +61,33 @@ let config = function () {
                 test: /\.html$/,
                 loader: 'html-loader'
             }, {
-                test: /\.(woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=10000'
-            }]
+                //     test: /\.html$/,
+                //     use: [{
+                //         loader: 'html-loader',
+                //         options: {
+                //             root: resolve(__dirname, 'src'),
+                //             attrs: ['img:src', 'link:href']
+                //         }
+                //     }]
+                // }, {
+                test: /favicon\.png$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]?[hash]'
+                    }
+                }]
+            },
+                {
+                    test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                    exclude: /favicon\.png$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 5000
+                        }
+                    }]
+                }]
         },
         plugins: [
             new ExtractTextPlugin({
@@ -68,8 +97,14 @@ let config = function () {
             }),
             new webpack.optimize.CommonsChunkPlugin({ //https://webpack.js.org/plugins/commons-chunk-plugin/
                 names: ['vendor', 'manifest'],// Specify the common bundle's name.
-                chunks: ['vendor', 'index'],
-                minChunks: 'Infinity', //number|Infinity|function(module, count) -> boolean
+                chunks: ['vendor', 'index'],//Select the source chunks by chunk names, the chunk must be a child of the commons chunk.
+                // If omitted all entry chunks are selected.
+                // filename: 'common',//The filename template for the commons chunk
+                // minChunks: Infinity, //number|Infinity|function(module, count) -> boolean
+                // Infinity (with more entries, this ensures that no other module goes into the vendor chunk)
+                // children: true, //If `true` all children of the commons chunk are selected
+                // async: true, // (create an async commons chunk)
+
             }),
             new HtmlWebpackPlugin({//https://github.com/ampedandwired/html-webpack-plugin
                 chunks: ['index', 'vendor', 'hot', 'manifest'],//only certain chunks you can limit the chunks being used

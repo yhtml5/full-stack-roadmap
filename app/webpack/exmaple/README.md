@@ -70,7 +70,9 @@ Welcome to front-end world and enjoy yourself
     * `HtmlWebpackPlugin.hash=true`append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.   
     * `webpack.filename *.*?[hash]`
 - [ ] wrong chunks order[wrong-chunks-order]
-- [ ] set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin
+- [ ] webpackJsonp is not defined
+    * set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin.   
+    * CommonsChunkPlugin choice chunks pack into common package  `chunks: ['vendor', 'index']`
     
     
     
