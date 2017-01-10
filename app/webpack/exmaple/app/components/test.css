@@ -1,3 +1,7 @@
 .color {
     color: red;
 }
+
+:fullscreen a {
+    display: flex
+}

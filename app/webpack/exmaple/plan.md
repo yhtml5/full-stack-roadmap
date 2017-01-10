@@ -39,12 +39,15 @@
    - [x] 环境分离 --production, development, debug model
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
+   - [x] 统一路径  --简化import路径，`../../../a.js`, `~/components/a.js` 
+   - [ ] 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes 
    - [ ] support sass, less, postCSS(recommend)
 - [x] 高级功能
-   - [x] 热更新 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
+   - [x] 热更新 --及时刷新页面
+   - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
    - [x] 源码映射 --追踪错误代码到开发源码的错误一行
    - [x] 打包监测 --分析打包性能，模块内容
-   - [x] 局域网访问  --开启局域网访问
+   - [x] 局域网访问  --开发环境允许局域网访问
    - [x] 版本管理 --小版本携带版本号+时间戳，大版本使用版本号(字母)
    - [x] 重定向依赖 --使用第三方包提供的压缩包而不是通过webpack   
 - [x] 可选功能  
@@ -65,6 +68,8 @@
    - [ ] 清理重复cssClass等等
    - [ ] 首屏内联样式
    - [ ] 浏览器兼容性: IE系列,html5shim,css,js,
+   - [ ] 优化babel编译后的代码性能 
+
 - [ ] 代码测试
    - [ ] .eslintrc, eslint
    - [ ] .editconfig --统一编辑器格式，减少代码冲突
@@ -79,3 +84,7 @@
    - [ ] 普通页面支持热更新
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
+
+### bug 
+- [ ] 级别3 --开发模式下热更新俩次
+- [ ] level1  --can't set chunkhash in dev.env

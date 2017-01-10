@@ -3,13 +3,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const minify = require('html-minifier').minify;
-const {version, sortChunks} = require('./webpack.tools')
-
-const isEnvPro = () => process.env.NODE_ENV == 'production'
-const isEnvDev = () => process.env.NODE_ENV == 'development'
-const isEnvDebug = () => process.env.NODE_ENV == 'debug'
-
-let hasMinString = () => (isEnvPro() || isEnvDebug()) ? ".min" : ""
+const {version, isEnvPro, isEnvDev, isEnvDebug, hasMinString} = require('./webpack.tools')
 
 let config = function () {
     return {
@@ -21,6 +15,7 @@ let config = function () {
         },
         resolve: {
             alias: {
+                '~': path.resolve(__dirname, '../app'),
                 react: "react/dist/react" + hasMinString() + ".js",
                 "react-dom": "react-dom/dist/react-dom" + hasMinString() + ".js",
                 "react-redux": "react-redux/dist/react-redux" + hasMinString() + ".js",
@@ -38,7 +33,7 @@ let config = function () {
         module: {
             rules: [{
                 test: /\.html$/,
-                loader: 'html-loader'
+                loader: 'html-loader'//https://github.com/webpack/html-loader
             }, {
                 //     test: /\.html$/,
                 //     use: [{
@@ -51,11 +46,18 @@ let config = function () {
                 // }, {
                 test: /favicon\.png$/,
                 use: [{
-                    loader: 'file-loader',
+                    loader: 'file-loader',//https://github.com/webpack/file-loader
                     options: {
                         name: '[name].[ext]?[hash]'
                     }
                 }]
+            }, {
+                test: /\.pcss/,
+                use: [
+                    'style-loader',
+                    'css-loader?importLoaders=1',
+                    'postcss-loader'
+                ]
             }, {
                 test: /\.css$/,
                 // use: [
@@ -63,14 +65,13 @@ let config = function () {
                 //     'css-loader?modules',
                 //     'postcss-loader',
                 // ],
-                // {
-                //     test: /\.css$/,
-                //     use: ['style-loader', 'css-loader', 'postcss-loader']
-                // },
                 loader: ExtractTextPlugin.extract({
                     fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
                     notExtractLoader: "style-loader",
-                    loader: ['css-loader?sourceMap', 'postcss-loader'], //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
+                    loader: [
+                        'css-loader?sourceMap', //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
+                        'postcss-loader'//[https://github.com/postcss/postcss,https://github.com/postcss/postcss-loader]
+                    ],
                     publicPath: "/",// override the publicPath setting for this loader
                 })
             }, {
@@ -106,6 +107,11 @@ let config = function () {
                 // async: true, // (create an async commons chunk)
 
             }),
+            new webpack.DefinePlugin({//http://webpack.github.io/docs/list-of-plugins.html#defineplugin
+                DEBUG: !isEnvPro(),
+                // VERSION: JSON.stringify(pkgInfo.version),
+                // CONFIG: JSON.stringify(config.runtimeConfig)
+            }),
             new HtmlWebpackPlugin({//https://github.com/ampedandwired/html-webpack-plugin
                 chunks: ['index', 'vendor', 'hot', 'manifest'],//only certain chunks you can limit the chunks being used
                 excludeChunks: ['login'],//exclude certain chunks
@@ -114,7 +120,7 @@ let config = function () {
                 title: 'INDEX',
                 hash: false,//if true (!default) append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
                 cache: true, //if true (default) try to emit the file only if it was changed
-                favicon: 'favicon.ico',
+                favicon: 'static/favicon.ico',
                 minify: {
                     collapseWhitespace: true,
                     removeComments: true,
@@ -131,7 +137,7 @@ let config = function () {
                 // template: '!!handlebars!src/index.hbs', // For details on `!!` see https://webpack.github.io/docs/loaders.html#loader-order
                 chunksSortMode: 'auto',//'none' | 'auto' | 'dependency' | function
                 title: 'LOGIN',
-                favicon: 'favicon.ico',
+                favicon: 'static/favicon.ico',
                 minify: {
                     collapseWhitespace: true,
                     removeComments: true,

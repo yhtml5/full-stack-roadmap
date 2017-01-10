@@ -1,2 +1,2 @@
-import './style3.css'
+import '~/components/style3.css'
 console.log('hello world')

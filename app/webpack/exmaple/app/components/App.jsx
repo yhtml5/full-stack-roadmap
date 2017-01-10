@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Layout from './Layout';
 import Counter from './Counter';
-import styles from './App.css';
+import styles from './App.pcss';
 
 require('./test.css')
 
@@ -16,9 +16,9 @@ class App extends Component {
     render() {
         return (
             <Layout>
-                <a href="http://0.0.0.0:61200/login.html">login11111111111</a>
-                <div className={styles.app}>
-                    <h2 className='color'>App2</h2>
+                <a className={styles.center} href="http://0.0.0.0:61200/login.html">login22</a>
+                <div>
+                    <h2 className='color'>App2222</h2>
                     <Counter />
                 </div>
             </Layout>

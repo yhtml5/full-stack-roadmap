@@ -28,6 +28,7 @@ init.author.name=yhtml5
 |npm run|list all scripts|
 |npm run dev|do something|
 |npm show modules|显示模块详情|
+|npm show webpack versions --json|显示模块版本信息|
 |npm update|升级当前目录下的项目的所有模块|
 |npm update modules|升级当前目录下的项目的指定模块|
 |npm update modules -g|升级全局安装的express模块|

@@ -6,11 +6,11 @@ import {AppContainer} from 'react-hot-loader';
 // AppContainer is a necessary wrapper component for HMR
 
 import App from './components/App.jsx';
-import './components/text.yhtml5'
-import './style.css'
-import './style2.css'
+import '~/components/text.yhtml5'
+import '~/components/style.css'
+import '~/components/style2.css'
+import '~/components/a.js'
 
-require('./a');
 //webpack splits code using require.ensure()
 // require.ensure([], function (require) {
 //     require('./b');

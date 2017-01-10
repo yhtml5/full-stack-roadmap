@@ -4,7 +4,7 @@ import './test.css'
 export default function Layout({ children }) {
   return (
     <div className="color">
-      <h1>Hello</h1>
+      <h1>Hello12</h1>
       {children}
     </div>
   )
