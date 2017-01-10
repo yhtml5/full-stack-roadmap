@@ -39,9 +39,9 @@
    - [x] 环境分离 --production, development, debug model
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
-   - [x] 统一路径  --简化import路径，`../../../a.js`, `~/components/a.js` 
+   - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js` 
    - [ ] 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes 
-   - [ ] support sass, less, postCSS(recommend)
+   - [ ] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
 - [x] 高级功能
    - [x] 热更新 --及时刷新页面
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
@@ -69,7 +69,7 @@
    - [ ] 首屏内联样式
    - [ ] 浏览器兼容性: IE系列,html5shim,css,js,
    - [ ] 优化babel编译后的代码性能 
-
+   - [ ] 首屏css内联 style-loader
 - [ ] 代码测试
    - [ ] .eslintrc, eslint
    - [ ] .editconfig --统一编辑器格式，减少代码冲突
@@ -81,6 +81,7 @@
    - [ ] 自动化部署  -- 一键推送线上
 - [ ] others
    - [ ] 支持markdown
+   - [ ] support sass, less,postCSS
    - [ ] 普通页面支持热更新
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower

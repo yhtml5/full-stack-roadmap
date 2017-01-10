@@ -74,7 +74,31 @@ Welcome to front-end world and enjoy yourself
     * set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin.   
     * CommonsChunkPlugin choice chunks pack into common package  `chunks: ['vendor', 'index']`
     
-    
+```
+├── dist
+├── package.json
+├── node_modules
+├── src
+│   ├── components
+│   ├── libs
+|   ├── favicon.png
+|   ├── vendor.js             所有页面公用的第三方库
+│   └── pages                 页面放这里
+|       ├── foo               编译后生成 http://localhost:8100/foo.html
+|       |    ├── index.html
+|       |    ├── index.js
+|       |    ├── style.css
+|       |    └── pic.png
+|       └── bar               http://localhost:8100/bar.html
+|           ├── index.html
+|           ├── index.js
+|           ├── style.css
+|           └── baz           http://localhost:8100/bar/baz.html
+|               ├── index.html
+|               ├── index.js
+|               └── style.css
+└── webpack.config.js
+```    
     
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next

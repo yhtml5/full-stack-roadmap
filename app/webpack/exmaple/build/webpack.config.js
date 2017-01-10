@@ -31,64 +31,75 @@ let config = function () {
             publicPath: "./",//the URL of your output.path from the view of the HTML page,if you want to open from the local files, you can set './'
         },
         module: {
-            rules: [{
-                test: /\.html$/,
-                loader: 'html-loader'//https://github.com/webpack/html-loader
-            }, {
-                //     test: /\.html$/,
-                //     use: [{
-                //         loader: 'html-loader',
-                //         options: {
-                //             root: resolve(__dirname, 'src'),
-                //             attrs: ['img:src', 'link:href']
-                //         }
-                //     }]
-                // }, {
-                test: /favicon\.png$/,
-                use: [{
-                    loader: 'file-loader',//https://github.com/webpack/file-loader
-                    options: {
-                        name: '[name].[ext]?[hash]'
-                    }
+            rules: [
+                {
+                    test: /\.html$/,
+                    use: [{
+                        loader: 'html-loader',
+                        // options: {
+                        //     root: resolve(__dirname, 'src'),
+                        //     attrs: ['img:src', 'link:href']
+                        // }
+                    }]
+                }, {
+                    //     test: /\.html$/,
+                    //     use: [{
+                    //         loader: 'html-loader',
+                    //         options: {
+                    //             root: resolve(__dirname, 'src'),
+                    //             attrs: ['img:src', 'link:href']
+                    //         }
+                    //     }]
+                    // }, {
+                    test: /favicon\.png$/,
+                    use: [{
+                        loader: 'file-loader',//https://github.com/webpack/file-loader
+                        options: {
+                            name: '[name].[ext]?[hash]'
+                        }
+                    }]
+                }, {
+                    test: /\.(css|pcss)$/,
+                    // use: [
+                    //     'style-loader',
+                    //     'css-loader?modules',
+                    //     'postcss-loader',
+                    // ],
+                    loader: ExtractTextPlugin.extract({
+                        fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
+                        notExtractLoader: "style-loader",
+                        loader: [
+                            'css-loader',//https://css-modules.github.io/webpack-demo/
+                            //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
+                            // 'postcss-loader'//[https://github.com/postcss/postcss,https://github.com/postcss/postcss-loader]
+                        ],
+                        query: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]-[local]-[hash:base64:5]',
+                            // minimize: true,
+                            // function (loaderContext, localIdentName, localName, options) {
+                            // return 'whatever_random_class_name'
+                            // ?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]
+                            // }
+                        },
+                        publicPath: "/",// override the publicPath setting for this loader
+                    })
+                }, {
+                    test: /\.(js|jsx)$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: 'babel-loader',
+                    // use: ['babel-loader', 'eslint-loader']
+                }, {
+                    test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                    exclude: /favicon\.png$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            limit: 5000
+                        }
+                    }]
                 }]
-            }, {
-                test: /\.pcss/,
-                use: [
-                    'style-loader',
-                    'css-loader?importLoaders=1',
-                    'postcss-loader'
-                ]
-            }, {
-                test: /\.css$/,
-                // use: [
-                //     'style-loader',
-                //     'css-loader?modules',
-                //     'postcss-loader',
-                // ],
-                loader: ExtractTextPlugin.extract({
-                    fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
-                    notExtractLoader: "style-loader",
-                    loader: [
-                        'css-loader?sourceMap', //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
-                        'postcss-loader'//[https://github.com/postcss/postcss,https://github.com/postcss/postcss-loader]
-                    ],
-                    publicPath: "/",// override the publicPath setting for this loader
-                })
-            }, {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
-                use: 'babel-loader',
-                // use: ['babel-loader', 'eslint-loader']
-            }, {
-                test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
-                exclude: /favicon\.png$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 5000
-                    }
-                }]
-            }]
         },
         plugins: [
             new ExtractTextPlugin({//https://github.com/webpack/extract-text-webpack-plugin
