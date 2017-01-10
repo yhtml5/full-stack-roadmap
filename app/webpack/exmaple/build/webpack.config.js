@@ -37,27 +37,6 @@ let config = function () {
         },
         module: {
             rules: [{
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
-                use: 'babel-loader',
-                // use: ['babel-loader', 'eslint-loader']
-            }, {
-                test: /\.css$/,
-                // use: [
-                //     'style-loader',
-                //     'css-loader?modules',
-                //     'postcss-loader',
-                // ],
-                // {
-                //     test: /\.css$/,
-                //     use: ['style-loader', 'css-loader', 'postcss-loader']
-                // },
-                loader: ExtractTextPlugin.extract({
-                    notExtractLoader: "style-loader",
-                    loader: "css-loader?sourceMap",
-                    publicPath: "/"
-                })
-            }, {
                 test: /\.html$/,
                 loader: 'html-loader'
             }, {
@@ -77,23 +56,44 @@ let config = function () {
                         name: '[name].[ext]?[hash]'
                     }
                 }]
-            },
-                {
-                    test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
-                    exclude: /favicon\.png$/,
-                    use: [{
-                        loader: 'url-loader',
-                        options: {
-                            limit: 5000
-                        }
-                    }]
+            }, {
+                test: /\.css$/,
+                // use: [
+                //     'style-loader',
+                //     'css-loader?modules',
+                //     'postcss-loader',
+                // ],
+                // {
+                //     test: /\.css$/,
+                //     use: ['style-loader', 'css-loader', 'postcss-loader']
+                // },
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
+                    notExtractLoader: "style-loader",
+                    loader: ['css-loader?sourceMap', 'postcss-loader'], //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
+                    publicPath: "/",// override the publicPath setting for this loader
+                })
+            }, {
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules|bower_components)/,
+                use: 'babel-loader',
+                // use: ['babel-loader', 'eslint-loader']
+            }, {
+                test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                exclude: /favicon\.png$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 5000
+                    }
                 }]
+            }]
         },
         plugins: [
-            new ExtractTextPlugin({
-                filename: 'static/[name].[chunkhash:6].css',
-                disable: false,
-                allChunks: true
+            new ExtractTextPlugin({//https://github.com/webpack/extract-text-webpack-plugin
+                filename: 'static/[name].[contenthash:6].css',
+                disable: false,//disables the plugin
+                allChunks: true,//extract from all additional chunks too (by default it extracts only from the initial chunk(s))
             }),
             new webpack.optimize.CommonsChunkPlugin({ //https://webpack.js.org/plugins/commons-chunk-plugin/
                 names: ['vendor', 'manifest'],// Specify the common bundle's name.
