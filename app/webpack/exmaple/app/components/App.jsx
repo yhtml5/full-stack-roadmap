@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import '../global.pcss'
 import Layout from './Layout';
 import Counter from './Counter';
 import styles from './App.pcss';
-import '../global.pcss'
+import './App.chilren.pcss'
 
 require('./test.css')
 
@@ -17,7 +18,10 @@ class App extends Component {
             <Layout>
                 <a className={styles.center} href="http://0.0.0.0:61200/login.html">login22</a>
                 <div>
-                    <h2 className='yGreen'>App2222</h2>
+                    <h2 className='yGreen'>App</h2>
+                    <h3 className={styles.root}>compose</h3>
+                    <h3 className={styles.text}>compose</h3>
+                    <h3 className={styles.text2}>compose</h3>
                     <Counter />
                 </div>
             </Layout>
