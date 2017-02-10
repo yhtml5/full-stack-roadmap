@@ -7,6 +7,9 @@
   "homepage": "https://github.com/yhtml5/YHTML5-Tutorial#readme",
   "main": "index.js",
   "scripts": {
+    "pregit": "clear && git status",
+    "git": "git checkout dev && git add -A && git commit -m 'auto commit' && git checkout master && git merge dev && git push && git checkout dev && git merge master",
+    "postgit": "clear && git status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +25,7 @@
     "vue-router": "^0.x"
   },
   "devDependencies": {
+    "eslint": "^3.13.1",
     "webpack": "^1.14.0"
   }
 }
