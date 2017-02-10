@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "pregit": "clear && git status",
-    "git": "git checkout dev && git add -A && git commit -m'auto commit' && git pull && git checkout master && git merge dev && git pull && git push && git checkout dev && git merge master",
+    "git": "git checkout dev && git add -A && git commit -m'auto commit' && git pull && git checkout master && git merge dev && git pull && git push --all && git checkout dev && git merge master",
     "postgit": "clear && git status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
