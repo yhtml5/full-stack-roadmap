@@ -47,6 +47,11 @@
 
 ![img-htmltree]
 
+### question
+
+[el.value与el.getAttribute("value")的区别][question1]
+
 [dom-obj-document]:http://www.runoob.com/jsref/dom-obj-document.html
 [htmldom-tutorial]:http://www.runoob.com/htmldom/htmldom-tutorial.html
 [img-htmltree]:./htmltree.gif
+[question1]:http://www.jianshu.com/p/bbff1203ebf4
