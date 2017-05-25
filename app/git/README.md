@@ -50,12 +50,13 @@
    * git push origin --delete **branchName**  --删除远程分支
    * git push origin --delete **tagname**   --删除远程标签
    * git push origin --tags --推送全部尚未推送到远程的本地标签
+   * git reset --hard `<commit-hash>` && git push -f origin master   --撤销之前提交的commit(没有被其他人pull过)
+   * 但是如果有其他人同步过你的push，那么你可以在本地使用revert来还原你提交的commit，然后生成一个新的commit然后再推送到远端
    * git remote 不带参数，列出已经存在的远程分支
    * git remote add origin git@github.com:chenyexing/learngit.git --Adds a remote named **name** for the repository at **url**
    * git remote add origin git@server-name:path/repo-name.git --关联一个远程库
    * git remote -v | --verbose 列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中间。
  
-
 ### Branch Manage
    * git branch --查看分支
    * git branch -a  --查看所有分支(远程)
