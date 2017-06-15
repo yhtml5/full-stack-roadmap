@@ -1,5 +1,20 @@
 ## Nginx Web Server
 
+### Nginx comman lind
+
+|comman|usage|
+|---|---|
+|$ sudo nginx -t| 测试配置|
+|sudo systemctl reload nginx|重新加载服务配置文件|
+|sudo systemctl status nginx.service|查看服务器状态|
+|sudo systemctl start nginx.service|启动nginx服务|
+|sudo systemctl restart nginx.service|重新启动|
+|sudo systemctl stop nginx.service|停止服务|
+|sudo systemctl enable nginx.service|开机启动|
+|sudo systemctl disable nginx.service|禁止开机启动|
+
+更改本地host地址指向域名
+
 ### Global Config 
 
 ```
@@ -67,22 +82,18 @@ $ sudo nginx -t
 $ netstat -ntlp
 ```
 
+### [gzip][gzip]
 
-
-### Nginx comman lind
-
-|comman|usage|
-|---|---|
-|$ sudo nginx -t| 测试配置|
-|sudo systemctl reload nginx|重新加载服务配置文件|
-|sudo systemctl status nginx.service|查看服务器状态|
-|sudo systemctl start nginx.service|启动nginx服务|
-|sudo systemctl restart nginx.service|重新启动|
-|sudo systemctl stop nginx.service|停止服务|
-|sudo systemctl enable nginx.service|开机启动|
-|sudo systemctl disable nginx.service|禁止开机启动|
-
-
-更改本地host地址指向域名
+```
+gzip on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+#gzip_http_version 1.0;
+gzip_comp_level 2;
+gzip_types text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+gzip_vary off;
+gzip_disable "MSIE [1-6]\.";
+```
 
 [ninghaoNginx]:http://ninghao.net/course/3996
+[gzip]:http://www.cnblogs.com/mitang/p/4477220.html
