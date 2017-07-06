@@ -1,5 +1,5 @@
-##推荐书单
-###CSS推荐阅读
+## 推荐书单
+### CSS推荐阅读
   css网站布局实录            //侧重技术方法
   网站重构－应用web标准进行设计//侧重编程思想
   精通css：高级web标准解决方案//
@@ -19,11 +19,11 @@
   the book of css3 //css3模块描述和实践指南
 
 
-###html推荐阅读
+### html推荐阅读
   html5权威指南
 
 
-###js推荐阅读
+### js推荐阅读
   javascript高级程序设计    //经典的入门书籍
   javascript王者归来        //百度web员工编写适合入门
 
@@ -49,7 +49,7 @@
   javascript web  applications //js landscape的总结
 
 
-###网站建设与性能
+### 网站建设与性能
   高性能网站建设指南
   网站重构
   web性能权威指南
@@ -57,16 +57,16 @@
   高性能网站进阶
   web开发敏捷之道
 
-###SEO
+### SEO
   SEO的艺术
-###正则表达式
+### 正则表达式
   精通正则表达式
-###tcp／ip
+### tcp／ip
   图解http
   http权威指南
   图解tcpip
 
-###系列书单
+### 系列书单
   1.head first html&css
   2.css权威指南
   3.精通css
