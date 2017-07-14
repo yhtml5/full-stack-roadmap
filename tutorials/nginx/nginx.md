@@ -4,7 +4,6 @@
 
 |comman|usage|
 |---|---|
-|$ sudo nginx -t| 测试配置|
 |sudo systemctl reload nginx|重新加载服务配置文件|
 |sudo systemctl status nginx.service|查看服务器状态|
 |sudo systemctl start nginx.service|启动nginx服务|
@@ -12,6 +11,16 @@
 |sudo systemctl stop nginx.service|停止服务|
 |sudo systemctl enable nginx.service|开机启动|
 |sudo systemctl disable nginx.service|禁止开机启动|
+
+|comman|usage|
+|---|---|
+|sudo nginx | 启动 |
+|sudo nginx -v | 版本 |
+|sudo nginx -V | 详细版本 |
+|sudo nginx -t| 测试配置 |
+|sudo nginx -s reload| 重载配置 |
+|sudo nginx -s stop | 停止 |
+|sudo nginx -s quit | 停止 |
 
 更改本地host地址指向域名
 
