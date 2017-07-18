@@ -16,6 +16,7 @@ cat /etc/sudoers
 sudo cat /etc/sudoers
 exit
 exit
+
 ssh test@127.0.0.1
 ls -al
 ```
@@ -23,11 +24,12 @@ ls -al
 #### 2.use ssh install of password
 
 ```
-local mac
+### local mac
 brew install ssh-copy-id
 ssh-copy-id test@127.0.0.1
 exit
-ssh test@127.0.0.1
+
+ssh test@127.0.0.1 
 ```
 
 ### 3.prohibit root user remote login
@@ -38,6 +40,7 @@ sudo vi /etc/ssh/sshd_config
 PermitRootLogin no | remove '#' and change 'yes' to 'no'
 sudo systemctl reload sshd
 exit
+
 ssh root@127.0.0.1
 Permission denied, please try again.
 ```
@@ -50,6 +53,7 @@ sudo vi /etc/ssh/sshd_config
 PasswordAuthentication no | remove '#' and change 'yes' to 'no'
 sudo systemctl reload sshd
 exit
+
 ssh test@127.0.0.1
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 ```
@@ -62,6 +66,7 @@ sudo vi /etc/ssh/sshd_config
 Port xxx | remove '#' and change '22' to 'xxx'
 sudo systemctl reload sshd
 exit
+
 ssh test@127.0.0.1
 connect to host 47.89.194.18 port 22: Connection refused
 ssh test@127.0.0.1 -p xxx
@@ -82,7 +87,6 @@ restart Ali ECS
 # df -h
 # bash auto_fdisk.sh
 # df -h
-
 ```
 
 ## 阿里控制台操作

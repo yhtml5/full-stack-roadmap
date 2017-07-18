@@ -36,7 +36,7 @@
 |ifconfig -a|查看ip|
 |ip addr|查看ip地址|
 |curl wtfismyip.com/json|查看ip地址|
-|telnet 47.89.194.18|查看ip地址|
+|telnet 47.89.194.18|telnet ip|
 |man `command`|manual|`q`exit;`space`page down|
 |who|view who online|
 |netstat -a|view net status|
