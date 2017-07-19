@@ -25,31 +25,35 @@ npm install grunt --registry=http://registry.npm.taobao.org
 > npm install npm -g  |update npm itself
 
 ### NPM 
-|command|usage|
-|---|---|
-|npm -v|显示版本，检查npm 是否正确安装|
-|npm config ls|查看部分配置信息|
-|npm config ls -l |查看所有配置信息|
-|npm run|list all scripts|
-|npm run dev|do something|
-|npm root|本地的依赖包的绝对目录|
-|npm root -g|全局的依赖包的绝对目录|
-|npm search `<package-name>`|搜索依赖包|
-|npm view `<package-name>`|查看依赖包的package.json信息|
-|npm view `<package-name>` dependencies|单独查看package.json某个配置|
-|npm show modules|显示模块详情|
-|npm show webpack versions --json|显示模块版本信息|
-|npm update|升级当前目录下的项目的所有模块|
-|npm update modules|升级当前目录下的项目的指定模块|
-|npm uninstall `<package-name>`|删除指定的模块|
-|npm list|列出已安装模块|
-|npm ls --depth 0|删除全局模块|
-|npm test|npm t|
-|npm install modules|npm i|
-|--global|-g|
-|--save|-S|
-|--save-dev|-D|
-|--save-pro|-P|
+command|usage
+---|---
+npm -v | 显示版本，检查npm 是否正确安装
+npm config ls | 查看部分配置信息
+npm config ls -l | 查看所有配置信息
+npm run | list all scripts
+npm run dev | do something
+npm root | 本地的依赖包的绝对目录
+npm root -g | 全局的依赖包的绝对目录
+npm search `<package-name>` | 搜索依赖包
+npm view `<package-name>` | 查看依赖包的package.json信息
+npm view `<package-name>` dependencies | 单独查看package.json某个配置
+npm show modules | 显示模块详情
+npm show webpack versions --json | 显示模块版本信息
+npm update | 升级当前目录下的项目的所有模块
+npm update modules | 升级当前目录下的项目的指定模块
+npm uninstall `<package-name>` | 删除指定的模块
+npm list | 列出已安装模块
+npm ls --depth 0 | 删除全局模块
+npm test | npm t
+npm install modules | npm i
+npm version | 查看版本
+npm version patch | 升级小版本
+npm version minor | 升级中版本
+npm version major | 升级大版本
+--global|-g
+--save|-S
+--save-dev|
+--save-pro|
 
 
 
