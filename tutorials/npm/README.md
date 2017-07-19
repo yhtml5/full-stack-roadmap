@@ -24,15 +24,12 @@ npm install grunt --registry=http://registry.npm.taobao.org
 
 > npm install npm -g  |update npm itself
 
-### NPM
+### NPM 
 |command|usage|
 |---|---|
 |npm -v|显示版本，检查npm 是否正确安装|
 |npm config ls|查看部分配置信息|
 |npm config ls -l |查看所有配置信息|
-|npm install modules|安装模块,参数: -g, --save, --save-dev, --production|
-|npm list|列出已安装模块|
-|npm list -g|查看全局依赖包|
 |npm run|list all scripts|
 |npm run dev|do something|
 |npm root|本地的依赖包的绝对目录|
@@ -44,9 +41,19 @@ npm install grunt --registry=http://registry.npm.taobao.org
 |npm show webpack versions --json|显示模块版本信息|
 |npm update|升级当前目录下的项目的所有模块|
 |npm update modules|升级当前目录下的项目的指定模块|
-|npm update modules -g|升级全局安装的express模块|
 |npm uninstall `<package-name>`|删除指定的模块|
-|npm uninstall `<package-name>` -g|删除全局模块|
+|npm list|列出已安装模块|
+|npm ls --depth 0|删除全局模块|
+|npm test|npm t|
+|npm install modules|npm i|
+|--global|-g|
+|--save|-S|
+|--save-dev|-D|
+|--save-pro|-P|
+
+
+
+
 |n|node版本管理|
 |n stable|升级Node到最新稳定版|
 |n 7.0|升级Node指定版本|
@@ -134,3 +141,6 @@ npm-debug.log
 > npm config set registry https://registry.npmjs.org/
 
 [npm-script-ruan]:http://www.ruanyifeng.com/blog/2016/10/npm_scripts.htmls
+[shorthands-and-other-cli-niceties]:https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties
+
+
