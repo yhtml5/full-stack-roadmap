@@ -5,8 +5,4 @@
 
 
 
-
-
-
-
 [es6-ruanyifeng]http://es6.ruanyifeng.com/
