@@ -50,17 +50,13 @@ npm version | 查看版本
 npm version patch | 升级小版本
 npm version minor | 升级中版本
 npm version major | 升级大版本
---global|-g
---save|-S
---save-dev|
---save-pro|
-
-
-
-
-|n|node版本管理|
-|n stable|升级Node到最新稳定版|
-|n 7.0|升级Node指定版本|
+--global | -g
+--save | -S
+--save-dev | -D
+--save-pro | -P
+n | node版本管理
+n stable | 升级
+n 7.0 | 升级Nod
 
 ### Semantic Versioning
 
