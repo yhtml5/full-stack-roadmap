@@ -1,8 +1,8 @@
 ## Nginx Web Server
 
-* [nginx config reference][nginx-reference]
+* [Nginx config reference][nginx-reference]
 * [nginx question][nginx-question]
-* [nginx install][nginx-install]
+* [How to install nginx][nginx-install]
 
 ### Nginx comman lind
 
