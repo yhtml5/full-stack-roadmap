@@ -39,6 +39,8 @@
 |telnet 47.89.194.18|telnet ip|
 |man `command`|manual|`q`exit;`space`page down|
 |who|view who online|
+|whoami| To see your username |
+|id -g -n $whoami | To see your group name |
 |netstat -a|view net status|
 |netstat -ntlp|list port|linux|
 |sudo lsof -i:port|查看端口占用|mac|

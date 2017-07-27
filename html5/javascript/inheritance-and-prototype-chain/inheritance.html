@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function Parent() {
+            this.sayAge = function () {
+                console.log(this.age);
+            }
+        }
+
+        Parent.prototype.sayParent = function () {
+            alert("this is parentmethod!!!");
+        }
+
+        function Child(firstname) {
+            Parent.call(this);
+            this.fname = firstname;
+            this.age = 40;
+            this.saySomeThing = function () {
+                console.log(this.fname);
+                this.sayAge();
+            }
+        }
+
+        Child.prototype = new Parent();
+        var child = new Child("张");
+        child.saySomeThing();
+        child.sayParent();
+    </script>
+</body>
+
+</html>
