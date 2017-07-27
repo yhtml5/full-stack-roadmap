@@ -1,7 +1,9 @@
 ## Nginx Web Server
 
 [nginx config reference][nginx-reference]
+
 [nginx question][nginx-question]
+
 [nginx install][nginx-install]
 
 ### Nginx comman lind
