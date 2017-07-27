@@ -1,8 +1,12 @@
 ## Nginx Web Server
 
+[nginx config reference][nginx-reference]
+[nginx question][nginx-question]
+[nginx install][nginx-install]
+
 ### Nginx comman lind
 
-|comman|usage|
+|comman in linux|usage|
 |---|---|
 |sudo systemctl reload nginx|重新加载服务配置文件|
 |sudo systemctl status nginx.service|查看服务器状态|
@@ -12,7 +16,7 @@
 |sudo systemctl enable nginx.service|开机启动|
 |sudo systemctl disable nginx.service|禁止开机启动|
 
-|comman|usage|
+|comman in mac|usage|
 |---|---|
 |sudo nginx | 启动 |
 |sudo nginx -v | 版本 |
@@ -106,3 +110,6 @@ gzip_disable "MSIE [1-6]\.";
 
 [ninghaoNginx]:http://ninghao.net/course/3996
 [gzip]:http://www.cnblogs.com/mitang/p/4477220.html
+[nginx-reference]:http://www.cnblogs.com/gide/p/6180251.html
+[nginx-question]:question.md
+[nginx-install]:install.md
