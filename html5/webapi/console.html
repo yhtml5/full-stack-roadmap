@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>console</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1>hello world</h1>
+  <h2>参考资料</h2>
+  <ol>
+    <li>
+      <a href="https://medium.freecodecamp.org/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d"></a>
+    </li>
+  </ol>
+  <script>
+    console.clear()
+    base()
+    count()
+    time()
+
+    function base(params) {
+      console.group('base')
+      console.log('log')
+      console.info('info')
+      console.warn('warn')
+      console.error('error')
+      console.groupEnd('count')
+    }
+    function time(params) {
+      console.group('time')
+      console.time('time')
+      for (var i = 0; i < 99999; i++) {
+      }
+      console.log(i)
+      console.timeEnd('time')
+      console.groupEnd('time')
+    }
+
+    function count(params) {
+      console.group('count')
+      console.log('console.count([label])')
+      console.log('label: 字符串，如果有，count() 输出此给定的 label 及其被调用的次数')
+      var user = "";
+      function greet() {
+        console.count(user);
+        return "hi " + user;
+      }
+      user = "bob";
+      greet();
+      user = "alice";
+      greet();
+      greet();
+      console.count("alice");
+      console.groupEnd()
+    }
+  </script>
+</body>
+
+</html>
