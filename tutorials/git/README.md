@@ -40,6 +40,7 @@
    * git clone  --克隆
    * git clone `ssh://userName@ipAddress:port/path/repository.git`
    * git clone `../test/sample.git`
+   * git clone  --depth=1  --克隆深度为最近一次提交
    * git pull  --抓取远程分支
    * git push -u origin master  --推送master分支并关联本地与远程的分支(第一次加-u)
    * git push origin **branch-name**  --推送本地分支到远程库

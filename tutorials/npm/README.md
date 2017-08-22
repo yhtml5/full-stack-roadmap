@@ -58,6 +58,19 @@ n | node版本管理
 n stable | 升级
 n 7.0 | 升级Nod
 
+### npm develop
+
+```
+package.json 
+
+"bin": {
+    "yhtml5-cli": "./bin/yhtml5"
+  },
+```
+npm link 
+npm version patch 
+npm publish
+
 ### Semantic Versioning
 
 npm 采用语义版本管理软件包。所谓语义版本，就是指版本号为a.b.c的形式，其中a是大版本号，b是小版本号，c是补丁号。
