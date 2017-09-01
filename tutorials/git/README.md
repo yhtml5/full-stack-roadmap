@@ -26,13 +26,9 @@
    * git checkout -- file --丢弃工作区的修改
    * git diff --查看具体修改内容
    * git diff HEAD -- filename
-   * git log --查看历史记录（最近到最远显示），以便确定要回退到哪个版本
-   * git log --pretty=oneline --查看减少后的历史记录
    * git reset --hard HEAD^ --返回到上个版本（上上个版本：HEAD^^；往上100个版本：HEAD~100）
    * git reset --hard 版本号 --回到删除的版本（当前命令行窗口未关闭；版本号没必要写全）
    * git reset HEAD file --将暂存区的修改退回工作区   * sudo chown -R git:git sample.git  --改变权限
-
-   * git reflog --查看命令历史，以便确定要回到未来的哪个版本
    * git rm --用于删除一个文件
    * git status --查看修改状态
   
@@ -66,12 +62,12 @@
    * git branch --查看当前分支（当前分支前会标*）
    * git branch -d **name** --删除分支
    * git branch -D **name** --强行删除没有合并过的分支
+   * git branch **name**  **SHA1值** --恢复删除的分支
    * git branch --set-upstream branch-name origin/branch-name --建立本地分支和远程分支的关系
    * git branch --set-upstream-to=origin/dev dev --建立本地分支和远程分支的关系
    * git cherry-pick 62ecb3  --合并部分提交到当前分支
    * git checkout -b branch-name --创建+切换分支
    * git checkout -b branch-name origin/branch-name --本地创建+切换和远程分支对应的分支(本地和远程分支的名称最好一致)
-   * git log --graph --查看分支合并图
    * git merge **name** --合并某分支到当前分支
    * git merge **name** --no-ff -m "merge" -dev
             --禁用 Fast formard 模式(删除分支后,丢掉分支信息,看不出历史合并记录)
@@ -89,12 +85,16 @@
    * git tag -s **tagname** -m **note** --用PGP签名标签
    * git tag -d **tagname** --删除标签（本地）
 
+### Log
+   * git log --查看历史记录（最近到最远显示），以便确定要回退到哪个版本
+   * git log --pretty=oneline  --简化log
+   * git log --graph --查看分支合并图
+   * git log --graph --pretty=oneline --abbrev-commit
+   * git log --pretty=oneline --查看减少后的历史记录
+   * git reflog --查看命令历史，以便确定要回到未来的哪个版本
+
 ### Others
    * gitignore  --.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
-   * git log  --查看git日志 
-   * git log --pretty=oneline  --简化log
-   * git log --graph  --命令可以看到分支合并图
-   * git log --graph --pretty=oneline --abbrev-commit
    * git config --list  --显示当前配置信息
    * git config --global color.ui true  --让Git显示颜色
    * git config --global user.name "Your Name"  --global参数, 表示你这台机器上所有的Git仓库都会使用这个配置，

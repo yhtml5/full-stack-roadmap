@@ -1,5 +1,7 @@
 ### equal sign operator
 
+### === 与 == 调用的函数
+
 ```
 NaN == NaN         // false
 NaN === NaN        // false
