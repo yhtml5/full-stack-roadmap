@@ -50,6 +50,14 @@ npm version | 查看版本
 npm version patch | 升级小版本
 npm version minor | 升级中版本
 npm version major | 升级大版本
+npm publish | publish npm packages
+npm unpublish --force | unpublish npm packages
+npm login | login
+npm login --registry http://127.0.0.1 | login 127.0.0.1
+npm logout | logout
+npm set @scope:registry=http://127.0.0.1 | set scope
+npm adduser --registry http://127.0.0.1 | add user
+
 --global | -g
 --save | -S
 --save-dev | -D

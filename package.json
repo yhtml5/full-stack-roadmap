@@ -7,9 +7,8 @@
   "homepage": "https://github.com/yhtml5/YHTML5-Tutorial#readme",
   "main": "index.js",
   "scripts": {
-    "pregit": "git checkout dev && clear && git status",
-    "git": "git add -A && git commit -m 'auto update'  && git pull && git push && git checkout master && git merge dev && git pull && git push ",
-    "postgit": "git checkout dev && git merge master && clear && git status",
+    "git": "clear && git status && git add -A && git commit -m ",
+    "postgit": "git pull && git push && git status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
