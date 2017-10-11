@@ -43,7 +43,7 @@ npm update | 升级当前目录下的项目的所有模块
 npm update modules | 升级当前目录下的项目的指定模块
 npm uninstall `<package-name>` | 删除指定的模块
 npm list | 列出已安装模块
-npm ls --depth 0 | 删除全局模块
+npm ls --depth=0 | 列出已安装模块 深度为0  
 npm test | npm t
 npm install modules | npm i
 npm version | 查看版本
