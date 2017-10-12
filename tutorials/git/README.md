@@ -39,11 +39,14 @@
    * git clone `ssh://userName@ipAddress:port/path/repository.git`
    * git clone `../test/sample.git`
    * git clone  --depth=1  `克隆深度为最近一次提交`
+   * git fetch `将远程所有分支commit取回本地`
+   * git fetch origin master `将远程所有分支commit取回本地`
    * git pull  `抓取远程分支`
+   * git push `<远程主机名>` `<本地分支名>`:`<远程分支名>`
    * git push -u origin master  `推送master分支并关联本地与远程的分支(第一次加-u)`
    * git push origin **branch-name**  `推送本地分支到远程库`
-   * git push origin **tagname** `推送一个本地标签`
    * git push origin master  `推送分支`
+   * git push origin **tagname** `推送一个本地标签`
    * git push origin :**branchName**          `删除远程分支`
    * git push origin :refs/tags/**tagname**  `删除远程标签`
    * git push origin --delete **branchName**  `删除远程分支`
@@ -94,6 +97,7 @@
    * git log --graph --pretty=oneline --abbrev-commit `缩写commithash`
    * git log --pretty=oneline `查看减少后的历史记录`
    * git log --author=yhtml5  `只查看该作者提交记录`
+   * git log -p -2 `-p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新`
    * git reflog `查看命令历史，以便确定要回到未来的哪个版本`
    * git config --global alias.lg "log --color --graph --pretty=format:  
      > '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"   
