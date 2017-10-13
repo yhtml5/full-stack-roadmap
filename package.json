@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "git": "clear && git status && git add . && git commit -m",
-    "postgit": "git pull && git push  && git status",
+    "postgit": "git pull && git push && git push origin dev:master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
