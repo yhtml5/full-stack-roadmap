@@ -59,17 +59,27 @@
    * git remote -v | --verbose `列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中```
  
 ### Branch Manage
-   * git branch `查看分支`
+
+```demo
+[master]:    dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057 
+               |         \
+[feature]:     |          76cada - 62ecb3 - b886a0
+               |
+[bug]:       ad2112 - ca2131 - as2131    
+```
+
+   * git branch `查看当前分支（当前分支前会标*）`
    * git branch -a  `查看所有分支(远程)`
    * git branch -m dev1 dev2  `重命名分支`
    * git branch **name** `创建分支`
-   * git branch `查看当前分支（当前分支前会标*）`
    * git branch -d **name** `删除分支`
    * git branch -D **name** `强行删除没有合并过的分支`
    * git branch **name**  **SHA1值** `恢复删除的分支`
    * git branch --set-upstream branch-name origin/branch-name `建立本地分支和远程分支的关系`
    * git branch --set-upstream-to=origin/dev dev `建立本地分支和远程分支的关系`
-   * git cherry-pick 62ecb3  `合并部分提交到当前分支`
+   * git cherry-pick 62ecb3  `合并其它分支的一次提交到当前分支`
+   * git cherry-pick --abort `撤销这次合并`
+   * git rebase --onto feature ad2112 ca2131 `!将ad2112-ca2131的提交衍合到feature分支`
    * git checkout -b branch-name `创建+切换分支`
    * git checkout -b branch-name origin/branch-name `本地创建+切换和远程分支对应的分支(本地和远程分支的名称最好一致)`
    * git merge **name** `合并某分支到当前分支`
