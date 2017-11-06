@@ -22,12 +22,21 @@ function getUrl2(uri) {
   }
 }
 
+function safeDecodeURIComponent(str) {
+  try {
+    return decodeURIComponent(str);
+  } catch (e) {
+    return str;
+  }
+}
+
 const getUrl3 = (uri) => decodeURIComponent(encodeURIComponent(encodeURIComponent(uri)))
 
 const getUrl4 = (uri) => decodeURI(encodeURI(uri))
 
 
 console.log(getUrl(testURI), getUrl2(testURI), getUrl3(testURI), getUrl4(testURI))
+
 
 
 

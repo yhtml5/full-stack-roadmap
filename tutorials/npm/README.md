@@ -22,7 +22,7 @@ init.author.name=yhtml5
 
 npm install grunt --registry=http://registry.npm.taobao.org
 
-> npm install npm -g  |update npm itself
+> npm install npm -g  | update npm itself
 
 ### NPM 
 command|usage
