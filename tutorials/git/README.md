@@ -56,7 +56,8 @@
    * git remote `不带参数，列出已经存在的远程分支`
    * git remote add origin git@github.com:chenyexing/learngit.git `Adds a remote named **name** for the repository at **url**`
    * git remote add origin git@server-name:path/repo-name.git `关联一个远程库`
-   * git remote -v | --verbose `列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中```
+   * git remote set-url origin git@github.com:yhtml5/yhtml5-tutorial.git `配置git远程url`
+   * git remote -v | --verbose `列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中`
  
 ### Branch Manage
 
