@@ -7,11 +7,17 @@
 
 #### current planning
 
-**[npm script][npm],[react][react],[redux][redux],[ES6][es6-ruan]**
+**[npm script][npm],[react][react],[redux][redux],[ES6][es6-ruanyifeng]**
  
-#### where
+#### refrence
 
-**[MDN][mdn][CodeSchool][codeschool],[极客学院][jikexueyuan],[廖雪峰][liaoxuefeng]**
+* [MDN][mdn]
+* [CodeSchool][codeschool]
+* [极客学院][jikexueyuan]
+* [廖雪峰][liaoxuefeng]
+* [JavaScript 标准参考教程(alpha)][javascript-ruanyifeng]
+* [ECMAScript 6 入门][es6-ruanyifeng]
+* [axure](http://www.iaxure.com/3815.html)
 
 #### Here are what I have learned 
 
@@ -88,7 +94,7 @@
 
 |Name|Usage|Note|
 |---|---|---|
-|[ES6]|ECMAScript 2015|[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][mdn-js]|
+|[ES6]|ECMAScript 2015|[阮一峰Es6入门][es6-ruanyifeng], [Mozilla Developer Network][mdn-js]|
 |git||[廖雪峰git教程][liaoxuefeng]|
 |http||[Mozilla Developer Network][mdn-http]|    
 |linux||[鸟哥的linux私房菜][linux-vbird]|
@@ -158,9 +164,10 @@ We'll nerver use these,
 [codeschool]:https://www.codeschool.com/
 [eslint]:https://github.com/eslint/eslint
 [es6]:http://www.ecma-international.org/ecma-262/6.0/index.html
-[es6-ruan]:http://es6.ruanyifeng.com/
+[es6-ruanyifeng]:http://es6.ruanyifeng.com/
 [express]:https://github.com/expressjs/express
 [express-cn]:http://www.expressjs.com.cn/
+[javascript-ruanyifeng]:http://javascript.ruanyifeng.com/
 [forever]:https://github.com/foreverjs/forever
 [liaoxuefeng]:http://www.liaoxuefeng.com/
 [jikexueyuan]:http://www.jikexueyuan.com/
