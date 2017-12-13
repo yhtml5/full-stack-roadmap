@@ -1,0 +1,14 @@
+{
+  "name": "study-weinre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "weinre": "^2.0.0-pre-I0Z7U9OV"
+  }
+}
