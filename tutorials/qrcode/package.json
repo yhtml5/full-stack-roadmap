@@ -1,0 +1,14 @@
+{
+  "name": "qrcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "qrcode-reader": "^1.0.4"
+  }
+}
