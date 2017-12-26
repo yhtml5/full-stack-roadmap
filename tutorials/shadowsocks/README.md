@@ -10,16 +10,38 @@ Official website:
 
 ```
 #install python setup tools
-yum install python-setuptools -y
+sudo yum install python-setuptools -y
 
 #install pip
-easy_install pip
+sudo easy_install pip
 
 #update pip
-pip install –upgrade pip
+sudo pip install –upgrade pip
 
 #install shadowsocks
-pip install shadowsocks
+sudo pip install shadowsocks
+```
+
+### Create shadowsocks service, With the system started
+> vim /usr/lib/systemd/system/shadowsocks.service
+
+```
+[Unit]
+Description=Shadowsocks Server
+Documentation=https://github.com/shadowsocks/shadowsocks
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+
+#设置启动时的配置文件,根据自己的需求改.
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks-libev/config.json
+-d start
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/usr/bin/ssserver -d stop
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ### config 
@@ -50,28 +72,6 @@ pip install shadowsocks
   “8992”:”B用户密码”
   }
 }
-```
-
-### Create shadowsocks service, With the system started
-> vim /usr/lib/systemd/system/shadowsocks.service
-
-```
-[Unit]
-Description=Shadowsocks Server
-Documentation=https://github.com/shadowsocks/shadowsocks
-After=network.target remote-fs.target nss-lookup.target
-
-[Service]
-Type=forking
-
-#设置启动时的配置文件,根据自己的需求改.
-ExecStart=/usr/bin/ssserver -c /etc/shadowsocks-libev/config.json
--d start
-ExecReload=/bin/kill -HUP $MAINPID
-ExecStop=/usr/bin/ssserver -d stop
-
-[Install]
-WantedBy=multi-user.target
 ```
 
 ### start service 
