@@ -75,14 +75,14 @@ WantedBy=multi-user.target
 ```
 
 ### start service 
-> sudo systemctl enable shadowsocks
-> sudo systemctl status shadowsocks
-> sudo systemctl start shadowsocks
-> sudo systemctl stop shadowsocks
+> sudo systemctl enable shadowsocks  
+> sudo systemctl status shadowsocks  
+> sudo systemctl start shadowsocks  
+> sudo systemctl stop shadowsocks  
 
 ### firewall 
-> firewall-cmd –permanent –add-port=8989/tcp
-> firewall-cmd –permanent –add-port=8989/udp
+> firewall-cmd –permanent –add-port=8989/tcp  
+> firewall-cmd –permanent –add-port=8989/udp  
 > firewall-cmd –reload
 
 ### notice
