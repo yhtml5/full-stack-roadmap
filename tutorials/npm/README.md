@@ -25,6 +25,28 @@ npm install grunt --registry=http://registry.npm.taobao.org
 > npm install npm -g  | update npm itself
 
 ### NPM 
+
+#### NPM install
+
+command|usage
+---|---
+npm install | npm i 
+npm install --only=production | npm i --only=prod
+npm install --only=development | npm i --only=dev
+npm install --production | 只安装dependencies
+npm install --global | npm i -g
+npm install --save | npm i -S
+npm install --save-dev | npm i -D
+npm install --save-pro | npm i -P
+npm install --save-optional | npm i -O
+npm install --no-save | 
+npm uninstall `<package-name>` | 删除指定的模块
+npm update | 升级当前目录下的项目的所有模块
+npm update `<package-name>` | 升级当前目录下的项目的指定模块
+npm outdated | 查看当前package module是否有新版本
+
+#### npm other
+
 command|usage
 ---|---
 npm -v | 显示版本，检查npm 是否正确安装
@@ -39,13 +61,9 @@ npm view `<package-name>` | 查看依赖包的package.json信息
 npm view `<package-name>` dependencies | 单独查看package.json某个配置
 npm show modules | 显示模块详情
 npm show webpack versions --json | 显示模块版本信息
-npm update | 升级当前目录下的项目的所有模块
-npm update modules | 升级当前目录下的项目的指定模块
-npm uninstall `<package-name>` | 删除指定的模块
 npm list | 列出已安装模块
 npm ls --depth=0 | 列出已安装模块 深度为0  
 npm test | npm t
-npm install modules | npm i
 npm version | 查看版本
 npm version patch | 升级小版本
 npm version minor | 升级中版本
@@ -58,10 +76,6 @@ npm logout | logout
 npm set @scope:registry=http://127.0.0.1 | set scope
 npm adduser --registry http://127.0.0.1 | add user
 
---global | -g
---save | -S
---save-dev | -D
---save-pro | -P
 n | node版本管理
 n stable | 升级
 n 7.0 | 升级Nod

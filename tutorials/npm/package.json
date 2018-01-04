@@ -6,11 +6,16 @@
   "keywords": [],
   "author": "yhtml5 <1417376255@qq.com>",
   "license": "MIT",
-  "dependencies": {
-    "jshint": "^2.9.2"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yhtml5-utils": "0.0.3"
+  },
+  "devDependencies": {
+    "yhtml5-test": "^1.0.12"
+  },
+  "optionalDependencies": {
+    "yhtml5-dev-utils": "^1.0.3"
   }
 }
