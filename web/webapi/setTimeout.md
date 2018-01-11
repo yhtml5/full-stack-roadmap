@@ -1,5 +1,12 @@
 ### setTimeout
 
+> var timeoutID = scope.setTimeout(function[, delay, param1, param2, ...]);
+> var timeoutID = scope.setTimeout(function[, delay]); 
+> var timeoutID = scope.setTimeout(code[, delay]); 
+
+附加参数，一旦定时器到期，它们会作为参数传递给function 或 执行字符串（setTimeout参数中的code）
+IE9 及更早的 IE 浏览器不支持
+
 #### 清除定时
 ```
 var timeoutID;
@@ -23,3 +30,6 @@ function clearAlert() {
 由setTimeout()调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 this 关键字在非严格模式会指向 window (或全局)对象，严格模式下为 undefined，这和所期望的this的值是不一样的。
 
 myArray.myMethod函数传递给 setTimeout，到了定时时间，this没有指向，默认指向window对象。并且没有方法把 thisArg 传递给setTimeout，正如Array方法的forEach，reduce等。下面的例子表示使用call方法也没用。
+
+### Reference
+[mdn]:(https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout)
