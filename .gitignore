@@ -3,6 +3,7 @@
 /**/node_modules/
 npm-debug.log
 app/webpack/*/dist/
+.vscode
 
 # Windows image file caches
 Thumbs.db
