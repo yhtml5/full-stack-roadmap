@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Axios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function getUserAccount() {
+        return axios.get('https://bird.ioliu.cn/joke/rand', {
+          params: {
+            type: 'text'
+          }
+        })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+
+      function getUserPermissions() {
+        return axios.post('https://bird.ioliu.cn/joke/rand', {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+
+      // GET request for remote image
+      axios({
+        method: 'get',
+        url: 'https://bird.ioliu.cn/v2?url=http://bit.ly/2mTM3nY',
+        responseType: 'stream'
+      })
+        .then(function (response) {
+          console.log(response)
+        });
+
+      axios.all([getUserAccount(), getUserPermissions()])
+        .then(axios.spread(function (acct, perms) {
+          // Both requests are now complete
+          console.log(acct, perms)
+        }));
+
+      var instance = axios.create({
+        // baseURL: 'https://some-domain.com/api/',
+        timeout: 1000,
+        headers: {
+          'env': '__GATEWAY_API_EVN',
+          // 'origin': 'http://d.2dfire-pre.com',
+          // 'Content-Type': 'application/form-data'
+          // 'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        // `withCredentials` indicates whether or not cross-site Access-Control requests
+        // should be made using credentials
+        // withCredentials: true,
+        params: {
+          s_osv: 'h5',
+          s_apv: '1.0',
+        }
+      });
+    </script>
+  </body>
+
+</html>
