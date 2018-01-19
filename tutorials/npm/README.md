@@ -74,6 +74,7 @@ npm login | login
 npm login --registry http://127.0.0.1 | login 127.0.0.1
 npm logout | logout
 npm set @scope:registry=http://127.0.0.1 | set scope
+npm set package-lock=false | set
 npm adduser --registry http://127.0.0.1 | add user
 
 n | node版本管理
