@@ -90,6 +90,7 @@
    * git remote -v `查看详细远程库信息`
    * git stash `“储藏”当前工作现场`
    * git stash list `查看临时储藏的工作现场`
+   * git stash show `检查工作现场`
    * git stash pop `回到工作现场`
    * git stash clear `清除stash队列`
 
