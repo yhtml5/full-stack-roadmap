@@ -2,9 +2,19 @@
 
 ### git 常用命令大全
 
+* [Use Ssh](#use-ssh) 
+* [Create Repository](#create-repository) 
+* [Git Basics](#git-basics) 
+* [Remote Repository](#Remote-Repository) 
+* [Branch Manage](#Branch-Manage) 
+* [Git Stash](#git-stash) 
+* [Label Manage](#Label-Manage) 
+* [Log](#Log) 
+* [notice](#notice) 
+    
 ![GitHub set up](principle.png)
 
-### add ssh
+### Use ssh
    * cat ~/.ssh/id_rsa.pub
    * ls -al ~/.ssh  `列出证书`
    * ssh-keygen -t rsa -b 4096 -C "1417376255@qq.com"  `创建ssh证书`
@@ -69,30 +79,35 @@
 [bug]:       ad2112 - ca2131 - as2131    
 ```
 
-   * git branch `查看当前分支（当前分支前会标*）`
-   * git branch -a  `查看所有分支(远程)`
-   * git branch -m dev1 dev2  `重命名分支`
-   * git branch **name** `创建分支`
-   * git branch -d **name** `删除分支`
-   * git branch -D **name** `强行删除没有合并过的分支`
-   * git branch **name**  **SHA1值** `恢复删除的分支`
-   * git branch --set-upstream branch-name origin/branch-name `建立本地分支和远程分支的关系`
-   * git branch --set-upstream-to=origin/dev dev `建立本地分支和远程分支的关系`
-   * git cherry-pick 62ecb3  `合并其它分支的一次提交到当前分支`
-   * git cherry-pick --abort `撤销这次合并`
-   * git rebase --onto feature ad2112 ca2131 `!将ad2112-ca2131的提交衍合到feature分支`
-   * git checkout -b branch-name `创建+切换分支`
-   * git checkout -b branch-name origin/branch-name `本地创建+切换和远程分支对应的分支(本地和远程分支的名称最好一致)`
-   * git merge **name** `合并某分支到当前分支`
-   * git merge **name** --no-ff -m "merge" -dev
-            --禁用 Fast formard 模式(删除分支后,丢掉分支信息,看不出历史合并记录)
-   * git remote `查看远程库信息`
-   * git remote -v `查看详细远程库信息`
-   * git stash `“储藏”当前工作现场`
-   * git stash list `查看临时储藏的工作现场`
-   * git stash show `检查工作现场`
-   * git stash pop `回到工作现场`
-   * git stash clear `清除stash队列`
+  * git branch `查看当前分支（当前分支前会标*）`
+  * git branch -a  `查看所有分支(远程)`
+  * git branch -m dev1 dev2  `重命名分支`
+  * git branch **name** `创建分支`
+  * git branch -d **name** `删除分支`
+  * git branch -D **name** `强行删除没有合并过的分支`
+  * git branch **name**  **SHA1值** `恢复删除的分支`
+  * git branch --set-upstream branch-name origin/branch-name `建立本地分支和远程分支的关系`
+  * git branch --set-upstream-to=origin/dev dev `建立本地分支和远程分支的关系`
+  * git cherry-pick 62ecb3  `合并其它分支的一次提交到当前分支`
+  * git cherry-pick --abort `撤销这次合并`
+  * git rebase --onto feature ad2112 ca2131 `!将ad2112-ca2131的提交衍合到feature分支`
+  * git checkout -b branch-name `创建+切换分支`
+  * git checkout -b branch-name origin/branch-name `本地创建+切换和远程分支对应的分支(本地和远程分支的名称最好一致)`
+  * git merge **name** `合并某分支到当前分支`
+  * git merge **name** --no-ff -m "merge" -dev
+           --禁用 Fast formard 模式(删除分支后,丢掉分支信息,看不出历史合并记录)
+  * git remote `查看远程库信息`
+  * git remote -v `查看详细远程库信息`
+
+
+### [git stash]
+  * git stash `储藏当前工作现场`
+  * git stash list `查看临时储藏的工作现场`
+  * git stash show `检查工作现场`
+  * git stash apply stash@{2}`应用储存`
+  * git stash drop stash@{0}`移除的储藏`
+  * git stash pop stash@{0} `应用储藏，并将其从堆栈中移走`
+  * git stash clear `清除stash队列`
 
 ### Label Manage
    * git tag **name** `打标签`
@@ -159,3 +174,9 @@
        * git checkout -- readme.txt 还没有被放到暂存区, 撤销修改就回到和版本库一模一样的状态   
        * git reset HEAD readme.txt  已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
    * git checkout -b branch-name origin/branch-name --本地创建和远程分支对应的分支(本地和远程分支的名称最好一致)
+
+
+
+
+[git stash]:https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%EF%BC%88Stashing%EF%BC%89
+
