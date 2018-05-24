@@ -3,6 +3,7 @@
 * [Nginx config reference][nginx-reference]
 * [nginx question][nginx-question]
 * [How to install nginx][nginx-install]
+* [Nginx Full Exmaple](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
 ### Nginx comman lind
 
