@@ -71,7 +71,6 @@ DOM事件
 * 异步过程的回调函数，一定不在当前这一轮事件循环中执行
 
 ### Reference
-
 * [并发模型与事件循环 MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
 * [JavaScript 异步、栈、事件循环、任务队列](https://segmentfault.com/a/1190000011198232)
 * [彻底理解同步、异步和事件循环(Event Loop)](https://segmentfault.com/a/1190000004322358)
