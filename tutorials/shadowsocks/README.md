@@ -5,6 +5,9 @@
 Official website: 
 > http://shadowsocks.org/en/index.html
 
+> https://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html
+> http://ryantech.top/posts/16
+> https://zzz.buzz/zh/gfw/2017/08/14/install-shadowsocks-server-on-centos-7
 
 ### install 
 

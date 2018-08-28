@@ -1,5 +1,6 @@
 ## Nginx Web Server
 
+* [Nginx 配置详解](https://www.cnblogs.com/hunttown/p/5759959.html)
 * [Nginx config reference][nginx-reference]
 * [nginx question][nginx-question]
 * [How to install nginx][nginx-install]

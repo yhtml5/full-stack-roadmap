@@ -1,6 +1,6 @@
 ### this
-函数体内: this指代全局对象(window/undefind)
-函数体外: 指的是函数执行的上下文,取决于函数是如何调用的
+函数体外: this指代全局对象(window/undefind)
+函数体内: 指的是函数执行的上下文,取决于函数是如何调用的
 
 ```
 var a = { a:function a(){

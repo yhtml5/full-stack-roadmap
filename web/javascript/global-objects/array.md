@@ -1,5 +1,8 @@
 ### Object and Array
 
+#### 
+[...new Set([1,2,3,1,'a',1,'a'])] 
+
 #### 数组去重
 ```
 Array.prototype.indexOf = Array.prototype.indexOf || function(item) {
