@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+  </head>
+
+  <body>
+
+    <h1>订单详情</h1>
+    <p>应该返回 订单列表, </p>
+
+    <a href="order.html#from=orderDetail">- 返回 (订单列表)</a>
+    <br>
+    <br>
+    <a id="back">- 返回 (history.back)</a>
+    <br>
+    <br>
+    <a href="bill.html#from=orderDetail">账单</a>
+
+    <script src="./storage.js"></script>
+    <script>
+      function back(params) {
+        window.history.back()
+      }
+      document.getElementById('back').addEventListener('click', back)
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单列表</title>
+  </head>
+
+  <body>
+
+    <h1>订单列表</h1>
+    <p>应该返回 购物车</p>
+
+    <a id="back">- 返回 (history.back)</a>
+    <br>
+    <br>
+    <a href="order.detail.html">订单详情</a>
+
+    <script>
+      function back(params) {
+        window.history.back()
+
+        // var search = window.location.hash
+        // var isFromBill = /bill/g.test(search)
+        // var isFromCart = /cart/g.test(search)
+
+        // if (isFromCart) {
+        //   window.location.href = 'cart.html'
+        // } else if (isFromBill) {
+        //   window.location.href = 'bill.html'
+        // } else {
+        //   alert('error')
+        // }
+      }
+      document.getElementById('back').addEventListener('click', back)
+    </script>
+  </body>
+
+</html>

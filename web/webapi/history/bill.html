@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账单</title>
+  </head>
+
+  <body>
+
+    <h1>账单</h1>
+
+    <button id="back">- 返回 (判断, 看情况返回)</button>
+    <br>
+    <br>
+    <button id="backNew">- 返回 (history.back)</button>
+    <br>
+    <br>
+    <button id="confirmOrder">下单 (返回已下单的菜)</button>
+
+    <h2>规则</h2>
+    <ul>
+      <li>购物车</li>
+      <li>购物车.node</li>
+      <li>下单, 返回已下单的菜</li>
+    </ul>
+
+    <script src="./storage.js"></script>
+    <script>
+      function back(params) {
+        var search = window.location.hash
+        var isFromCart = /cart/g.test(search)
+        var isFromOrderDetail = /orderDetail/g.test(search)
+        var isNodeApp = /node/g.test(search)
+
+        if (isFromCart) {
+          if (isNodeApp) {
+            window.location.href = 'cart.node.html'
+          } else {
+            window.location.href = 'cart.html'
+          }
+        } else if (isFromOrderDetail) {
+          window.location.href = 'order.detail.html'
+        } else {
+          alert('error')
+        }
+      }
+
+      function backNew(params) {
+        window.history.back()
+      }
+
+      var isOrdered = false
+      function confirmOrder(params) {
+        // window.history.replaceState({}, null, 'order.detail.html#order=123')
+        // setIsvBack('已下单的菜')
+        isOrdered = true
+      }
+
+      var url = window.location.href
+      window.history.pushState({}, null, url)
+      window.addEventListener('popstate', function (params) {
+        if (isOrdered) {
+          location.replace('order.recent.html')
+        } else {
+          history.go(-1)
+        }
+      })
+
+      document.getElementById('back').addEventListener('click', back)
+      document.getElementById('backNew').addEventListener('click', backNew)
+      document.getElementById('confirmOrder').addEventListener('click', confirmOrder)
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+  </head>
+
+  <body>
+
+    <h1>购物车 (node)</h1>
+
+    <a href="bill.html#from=cart">账单</a>
+    <br>
+    <br>
+    <a href="order.html#from=cart">订单列表</a>
+    <br>
+    <br>
+    <a id="goOrderDetail2">订单详情(localStorage)</a>
+
+    <script src="./storage.js"></script>
+    <script>
+      ISV.setIsvUrls({
+        返回: '',
+        账单: 'bill.html',
+        购物车: 'node.cart.html',
+        订单列表: 'node.order.html',
+        订单详情: 'node.order.detail.html',
+        已下单的菜: 'node.order.recent.html'
+      })
+      function goOrderDetail2(params) {
+        window.ISV.setIsvBack('订单列表')
+        window.location.href = 'order.detail.html'
+      }
+      document.getElementById('goOrderDetail2').addEventListener('click', goOrderDetail2)
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+  </head>
+
+  <body>
+
+    <h1>购物车</h1>
+
+    <a href="bill.html#from=cart">账单</a>
+    <br>
+    <br>
+    <a href="order.html#from=cart">订单列表</a>
+    <!-- <br>
+    <br>
+    <a href="order.detail.html#from=cart">订单详情</a>
+    <br>
+    <br>
+    <a id="goOrderDetail">订单详情(pushState)</a> -->
+    <br>
+    <br>
+    <a id="goOrderDetail2">订单详情(localStorage)</a>
+
+    <script src="./storage.js"></script>
+    <script>
+      ISV.setIsvUrls({
+        返回: '',
+        账单: 'bill.html',
+        购物车: 'cart.html',
+        订单列表: 'order.html',
+        订单详情: 'order.detail.html',
+        已下单的菜: 'order.recent.html'
+      })
+      function goOrderDetail2(params) {
+        window.ISV.setIsvBack('订单列表')
+        window.location.href = 'order.detail.html'
+      }
+      document.getElementById('goOrderDetail2').addEventListener('click', goOrderDetail2)
+
+      function goOrderDetail(params) {
+        window.history.pushState({ test: 1 }, "page", "order1.html");
+        window.history.pushState({ test: 1 }, "page", "order2.html");
+        window.history.pushState({ test: 1 }, "page", "order3.html");
+        window.history.pushState({ test: 1 }, "page", "order4.html");
+        // window.location.href = 'order.detail.html'
+      }
+      document.getElementById('goOrderDetail').addEventListener('click', goOrderDetail)
+
+    </script>
+  </body>
+
+</html>
