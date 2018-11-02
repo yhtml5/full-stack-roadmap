@@ -10,7 +10,6 @@
 * popstate/pushState
 * isvUrls/sessionStorage/token  
 
-
 ## 问题
         
 * 由浏览器默认维护的历史堆栈在某些业务场景中并不匹配
@@ -58,5 +57,6 @@
 ## 参考资料
 
 * [mdn History API](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API)
+* [mdn window.history](https://developer.mozilla.org/zh-TW/docs/Web/API/Window.history)
 
     

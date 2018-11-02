@@ -16,8 +16,10 @@
     <br>
     <br>
     <a href="order.html#from=cart">订单列表</a>
-    <!-- <br>
     <br>
+    <br>
+    <a href="member.html" id="goMember">老会员中心</a>
+    <!-- <br>
     <a href="order.detail.html#from=cart">订单详情</a>
     <br>
     <br>
@@ -36,11 +38,15 @@
         订单详情: 'order.detail.html',
         已下单的菜: 'order.recent.html'
       })
+
+      // document.getElementById('goOrderDetail').addEventListener('click', goOrderDetail)
+      document.getElementById('goOrderDetail2').addEventListener('click', goOrderDetail2)
+      document.getElementById('goMember').addEventListener('click', goMember)
+
       function goOrderDetail2(params) {
         window.ISV.setIsvBack('订单列表')
         window.location.href = 'order.detail.html'
       }
-      document.getElementById('goOrderDetail2').addEventListener('click', goOrderDetail2)
 
       function goOrderDetail(params) {
         window.history.pushState({ test: 1 }, "page", "order1.html");
@@ -49,8 +55,10 @@
         window.history.pushState({ test: 1 }, "page", "order4.html");
         // window.location.href = 'order.detail.html'
       }
-      document.getElementById('goOrderDetail').addEventListener('click', goOrderDetail)
 
+      function goMember(params) {
+
+      }
     </script>
   </body>
 

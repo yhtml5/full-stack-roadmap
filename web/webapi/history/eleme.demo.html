@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饿了么</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <h1>
+        {{ title }}
+      </h1>
+      <main>
+        <div id="home" v-show="page === 'home'">
+          <h2>主页</h2>
+          <ul>
+            <li>单页面返回与系统返回一致(微信/系统)</li>
+            <li>点击系统返回关闭购物车</li>
+            <li>页面刷新保留购物车效果</li>
+          </ul>
+        </div>
+        <div id="poi" v-show="page === 'poi'">选择地址页</div>
+        <div id="city" v-show="page === 'city'">城市列表</div>
+      </main>
+      <hr>
+      <footer>
+        <button @click="open('home')">回主页</button>
+        <button @click="open('poi')">选择地址</button>
+        <button @click="open('city')">选择城市</button>
+      </footer>
+    </div>
+
+    <!-- this.$store.commit("SET_PAGE", "poi"), UBT.send("EVENT", {
+      id: 105140
+  }), history.pushState({
+      page: "poi"
+  }, "", location.href) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+      var State = {
+        title: '饿了么',
+        page: 'home'
+      }
+      var app = new Vue({
+        el: '#app',
+        data: State,
+        mounted() {
+          var _this = this
+          // 还原 history
+          if (history.state) {
+            this.page = history.state.page || 'home'
+          }
+          window.addEventListener("popstate", function (event) {
+            var page = event.state ? event.state.page : "home"
+            _this.commit("SET_PAGE", page)
+            // _this.$store.commit("SET_PAGE", i)
+          })
+        },
+        watch: {
+          page() {
+            if ((this.page === 'home')) {
+              console.log(`init ${this.page} page`)
+            } else {
+              console.log(`init ${this.page} page`)
+            }
+          }
+        },
+        methods: {
+          open: function (page) {
+            history.pushState({
+              page,
+            }, null, location.href)
+            this.commit('', page)
+          },
+          commit(type, payload) {
+            this.page = payload
+          },
+        }
+      })
+    </script>
+
+  </body>
+
+</html>
