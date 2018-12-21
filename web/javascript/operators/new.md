@@ -9,7 +9,7 @@
 * 如果构造函数返回了一个“对象”，那么这个对象会取代整个new出来的结果。如果构造函数没有返回对象，那么new出来的结果为步骤1创建的对象，
 * 一般情况下构造函数不返回任何值，不过用户如果想覆盖这个返回值，可以自己选择返回一个普通对象来覆盖。当然，返回数组也会覆盖，因为数组也是对象。
 
-```
+```js
 function Car() {}
   car1 = new Car()
   console.log(car1.color)           // undefined
@@ -23,7 +23,7 @@ function Car() {}
 
 创建了一个mycar这个对象实例，给它赋予了3个属性，现在mycar.make等于"Eagle" 以此类推。
 
-```
+```js
 function car(make, model, year) {
    this.make = make;
    this.model = model;
@@ -34,7 +34,7 @@ var mycar = new car("Eagle", "Talon TSi", 1993);
 
 #### 对象属性为自身或其他对象
 
-```
+```js
 function person(name, age, sex) {
    this.name = name;
    this.age = age;
@@ -57,7 +57,21 @@ var car2 = new car("Nissan", "300ZX", 1992, ken);
 car2.owner.name
 ```
 
+#### demo
+```js
+function People(name) {
+    this.name = name
+}
+People.prototype.hello = function() {
+    console.log('Im ' + this.name)
+}
 
+const a = new People('david')
+a.hello()
+// 不使用new, 不继承自People.prototype
+const b = People('john')
+b.hello()
+```
 [new]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new
 
 
