@@ -4,6 +4,7 @@
 npm-debug.log
 app/webpack/*/dist/
 .vscode
+package-lock.json
 
 # Windows image file caches
 Thumbs.db
