@@ -1,4 +1,4 @@
-## Front-end study
+# Front-end study
 
 ![author]
 
