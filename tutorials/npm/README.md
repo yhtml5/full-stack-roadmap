@@ -1,13 +1,13 @@
-## NPM Tutorial
+# NPM Tutorial
 
 [npm scripts 使用指南][npm-script-ruan]
 
-### Command Lind
+## Command Lind
 
-#### 1. use Taobao cnpm
+## use Taobao cnpm
 > npm install -g cnpm --registry=https://registry.npm.taobao.org
 
-#### 2. change registry
+## change registry
 
 Edit ~/.npmrc and add :
 
@@ -18,15 +18,15 @@ init.author.email=1417376255@qq.com
 init.author.name=yhtml5
 ````
 
-#### 3. 临时配置。
+## 临时配置。
 
 npm install grunt --registry=http://registry.npm.taobao.org
 
 > npm install npm -g  | update npm itself
 
-### NPM 
+## NPM 
 
-#### NPM install
+## NPM install
 
 command|usage
 ---|---
@@ -45,7 +45,7 @@ npm update | 升级当前目录下的项目的所有模块
 npm update `<package-name>` | 升级当前目录下的项目的指定模块
 npm outdated | 查看当前package module是否有新版本
 
-#### npm other
+## npm other
 
 command|usage
 ---|---
@@ -81,20 +81,30 @@ n | node版本管理
 n stable | 升级
 n 7.0 | 升级Nod
 
-### npm develop
+## npm develop
 
+init npm
+```sh
+npm init
+mkdir lib bin
+touch index.js README.md
 ```
-package.json 
 
+> vim package.json 
+
+```json 
 "bin": {
-    "yhtml5-cli": "./bin/yhtml5"
+    "check": "./bin/check"
   },
 ```
-npm link 
+
+> npm link 
+> check 
+
 npm version patch 
 npm publish
 
-### Semantic Versioning
+## Semantic Versioning
 
 npm 采用语义版本管理软件包。所谓语义版本，就是指版本号为a.b.c的形式，其中a是大版本号，b是小版本号，c是补丁号。
 
@@ -129,7 +139,7 @@ demo:
 ```
 注意，如果使用连字号，它的两端必须有空格。如果不带空格，会被 npm 理解成预发布的 tag，比如1.0.0-rc.1。
 
-### 目录和包查找原则
+## 目录和包查找原则
 
 比如有如下的模块路径： 查找规则是沿路径向上逐级递归，直到根目录的node_modules目录:
 ```
@@ -146,7 +156,7 @@ demo:
 如果main属性指定错误，或者没有package.json文件，那么node会将index作为默认的文件名，去依次查找index.js , index.json , index.node
 在目录分析中没有定位到任何模块，那么它会遍历自己的上一级目录进行查找，如果还没找到，抛出查找失败的异常。
 
-### npm 发布
+## npm 发布
 
 1. 注册一个registry帐号， npm adduser ，然后根据引导输入帐号、密码和邮箱地址。
 2. 登录registry帐号， npm login ，登录信息会保存在客户端。
