@@ -1,17 +1,17 @@
-### npm script
+# npm script
 
-#### 传参
+## 传参
 
 ```
 "lint": "jshint **.js",
 "lint:checkstyle": "npm run lint -- --reporter checkstyle > checkstyle.xml"
 ```
 
-#### 执行顺序
+## 执行顺序
 并行执行 &
 继发执行 &&
 
-### 默认值
+## 默认值
 
 ```
 "start": "node server.js"，
@@ -21,7 +21,7 @@
 上面代码中，npm run start的默认值是node server.js，前提是项目根目录下有server.js这个脚本；
 npm run install的默认值是node-gyp rebuild，前提是项目根目录下有binding.gyp文件。
 
-### hook
+## hook
 
 npm 脚本有pre和post两个钩子 
 
@@ -54,6 +54,11 @@ prestop，poststop
 prestart，poststart
 prerestart，postrestart
 ```
+
+**notice**
+* prepublish: Run BEFORE the package is packed and published, as well as on local npm install without any arguments
+* prepublishOnly: Run BEFORE the package is prepared and packed, ONLY on npm publish.
+
 
 
 
