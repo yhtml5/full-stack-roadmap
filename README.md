@@ -159,7 +159,7 @@ We'll nerver use these,
 |~~yoman~~||webpack && npm script|
 |~~wordpress~~||nodejs && html5 |
 
-[author]:https://img.shields.io/badge/group-军、漾、文、圆、庆、媛-blue.svg
+[author]:https://img.shields.io/badge/group-yhtml5-blue.svg
 [babel]:https://github.com/babel/babel
 [codeschool]:https://www.codeschool.com/
 [eslint]:https://github.com/eslint/eslint
