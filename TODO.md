@@ -5,7 +5,7 @@
 - [ ] https://www.jianshu.com/p/13d58d0c4705
 - [ ] https://www.jianshu.com/p/e6805c819abb
 
-### 弹窗禁止背景滑动
+## 弹窗禁止背景滑动
 
 https://www.cnblogs.com/lbcheng/p/6044303.html
 
@@ -13,5 +13,5 @@ https://www.cnblogs.com/lbcheng/p/6044303.html
 2. 给要滚动的元素添加一个父级，设定高度，overflow：auto；
 3. html,body{height:100%;overflow:hidden}
 
-### change-an-elements-class-with-javascript
+## change-an-elements-class-with-javascript
 https://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript
