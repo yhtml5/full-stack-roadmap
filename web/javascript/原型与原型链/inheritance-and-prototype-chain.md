@@ -1,5 +1,17 @@
-### 原型与原型链
+# 原型与原型链
 
+## 参考
+- [深度解析原型中的各个难点](https://github.com/KieSun/Blog/issues/2)
+
+## 总结
+- Object 是所有对象的爸爸，所有对象都可以通过 __proto__ 找到它
+- Function 是所有函数的爸爸，所有函数都可以通过 __proto__ 找到它
+- Function.prototype 和 Object.prototype 是两个特殊的对象，他们由引擎来创建
+- 除了以上两个特殊对象，其他对象都是通过构造器 new 出来的
+- 函数的 prototype 是一个对象，也就是原型
+- 对象的 __proto__ 指向原型， __proto__ 将对象和原型连接起来组成了原型链
+
+## 概念
 * 每个函数都有一个属性叫做原型，这个属性指向一个对象
 * 原型只是函数的一个属性
 
@@ -7,7 +19,7 @@
 
 每次你定义一个函数的时候，这个函数的原型属性也就被定义出来了，也就可以使用了，如果不对它进行显示赋值的话，那么它的初始值就是一个空的对象Object。
 
-#### 继承和原型链
+## 继承和原型链
 
 JavaScript 是动态的，并且本身不提供类实现.(在ES2015/ES6中引入了class关键字，但是只是语法糖，JavaScript 仍然是基于原型的)。
 当谈到继承时，Javascript 只有一种结构：对象。
@@ -19,7 +31,7 @@ JavaScript 是动态的，并且本身不提供类实现.(在ES2015/ES6中引入
 举例来说，在原型继承模型的基础之上建立一个经典的继承模型是相当容易的。
 
 
-#### 继承属性
+## 继承属性
 
 JavaScript 对象是动态的属性“包”（指其自己的属性）。
 JavaScript 对象有一个指向一个原型对象的链。
@@ -61,7 +73,7 @@ console.log(o.d); // undefined
 
 创建一个对象它自己的属性的方法就是设置这个对象的属性。唯一例外的获取和设置的行为规则就是当有一个 getter或者一个setter 被设置成继承的属性的时候。
 
-#### 继承方法
+## 继承方法
 
 JavaScript 并没有其他基于类的语言所定义的“方法”。
 在 JavaScript 里，任何函数都可以添加到对象上作为对象的属性。
@@ -90,13 +102,13 @@ console.log(p.m()); // 13
 // 此时的'this.a' 即 p.a，即 p 的自身属性 'a'
 ```
 
-#### 如何实现继承
+## 如何实现继承
 
 
 
-#### 使用不同的方法来创建对象和生成原型链
+## 使用不同的方法来创建对象和生成原型链
 
-#### 使用普通语法创建对象
+## 使用普通语法创建对象
 ```
 var o = {a: 1};
 
@@ -123,7 +135,7 @@ function f(){
 // f ---> Function.prototype ---> Object.prototype ---> null
 ```
 
-#### 使用构造器创建对象
+## 使用构造器创建对象
 
 在 JavaScript 中，构造器其实就是一个普通的函数。当使用 new 操作符 来作用这个函数时，它就可以被称为构造方法（构造函数）。
 
@@ -144,7 +156,7 @@ var g = new Graph();
 // 在g被实例化时,g.__proto__指向了Graph.prototype.
 ```
 
-#### 使用 Object.create 创建对象
+## 使用 Object.create 创建对象
 
 ECMAScript 5 中引入了一个新方法：Object.create()。可以调用这个方法来创建一个新对象。新对象的原型就是调用 create 方法时传入的第一个参数：
 ```
@@ -163,7 +175,7 @@ var d = Object.create(null);
 console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype
 ```
 
-#### 使用 class 关键字
+## 使用 class 关键字
 ECMAScript6 引入了一套新的关键字用来实现 class。使用基于类语言的开发人员会对这些结构感到熟悉，但它们是不一样的。 
 JavaScript 仍然是基于原型的。这些新的关键字包括 class, constructor, static, extends, 和 super.
 
@@ -193,7 +205,7 @@ class Square extends Polygon {
 var square = new Square(2);
 ```
 
-#### prototype or `__proto__`
+## prototype or `__proto__`
 
 [js中__proto__和prototype的区别和关系][prototype]
 
@@ -212,7 +224,7 @@ var square = new Square(2);
 * 显式原型的作用：用来实现基于原型的继承与属性的共享。
 * 隐式原型的作用：构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问obj这个对象中的x属性时，如果在obj中找不到，那么就会沿着__proto__依次查找。
 
-#### 总结
+## 总结
 
 在用原型继承编写复杂代码前理解原型继承模型十分重要。同时，还要清楚代码中原型链的长度，并在必要时结束原型链，以避免可能存在的性能问题。
 此外，除非为了兼容新 JavaScript 特性，否则，永远不要扩展原生的对象原型。
