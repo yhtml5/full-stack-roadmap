@@ -1,7 +1,9 @@
 ## 云服务器 ECS CentOS 7配置默认防火墙 Firewall
 
-说明：Centos7 下默认的防火墙是 Firewall，替代了之前的 iptables，Firewall 有图形界面管理和命令行管理两种方式，本文简要介绍命令 行Firewall 的使用。
-配置 Firewall
+说明：Centos7 下默认的防火墙是 Firewall，替代了之前的 iptables，Firewall 有图形界面管理和命令行管理两种方式，
+本文简要介绍命令 行Firewall 的使用。
+
+### 配置 Firewall
 
 进入系统之后，Centos7 默认是已安装了 Firewall，但是没有启动的，所以需要先启动下 Firewall，同时设置开机自启动
 
