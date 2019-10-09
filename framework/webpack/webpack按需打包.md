@@ -1,13 +1,13 @@
-## wzbpack按需打包
+## webpack按需打包
 
-* 分析依赖包大小 => 如何按需打包 => 例子 
+* 分析依赖包大小 => 如何按需打包 => 例子
 
-node_module 中的模块往往是转义成es5的, 引入会全量引入, 
+node_module 中的模块往往是转义成es5的, 引入会全量引入,
 以lodash为例
 
 > import { find } from 'lodash'
 
-如果要按需打包，我们可以选用的手段有: 
+如果要按需打包，我们可以选用的手段有:
 
 ### 函数模块
 类似 Lodash 中的每个函数在 NPM 都有一个单独的发布模块。NPM: results for ‘lodash’
