@@ -2,21 +2,21 @@
 
 ### git 常用命令大全
 
-* [ssh](#ssh) 
-* [git init](#git-init) 
-* [git clone](#git-clone) 
-* [git branch](#git-branch) 
-* [git tag](#git-tag) 
-* [git checkout](#git-checkout) 
-* [git commit](#git-commit) 
-* [git fetch](#git-fetch) 
-* [git push](#git-push) 
-* [git stash](#git-stash) 
-* [git diff](#git-diff) 
-* [git reset](#git-reset) 
-* [git config](#git-config) 
-* [git log](#git-log) 
-    
+* [ssh](#ssh)
+* [git init](#git-init)
+* [git clone](#git-clone)
+* [git branch](#git-branch)
+* [git tag](#git-tag)
+* [git checkout](#git-checkout)
+* [git commit](#git-commit)
+* [git fetch](#git-fetch)
+* [git push](#git-push)
+* [git stash](#git-stash)
+* [git diff](#git-diff)
+* [git reset](#git-reset)
+* [git config](#git-config)
+* [git log](#git-log)
+
 ![GitHub set up](principle.png)
 
 ### ssh
@@ -24,7 +24,7 @@
 * ls -al ~/.ssh  `列出证书`
 * ssh-keygen -t rsa -b 4096 -C "1417376255@qq.com"  `创建ssh证书`
 * ssh-keygen -t rsa -C "youremail@example.com"  `创建SSH Key`
-* eval "$(ssh-agent -s)"  --??  
+* eval "$(ssh-agent -s)"  --??
 * ssh-add ~.ssh/id_rsa  --??
 * clip < ~/.ssh/id_rsa.pub  `克隆`
 
@@ -43,41 +43,41 @@
 * git diff master origin/master `比较本地分支和远程分支的差异`
 
 ### git reset
-* git reset 
-  * HEAD file `将暂存区的修改退回工作区`  
+* git reset
+  * HEAD file `将暂存区的修改退回工作区`
   * --hard HEAD^ `返回到上个版本（上上个版本：HEAD^^；往上100个版本：HEAD~100)`
   * --hard 版本号 `回到删除的版本（当前命令行窗口未关闭；版本号没必要写全)`
 * git reset --hard `<commit-hash>` && git push -f origin master   `撤销之前提交的commit(没有被其他人pull过) 但是如果有其他人同步过你的push，那么你可以在本地使用revert来还原你提交的commit，然后生成一个新的commit然后再推送到远端`
 
-### git status  
+### git status
 * git status `查看修改状态`
 
-### git add  
+### git add
 * git add `把要提交的所有修改放到暂存区`
 * git add readme `添加文件到版本库`
 
-### git commit  
+### git commit
 * git commit `一次性把暂存区的所有修改提交到分支`
   * -m "info" `将暂存区提交到本地仓库, 增加提交说明info`
   * -am "info" `git add + git commit`
 
-### git remote  
+### git remote
 * git remote `不带参数，列出已经存在的远程分支`
   * -v `列出详细信息, 如果有子命令，-v 需要放在git remote与子命令中`
-  * --verbose 
-* git remote add origin git@github.com:chenyexing/learngit.git 
+  * --verbose
+* git remote add origin git@github.com:chenyexing/learngit.git
   * `Adds a remote named **name** for the repository at **url**`
   * origin git@server-name:path/repo-name.git `关联一个远程库`
 * git remote set-url git@server-name:path/repo-name.git `配置git远程url`
 
-### git fetch  
+### git fetch
 * git fetch `将远程仓库的所有分支commit取回本地`
   * --all `将远程所有仓库的所有分支commit取回本地`
 * git fetch origin master `将远程仓库origin的master分支commit取回本地`
 
 > [Git少用Pull多用Fetch和Merge](https://www.cnblogs.com/flying_bat/p/3408634.html)
 
-### git pull  
+### git pull
 * git pull  `git fetch + git merge origin/branch`
   * --all `拉取远程所有仓库的commit信息下载合并到本地分支`
 
@@ -89,7 +89,7 @@
 * git push origin **tagname**  `推送一个本地标签`
 * git push origin :**branchName**  `删除远程分支`
 * git push origin :refs/tags/**tagname**  `删除远程标签`
-* git push origin 
+* git push origin
   * --delete **branchName**  `删除远程分支`
   * --delete **tagname**   `删除远程标签`
   * --tags `推送全部尚未推送到远程的本地标签`
@@ -133,11 +133,11 @@
 ### git branch
 
 ```sh
-[master]:    dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057 
+[master]:    dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057
                |         \
 [feature]:     |          76cada - 62ecb3 - b886a0
                |
-[bug]:       ad2112 - ca2131 - as2131    
+[bug]:       ad2112 - ca2131 - as2131
 ```
 
 * git branch `查看当前分支（当前分支前会标*）`
@@ -168,14 +168,14 @@
 * git config --list  `显示当前配置信息`
 * git config --global color.ui true  `让Git显示颜色`
 * git config --global user.name "Your Name"  `global参数, 表示你这台机器上所有的Git仓库都会使用这个配置`
-* git config --global user.email "email@example.com"	
+* git config --global user.email "email@example.com"
 * git config --global alias.st status
 * git config --global alias.co checkout
 * git config --global alias.ci commit
 * git config --global alias.br branch
 * git config --global alias.unstage 'reset HEAD'
 * git config --global alias.last 'log -1'
-* git config --global alias.lg "log --color --graph --pretty=format: 
+* git config --global alias.lg "log --color --graph --pretty=format:
 * '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 ```
@@ -187,5 +187,5 @@
 	    st = status
 	[user]
 	    name = Your Name
-	    email = your@email.com  
-``` 	
+	    email = your@email.com
+```
