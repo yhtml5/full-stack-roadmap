@@ -2,14 +2,14 @@
 
 ### reference:
 
-Official website: 
+Official website:
 > http://shadowsocks.org/en/index.html
 
 > https://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html
 > http://ryantech.top/posts/16
 > https://zzz.buzz/zh/gfw/2017/08/14/install-shadowsocks-server-on-centos-7
 
-### install 
+### install
 
 ```
 #install python setup tools
@@ -47,10 +47,10 @@ ExecStop=/usr/bin/ssserver -d stop
 WantedBy=multi-user.target
 ```
 
-### config 
+### config
 ```
 {
-“server”:”0.0.0.0″,         
+“server”:”0.0.0.0″,
 “server_port”:8989,
 “local_address”: “127.0.0.1”,
 “local_port”:1080,
@@ -77,26 +77,35 @@ WantedBy=multi-user.target
 }
 ```
 
-### start service 
-> sudo systemctl enable shadowsocks  
+### start service
 
-> sudo systemctl status shadowsocks  
+```sh
+sudo systemctl enable shadowsocks
+sudo systemctl status shadowsocks
+sudo systemctl start shadowsocks
+sudo systemctl stop shadowsocks
+```
 
-> sudo systemctl start shadowsocks  
+### firewall
 
-> sudo systemctl stop shadowsocks  
+read firewall.md
 
-### firewall 
-> firewall-cmd –permanent –add-port=8989/tcp 
-
-> firewall-cmd –permanent –add-port=8989/udp  
-
-> firewall-cmd –reload
+```sh
+sudo firewall-cmd -–permanent –-add-port=8989/tcp
+sudo firewall-cmd –-permanent –-add-port=8989/udp
+sudo firewall-cmd -–reload
+```
 
 ### notice
 * aliyun esc 配置安全组策略
 * telnet host port 检查端口
 * netstat -ntlp 检查端口使用情况
+
+### 访问不了
+* 阿里云禁用端口
+* 防火墙增加端口
+* 策略组增加端口
+
 
 
 
