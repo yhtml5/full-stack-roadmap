@@ -6,9 +6,9 @@
 
 #### 1.create account named yhtml5:
 
-```
+```sh
 ssh root@127.0.0.1
-adduser test 
+adduser test
 passwd test
 gpasswd -a test wheel | add test to whell group
 su test | su -
@@ -23,18 +23,18 @@ ls -al
 
 #### 2.use ssh install of password
 
-```
+```sh
 ### local mac
 brew install ssh-copy-id
 ssh-copy-id test@127.0.0.1
 exit
 
-ssh test@127.0.0.1 
+ssh test@127.0.0.1
 ```
 
 ### 3.prohibit root user remote login
 
-```
+```sh
 sudo vi /etc/ssh/sshd_config
 /PermitRootLogin
 PermitRootLogin no | remove '#' and change 'yes' to 'no'
@@ -47,7 +47,7 @@ Permission denied, please try again.
 
 ### 4.prohibit the user use SSH password to login server
 
-```
+```sh
 sudo vi /etc/ssh/sshd_config
 /PasswordAuthentication
 PasswordAuthentication no | remove '#' and change 'yes' to 'no'
@@ -60,7 +60,7 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 
 ### 5.modify the port number of the SSH service
 
-```
+```sh
 sudo vi /etc/ssh/sshd_config
 /Port
 Port xxx | remove '#' and change '22' to 'xxx'
@@ -74,7 +74,7 @@ ssh test@127.0.0.1 -p xxx
 
 ### 6.change host name
 
-```
+```sh
 # hostname
 # vi /etc/sysconfig/network
 restart Ali ECS
@@ -82,7 +82,7 @@ restart Ali ECS
 
 ### 7.add a disk
 
-```
+```sh
 # pwd
 # df -h
 # bash auto_fdisk.sh

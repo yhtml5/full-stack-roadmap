@@ -7,8 +7,10 @@
 
 进入系统之后，Centos7 默认是已安装了 Firewall，但是没有启动的，所以需要先启动下 Firewall，同时设置开机自启动
 
-```
-systemctl start firewalld       ##启动Firewall
+```sh
+systemctl start firewalld           ##启动
+systemctl disable firewalld         ##停止
+systemctl stop firewalld            ##禁用
 systemctl enable firewalld.service  ##设置开机自启动
 
 ln -s '/usr/lib/systemd/system/firewalld.service' '/etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service'
