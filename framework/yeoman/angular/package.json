@@ -24,7 +24,7 @@
     "wiredep": "^2.2.2",
     "lazypipe": "^0.2.4",
     "gulp-ng-annotate": "^1.0.0",
-    "open": "0.0.5",
+    "open": "6.4.0",
     "jshint-stylish": "^1.0.0"
   },
   "engines": {
