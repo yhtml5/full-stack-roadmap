@@ -1,0 +1,15 @@
+Title: UML DEMO
+
+client-->>server: request
+
+server->weixin: request
+weixin->server: response
+
+participant mp
+
+Note left of server: Note left of server
+Note right of weixin: Note right of weixin
+Note over client: Note over client
+Note over client,server: Note over client and server
+
+
