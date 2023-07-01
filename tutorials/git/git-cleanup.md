@@ -1,6 +1,7 @@
 # GIT Cleanup
 
 ## 查看仓库中的大文件
+
 ```sh
 git rev-list --all --objects | \
 grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -n 3 | awk -F ' '  '{print $1}')"
@@ -11,6 +12,7 @@ grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -n 3 | 
 > 另外这里用到$ 先求解git verify-pack 的输出
 
 ## 删除仓库中的大文件
+
 ```sh
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch *.pcd' --prune-empty --tag-name-filter cat -- --all
 ```
@@ -25,8 +27,10 @@ git reflog expire --expire=now --all
 git gc --prune=now
 git gc --aggressive --prune=now
 ```
+
 > git reflog 用于管理reflog信息
 > git gc 移除不必要的文件并优化本地文件
 
 ## 强制推送改动到远端
+>
 > git push origin --force --all
