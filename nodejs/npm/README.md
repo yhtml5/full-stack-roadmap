@@ -5,32 +5,41 @@
 ## Command Lind
 
 ## use Taobao cnpm
-> npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+> npm install -g cnpm --registry=<https://registry.npm.taobao.org>
 
 ## change registry
 
 Edit ~/.npmrc and add :
 
-````
+````sh
 registry=https://registry.npm.taobao.org
 init.license=MIT
 init.author.email=1417376255@qq.com
 init.author.name=yhtml5
 ````
 
-## 临时配置。
+## project
 
-npm install grunt --registry=http://registry.npm.taobao.org
+Edit ./.npmrc and add :
+
+```sh
+registry="https://registry.npmjs.org/"
+```
+
+## 临时配置
+
+npm install grunt --registry=<http://registry.npm.taobao.org>
 
 > npm install npm -g  | update npm itself
 
-## NPM 
+## NPM
 
 ## NPM install
 
 command|usage
 ---|---
-npm install | npm i 
+npm install | npm i
 npm install --only=production | npm i --only=prod
 npm install --only=development | npm i --only=dev
 npm install --production | 只安装dependencies
@@ -39,7 +48,7 @@ npm install --save | npm i -S
 npm install --save-dev | npm i -D
 npm install --save-pro | npm i -P
 npm install --save-optional | npm i -O
-npm install --no-save | 
+npm install --no-save |
 npm uninstall `<package-name>` | 删除指定的模块
 npm update | 升级当前目录下的项目的所有模块
 npm update `<package-name>` | 升级当前目录下的项目的指定模块
@@ -62,7 +71,7 @@ npm view `<package-name>` dependencies | 单独查看package.json某个配置
 npm show modules | 显示模块详情
 npm show webpack versions --json | 显示模块版本信息
 npm list | 列出已安装模块
-npm ls --depth=0 | 列出已安装模块 深度为0  
+npm ls --depth=0 | 列出已安装模块 深度为0
 npm test | npm t
 npm version | 查看版本
 npm version patch | 升级小版本
@@ -71,11 +80,11 @@ npm version major | 升级大版本
 npm publish | publish npm packages
 npm unpublish --force | unpublish npm packages
 npm login | login
-npm login --registry http://127.0.0.1 | login 127.0.0.1
+npm login --registry <http://127.0.0.1> | login 127.0.0.1
 npm logout | logout
-npm set @scope:registry=http://127.0.0.1 | set scope
+npm set @scope:registry=<http://127.0.0.1> | set scope
 npm set package-lock=false | set
-npm adduser --registry http://127.0.0.1 | add user
+npm adduser --registry <http://127.0.0.1> | add user
 
 n | node版本管理
 n stable | 升级
@@ -84,24 +93,25 @@ n 7.0 | 升级Nod
 ## npm develop
 
 init npm
+
 ```sh
 npm init
 mkdir lib bin
 touch index.js README.md
 ```
 
-> vim package.json 
+> vim package.json
 
-```json 
+```json
 "bin": {
     "check": "./bin/check"
   },
 ```
 
-> npm link 
-> check 
+> npm link
+> check
 
-npm version patch 
+npm version patch
 npm publish
 
 ## Semantic Versioning
@@ -130,6 +140,7 @@ demo:
 ```
 
 还可以使用数学运算符（比如>, <, =, >= or <=等），指定版本范围
+
 ```
 >2.1
 1.0.0 - 1.2.0
@@ -137,16 +148,19 @@ demo:
 >=1.0.0-rc.0 <1.0.1
 ^2 <2.2 || > 2.3
 ```
+
 注意，如果使用连字号，它的两端必须有空格。如果不带空格，会被 npm 理解成预发布的 tag，比如1.0.0-rc.1。
 
 ## 目录和包查找原则
 
 比如有如下的模块路径： 查找规则是沿路径向上逐级递归，直到根目录的node_modules目录:
+
 ```
 ├─/node_modules/
 └─/home/node_modules/
 └─/user/test/node_modules/
 ```
+
 这就是自定义模块加载速度最慢的原因了。
 
 当我们require 的标识符 不包含扩展名node 会按照 .js .json .node 的次序补足扩展名 ，依次尝试。
@@ -184,9 +198,6 @@ npm-debug.log
 通过 npm config ls 查看是否使用了非 npmjs.org 官网的 registry
 
 暂时切回官方源地址
-> npm config set registry https://registry.npmjs.org/
+> npm config set registry <https://registry.npmjs.org/>
 
 [npm-script-ruan]:http://www.ruanyifeng.com/blog/2016/10/npm_scripts.htmls
-[shorthands-and-other-cli-niceties]:https://docs.npmjs.com/misc/config#shorthands-and-other-cli-niceties
-
-
