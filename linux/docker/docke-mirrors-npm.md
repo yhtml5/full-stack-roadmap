@@ -32,3 +32,11 @@ $ sudo docker info
 Registry Mirrors:
  https://hub-mirror.c.163.com/
 ```
+
+## 很遗憾以上无效
+
+简单粗暴应用
+
+```sh
+npm install --registry=https://registry.npmmirror.com
+```
