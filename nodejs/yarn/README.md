@@ -12,3 +12,6 @@ npm view yarn versions --json
 npm install yarn@latest -g
 ```
 
+```sh
+YARN_REGISTRY=https://mirrors.cloud.tencent.com/npm/ yarn install
+```
